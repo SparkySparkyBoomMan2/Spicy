@@ -9,4 +9,4 @@ Temporary mark down file stating files that need to eventually go in this "doc" 
       - Not sure if anyone else need their champion document in here
       - It must include at least 3 classes
    
-   Outside of this "doc" folder should be our gannt chart.
+   Outside of this "doc" folder should be our gannt chart
