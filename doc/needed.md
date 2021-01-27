@@ -1,5 +1,7 @@
 Temporary mark down file stating files that need to eventually go in this "doc" folder:
 
+   All group documents included in the System Analysis Demo
+
    Group RFP
    
    Champion document prefixed with my initials (Miguel)
