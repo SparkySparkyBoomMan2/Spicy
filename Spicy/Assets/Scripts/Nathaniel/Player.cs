@@ -4,46 +4,43 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform groundCheck = null; //gameObject is made for the ground detection
-    [SerializeField] private LayerMask playerMask; //uses the layer we create for player
     bool jumpPressed;
+
     float xInput;
-    Rigidbody rigidbodyComponent;
-    int speed = 4;
+    public float speed = 4;
+    public float jumpForce = 7;
+    Rigidbody2D rigidbody2D;
+
     // Start is called before the first frame update
     void Start()
     {
-        rigidbodyComponent = GetComponent<Rigidbody>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //initializes jumpPressed as true
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidbody2D.velocity.y) < 0.001f)
         {
             jumpPressed = true;
         }
 
         //gets xInput for horizontal movement
-        xInput = Input.GetAxis("Horizontal");
+        xInput = Input.GetAxis("Horizontal"); //gets horizontal input
     }
 
     //fixed update for physics
     private void FixedUpdate()
     {
-        rigidbodyComponent.velocity = new Vector3(xInput * speed, rigidbodyComponent.velocity.y, 0); //horizontal movement physics
-
-        if (Physics.OverlapSphere(groundCheck.position, 0.1f, playerMask).Length == 0) //add detections to prevent double jump
-        {
-            return;
-        }
+        rigidbody2D.velocity = new Vector2(xInput * speed, rigidbody2D.velocity.y); //horizontal movement physics
 
         if (jumpPressed) //activates the jump and resets jump key back to false
         {
             Debug.Log("Jump Key Pressed"); //debugs for when key pressed
-            rigidbodyComponent.AddForce(Vector2.up * 6, ForceMode.VelocityChange);
+            rigidbody2D.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse); // jump physics
             jumpPressed = false;
         }
     }
+
 }
