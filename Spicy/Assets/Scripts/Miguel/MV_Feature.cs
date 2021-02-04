@@ -1,4 +1,6 @@
-﻿/* Miguel is a doo doo head
+﻿/* Miguel:
  * 
- * 
+ * Sound/Music
+ * Player Movement
  */
+
