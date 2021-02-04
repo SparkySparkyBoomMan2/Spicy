@@ -4,19 +4,19 @@ Temporary mark down file stating files that need to eventually go in this "doc" 
 
    Group RFP
    
-   Champion document prefixed with my initials (Miguel)
+   Champion document prefixed with initials
    
-      - Not sure if anyone else need their champion document in here
+      - Not sure if anyone else needs their champion document in here (EDIT 2/3/21 think we do)
       
-   Feature class diagram prefixed with my initials (Miguel)
+   Feature class diagram prefixed with initials
    
-      - Not sure if anyone else need their champion document in here
+      - Not sure if anyone else needs this (EDIT 2/3/21 think we do)
       
       - It must include inheritence and aggregation
       
-   Feature sequence diagram prefixed with my initials (Miguel)
+   Feature sequence diagram prefixed with initials
    
-      - Not sure if anyone else need their champion document in here
+      - Not sure if anyone else needs this (EDIT 2/3/21 think we do)
       
       - It must include at least 3 classes
    
