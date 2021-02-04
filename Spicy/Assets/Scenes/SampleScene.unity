@@ -9345,6 +9345,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1869400104828105285, guid: 039dd189388f3b84a941b8b1918fdf78,
+        type: 3}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1869400104828105288, guid: 039dd189388f3b84a941b8b1918fdf78,
         type: 3}
       propertyPath: m_SortingOrder

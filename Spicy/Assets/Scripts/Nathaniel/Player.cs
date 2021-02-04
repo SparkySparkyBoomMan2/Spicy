@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     float xInput;
     public float speed = 4;
-    public float jumpForce = 7;
+    public float jumpForce = 9;
     Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
