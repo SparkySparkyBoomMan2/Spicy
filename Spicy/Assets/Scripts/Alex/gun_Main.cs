@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunScript : MonoBehaviour
+public class gun_Main : MonoBehaviour
 {
     public GameObject bullet;
     public SpriteRenderer gunRenderer;
-    
-    private bool AllowFire;
+    public float FireRateDelay;
+   
+    //AllowFire - when true, the gun is allowed to fire
+     private bool AllowFire;
     void Start()
     {
         AllowFire = true;
@@ -24,6 +26,7 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //Moves gun to aim towards mouse pointer
     void AimGun()
     {
         var mousePos = Input.mousePosition;
@@ -35,6 +38,7 @@ public class GunScript : MonoBehaviour
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
+        //Flips gun across y axis if mouse cursor crosses the gun's y axis
         if (transform.rotation.z > .7f || transform.rotation.z < -.7f)
         {
             gunRenderer.flipY = true;
@@ -45,14 +49,20 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //Coroutine to "shoot" gun
+    // * new bullet is instantiated
+    // * fire rate is controlled here
     IEnumerator FireGun()
     {
         AllowFire = false;
+        
+        //Rotation added on z-axis changes angle the "bullet" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, rot.z + 90);
 
         Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
-        yield return new WaitForSeconds(.50f);
+        //yield return new WaitForSeconds(.50f);
+        yield return new WaitForSeconds(FireRateDelay);
         AllowFire = true;
         
     }
