@@ -121,6 +121,7 @@ MonoBehaviour:
   rb: {fileID: 3483667529255493170}
   BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
     type: 3}
+  BulletSpeed: 20
 --- !u!60 &1196600278688479540
 PolygonCollider2D:
   m_ObjectHideFlags: 0
