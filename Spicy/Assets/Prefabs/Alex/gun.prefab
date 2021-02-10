@@ -128,3 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 257013681698751668, guid: 37da14cf3b479d045bd5c6ebe130d2b2, type: 3}
   gunRenderer: {fileID: 7998353565377808573}
+  FireRateDelay: 0.5
