@@ -17,7 +17,7 @@ TagManager:
   - Background
   - Platform
   - Player
-  - 
+  - Gunst/testing
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 81802759
+    locked: 0
+  - name: Guns
+    uniqueID: 2163429195
     locked: 0
