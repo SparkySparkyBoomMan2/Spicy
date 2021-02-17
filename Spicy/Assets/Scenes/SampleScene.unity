@@ -9839,6 +9839,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8978175484611981611, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
+      propertyPath: Idle
+      value: 
+      objectReference: {fileID: 5421400420791244033, guid: 4854562da88894f4cb11a2d91a4492b8,
+        type: 3}
+    - target: {fileID: 8978175484611981611, guid: e9f5b13c00c269b4387eefaf26329a90,
+        type: 3}
+      propertyPath: idle
+      value: 
+      objectReference: {fileID: 5421400420791244033, guid: 4854562da88894f4cb11a2d91a4492b8,
+        type: 3}
+    - target: {fileID: 8978175484611981611, guid: e9f5b13c00c269b4387eefaf26329a90,
+        type: 3}
+      propertyPath: walk
+      value: 
+      objectReference: {fileID: 8673904307632555663, guid: a920b146ff3925045a6c471631ed2ef6,
+        type: 3}
+    - target: {fileID: 8978175484611981611, guid: e9f5b13c00c269b4387eefaf26329a90,
+        type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1746645825}
@@ -9852,6 +9870,12 @@ PrefabInstance:
       propertyPath: Tomato
       value: 
       objectReference: {fileID: 1746645827}
+    - target: {fileID: 8978175484611981611, guid: e9f5b13c00c269b4387eefaf26329a90,
+        type: 3}
+      propertyPath: explode
+      value: 
+      objectReference: {fileID: 4445909792999507112, guid: bbe14ca05c532ef4f9bb3c82b195951d,
+        type: 3}
     - target: {fileID: 8978175484611981612, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
       propertyPath: m_Name
