@@ -28,9 +28,15 @@ public class Spawner : MonoBehaviour
         SpawnObject();
     }
 
+    // Correctly spawns a prefab of choice to the location of the parent object
+    // This may need to be a public method
     void SpawnObject()
     {
-        Instantiate(spawnableObjects[0], parent);
+        // Will also need to handle things like any sort of spawn animation (i.e. portal, summon, etc.)
+        // and destruction of those spawn elements as well
+        //Destroy(Instantiate(), delayTime);
+
+        //Instantiate(spawnableObjects[(int)spawnable.PLAYER], parent);
 
     }
 }
