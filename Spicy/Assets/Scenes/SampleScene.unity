@@ -9624,12 +9624,12 @@ PrefabInstance:
     - target: {fileID: 1869400104828105289, guid: 039dd189388f3b84a941b8b1918fdf78,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.19
+      value: 7.69
       objectReference: {fileID: 0}
     - target: {fileID: 1869400104828105289, guid: 039dd189388f3b84a941b8b1918fdf78,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.16
+      value: 7.91
       objectReference: {fileID: 0}
     - target: {fileID: 1869400104828105289, guid: 039dd189388f3b84a941b8b1918fdf78,
         type: 3}
@@ -9738,6 +9738,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 439587035345558240, guid: 1592d51f8dcb7384d82003f46793e668,
+        type: 3}
+      propertyPath: spawnableObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1746645825}
     - target: {fileID: 439587035345558241, guid: 1592d51f8dcb7384d82003f46793e668,
         type: 3}
       propertyPath: m_Name
@@ -9834,6 +9839,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8978175484611981609, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56077766d8895c748a679fd4c8b20cd2, type: 2}
+    - target: {fileID: 8978175484611981609, guid: e9f5b13c00c269b4387eefaf26329a90,
+        type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -9889,12 +9899,12 @@ PrefabInstance:
     - target: {fileID: 8978175484611981614, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8978175484611981614, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 8978175484611981614, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
