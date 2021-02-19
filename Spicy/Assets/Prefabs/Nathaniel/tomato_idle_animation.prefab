@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5421400420791244036}
   - component: {fileID: 5421400420791244039}
   - component: {fileID: 5421400420791244038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: tomato_idle_animation
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

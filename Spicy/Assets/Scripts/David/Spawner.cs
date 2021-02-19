@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         // and destruction of those spawn elements as well
         //Destroy(Instantiate(), delayTime);
 
-        //Instantiate(spawnableObjects[(int)spawnable.PLAYER], parent);
+        Instantiate(spawnableObjects[(int)spawnable.PLAYER], parent);
 
     }
 }
