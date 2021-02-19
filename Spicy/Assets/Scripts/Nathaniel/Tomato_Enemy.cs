@@ -8,24 +8,16 @@ public class Tomato_Enemy : MonoBehaviour
     float walk_speed = 2f;
     float step;
     float dir = 0f;
-    Vector2 direction;
     bool isGrounded;
     bool isWalled;
 
-    //Animations
-    public GameObject walk;
-    public GameObject explode;
-    public GameObject idle;
-
-
     Rigidbody2D rigidbody2d;
 
-    public Animation anim;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        idle.SetActive(true);
         rigidbody2d = GetComponent<Rigidbody2D>();
         step = walk_speed * Time.deltaTime;
 
@@ -44,6 +36,10 @@ public class Tomato_Enemy : MonoBehaviour
         {
             isWalled = true;
         }
+
+        animator.SetFloat("Horizontal", Tomato.position.x);
+        animator.SetFloat("Horizontal", Tomato.position.y);
+        animator.SetFloat("Speed", Tomato.position.sqrMagnitude);
     }
 
     private void FixedUpdate()
@@ -51,15 +47,8 @@ public class Tomato_Enemy : MonoBehaviour
         
         if (isGrounded)
         {
-            idle.SetActive(false);
-            walk.SetActive(true);
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(Tomato.position.x + dir, Tomato.position.y), step);
             isGrounded = false;
-        }
-        if (!isGrounded)
-        {
-            walk.SetActive(false);
-            idle.SetActive(true);
         }
 
         change_direction();
