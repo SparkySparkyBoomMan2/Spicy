@@ -6,6 +6,7 @@ public class gun_Main : MonoBehaviour
 {
     public GameObject bullet;
     public SpriteRenderer gunRenderer;
+    public Animator animator;
     public float FireRateDelay;
    
     //AllowFire - when true, the gun is allowed to fire
@@ -20,10 +21,19 @@ public class gun_Main : MonoBehaviour
     {
         AimGun();
 
-        if (Input.GetMouseButton(0) && AllowFire)
-        {
+        if (Input.GetMouseButton(0) && AllowFire && !Input.GetKey(KeyCode.R))
+        {  
+            animator.SetBool("isLauncherReload", false);
             StartCoroutine(FireGun());
+        }else if (Input.GetKey(KeyCode.R)) //testing
+        {
+            AllowFire = false;
+            Debug.Log("Reload should happen now!!!!!!");
+            animator.SetBool("isLauncherReload", true);
+            StartCoroutine(Reload());
         }
+
+        //endtesting
     }
 
     //Moves gun to aim towards mouse pointer
@@ -65,6 +75,14 @@ public class gun_Main : MonoBehaviour
         yield return new WaitForSeconds(FireRateDelay);
         AllowFire = true;
         
+    }
+
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isLauncherReload", false);
+        yield return new WaitForSeconds(2f);
+        AllowFire = true;
     }
 
     

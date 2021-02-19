@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 7475860667037709687}
   - component: {fileID: 7475860667037709688}
   - component: {fileID: 7188675088418722852}
+  - component: {fileID: 1444885136}
   m_Layer: 11
   m_Name: HotSauce_Launcher
   m_TagString: Untagged
@@ -55,9 +56,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7475860667037709686}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.64, y: 3.28, z: 0}
-  m_LocalScale: {x: 2.0976582, y: 1.9293298, z: 2.279569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.009, y: -0.029, z: 0}
+  m_LocalScale: {x: 0.4387685, y: 0.40355912, z: 4.768188}
   m_Children:
   - {fileID: 3515827751729676225}
   m_Father: {fileID: 0}
@@ -127,4 +128,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2541481239415706479, guid: 05169a77b04e0764baac2b44a7164725, type: 3}
   gunRenderer: {fileID: 7475860667037709688}
+  animator: {fileID: 1444885136}
   FireRateDelay: 0.5
+--- !u!95 &1444885136
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475860667037709686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42e1cfdf2a1c0f947813e6620aa7d829, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
