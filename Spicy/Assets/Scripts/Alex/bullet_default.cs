@@ -28,7 +28,7 @@ public class bullet_default : MonoBehaviour
         {
             DamageEnemy(other);
         }
-         BulletImpact();
+        BulletImpact();
     }
 
     //Instantiates a new "impact" particle effect for the bullet
