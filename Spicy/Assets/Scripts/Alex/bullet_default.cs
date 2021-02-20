@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet_Main : MonoBehaviour
+public class bullet_default : MonoBehaviour
 {
     public Rigidbody2D rb;
     public ParticleSystem BulletExplode;
