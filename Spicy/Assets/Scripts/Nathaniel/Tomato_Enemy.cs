@@ -14,6 +14,7 @@ public class Tomato_Enemy : MonoBehaviour
     Rigidbody2D rigidbody2d;
 
     public Animator animator;
+    public GameObject deathEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,11 @@ public class Tomato_Enemy : MonoBehaviour
             }
         }   
 
-
+        void Die()
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            animator.Play("tomato_explode");
+            Destroy(gameObject);
+        }
     }
 }
