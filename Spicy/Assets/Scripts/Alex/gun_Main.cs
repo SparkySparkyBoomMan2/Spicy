@@ -10,10 +10,14 @@ public class gun_Main : MonoBehaviour
     public float FireRateDelay;
    
     //AllowFire - when true, the gun is allowed to fire
+    //isReloading - when true, gun is reloading
      private bool AllowFire;
+     private bool isReloading;
+
     void Start()
     {
         AllowFire = true;
+        isReloading = false;
     }
 
     
@@ -21,19 +25,15 @@ public class gun_Main : MonoBehaviour
     {
         AimGun();
 
-        if (Input.GetMouseButton(0) && AllowFire && !Input.GetKey(KeyCode.R))
+        if (Input.GetMouseButton(0) && AllowFire && !isReloading)
         {  
-            animator.SetBool("isLauncherReload", false);
             StartCoroutine(FireGun());
-        }else if (Input.GetKey(KeyCode.R)) //testing
+        }
+        else if (Input.GetKey(KeyCode.R))
         {
-            AllowFire = false;
-            Debug.Log("Reload should happen now!!!!!!");
-            animator.SetBool("isLauncherReload", true);
             StartCoroutine(Reload());
         }
 
-        //endtesting
     }
 
     //Moves gun to aim towards mouse pointer
@@ -61,28 +61,31 @@ public class gun_Main : MonoBehaviour
 
     //Coroutine to "shoot" gun
     // * new bullet is instantiated
-    // * fire rate is controlled here
+    // * fire rate is used to wait between shots
     IEnumerator FireGun()
     {
         AllowFire = false;
-        
+
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, rot.z + 90);
 
         Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
-        //yield return new WaitForSeconds(.50f);
         yield return new WaitForSeconds(FireRateDelay);
         AllowFire = true;
-        
     }
 
+    //Coroutine to reload gun
+    // * sets a parameter of the attatched animator to true (play animation)
+    // * waits for animation to complete, then sets it to false
     IEnumerator Reload()
     {
-        yield return new WaitForSeconds(0.5f);
+        isReloading = true;
+        animator.SetBool("isLauncherReload", true);
+        yield return new WaitForSeconds(1f);
         animator.SetBool("isLauncherReload", false);
-        yield return new WaitForSeconds(2f);
-        AllowFire = true;
+        yield return new WaitForSeconds(.5f);
+        isReloading = false;
     }
 
     
