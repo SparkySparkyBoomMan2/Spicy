@@ -7,6 +7,7 @@ public class bullet_Main : MonoBehaviour
     public Rigidbody2D rb;
     public ParticleSystem BulletExplode;
     public float BulletSpeed;
+    public int Damage = 50;
     void Start()
     {
         //Makes the bullet have a starting velocity
@@ -22,7 +23,12 @@ public class bullet_Main : MonoBehaviour
     {
         Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
-        BulletImpact();
+       
+        if (other.gameObject.tag == "Enemy")
+        {
+            DamageEnemy(other);
+        }
+         BulletImpact();
     }
 
     //Instantiates a new "impact" particle effect for the bullet
@@ -32,5 +38,21 @@ public class bullet_Main : MonoBehaviour
     {
         Instantiate(BulletExplode, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    //If the object collided with is an enemy, damage that enemy
+    // * for now, only designed to work with tomato enemy
+    // * takes off 'damage' amount of health
+    //   - defined in public global variable
+    //   - TakeDamage() function expected to be defined in Tomato_Enemy script!
+    void DamageEnemy(Collision2D other)
+    {
+        Tomato_Enemy enemy = other.gameObject.GetComponent<Tomato_Enemy>();
+        
+        if (enemy != null)
+        {
+            Debug.Log(enemy.name);
+            //enemy.TakeDamage(Damage);
+        }
     }
 }
