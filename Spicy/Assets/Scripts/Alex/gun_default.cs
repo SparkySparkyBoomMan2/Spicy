@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gun_Main : MonoBehaviour
+public class gun_default : MonoBehaviour
 {
     public GameObject bullet;
     public SpriteRenderer gunRenderer;

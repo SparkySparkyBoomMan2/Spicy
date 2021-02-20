@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7475860667037709687}
   - component: {fileID: 7475860667037709688}
-  - component: {fileID: 7188675088418722852}
+  - component: {fileID: -3185450078089259798}
   - component: {fileID: 1444885136}
   m_Layer: 11
   m_Name: HotSauce_Launcher
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &7188675088418722852
+--- !u!114 &-3185450078089259798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,13 +123,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7475860667037709686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c25b7425bb551438b9a9fe1bdfc30c, type: 3}
+  m_Script: {fileID: 11500000, guid: d74717fbbc88972479ac586af8e43520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2541481239415706479, guid: 05169a77b04e0764baac2b44a7164725, type: 3}
   gunRenderer: {fileID: 7475860667037709688}
   animator: {fileID: 1444885136}
-  FireRateDelay: 0.5
+  FireRateDelay: 1
+  ReloadTime: 1
 --- !u!95 &1444885136
 Animator:
   serializedVersion: 3
