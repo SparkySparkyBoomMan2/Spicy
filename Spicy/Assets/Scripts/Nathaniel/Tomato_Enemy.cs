@@ -5,12 +5,12 @@ using UnityEngine;
 public class Tomato_Enemy : MonoBehaviour
 {
     public Transform Tomato;
-    float walk_speed = 2f;
-    float step;
-    float dir = 0f;
-    bool isGrounded;
-    bool isWalled;
+    public float walk_speed;
 
+    bool moveRight = true;
+    public Transform wallDetect;
+
+    Vector2 currPosition;
     Rigidbody2D rigidbody2d;
 
     public Animator animator;
@@ -19,52 +19,41 @@ public class Tomato_Enemy : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        step = walk_speed * Time.deltaTime;
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(rigidbody2d.velocity.y) < 0.001f)
+        currPosition = rigidbody2d.position; //gets position for animations
+        //setting up animator
+        animator.SetFloat("Horizontal", currPosition.x);
+        animator.SetFloat("Horizontal", currPosition.y);
+        animator.SetFloat("Speed", currPosition.sqrMagnitude);
+
+       // transform.Translate(Vector2.right * walk_speed * Time.deltaTime);
+
+        RaycastHit2D wallInfo = Physics2D.Raycast(wallDetect.position, Vector2.right, .01f);
+        RaycastHit2D groundInfo = Physics2D.Raycast(wallDetect.position, Vector2.down, .01f);
+
+        if (groundInfo.collider == false) //trying to set only linear movement if on ground
         {
-            isGrounded = true;
+            transform.Translate(Vector2.right * walk_speed * Time.deltaTime);
         }
 
-        if (Mathf.Abs(rigidbody2d.velocity.x) > 0.001f)
+        if (wallInfo.collider == true) //detects wall collission
         {
-            isWalled = true;
-        }
+            if(moveRight == true)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                moveRight = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                moveRight = true;
+            }
+        }   
 
-        animator.SetFloat("Horizontal", Tomato.position.x);
-        animator.SetFloat("Horizontal", Tomato.position.y);
-        animator.SetFloat("Speed", Tomato.position.sqrMagnitude);
-    }
 
-    private void FixedUpdate()
-    {
-        
-        if (isGrounded)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(Tomato.position.x + dir, Tomato.position.y), step);
-            isGrounded = false;
-        }
-
-        change_direction();
-        
-    }
-
-    void change_direction()
-    {
-       if (isWalled)
-        {
-            dir = 2f;
-            isWalled = false;
-        }
-        else if(!isWalled)
-        {
-            dir = 2f;
-        }
     }
 }
