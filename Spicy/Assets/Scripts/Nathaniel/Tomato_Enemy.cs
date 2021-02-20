@@ -54,12 +54,11 @@ public class Tomato_Enemy : MonoBehaviour
                 moveRight = true;
             }
         }   
-
-        public void Die()
-        {
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
-            animator.Play("tomato_explode");
-            Destroy(gameObject);
-        }
+    }
+    public void Die()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        animator.Play("tomato_explode");
+        Destroy(gameObject);
     }
 }
