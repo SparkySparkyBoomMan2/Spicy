@@ -20,15 +20,14 @@ public class bullet_Main : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.gameObject.tag);
+        Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
-        //if (other.gameObject.name == "TilemapPlatforms")
-        if (other.gameObject.name != "Player")
-        {
-            BulletImpact();
-        }
+        BulletImpact();
     }
 
+    //Instantiates a new "impact" particle effect for the bullet
+    // * destroys the bullet, but not particle system
+    // * particle system is destroyed in a seperate script
     void BulletImpact()
     {
         Instantiate(BulletExplode, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
