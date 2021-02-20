@@ -23,7 +23,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     public Wave[] waves;                                    // An array of the number of waves making up the current level
-    public Transform[] spawnPoints;                         // An array of spawn locations (current using the spawners - may use those instead and shift over some functionality over there)
+    public Spawner[] spawnPoints;                         // An array of spawn locations (currently using the spawners - may use those instead and shift over some functionality over there)
     private int nextWave = 0;                               // Index into waves to select which wave to spawn
     public float timeBetweenWaves = 5f;                     // Delay time between waves (Can use this for fancy text displaying name of wave before dissapearing)
     private float waveCountdown;                            // Countdown timer for time until next wave starts spawning (only starts counting down once all enemies with tag "Enemy" have been defeated)
@@ -89,7 +89,8 @@ public class SpawnManager : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            Spawn(_wave.spawnedObject, i);
+            spawnPoints[i].Spawn(spawnPoints[i].transform, 0);
+            //Spawn(_wave.spawnedObject, i);
             yield return new WaitForSeconds(1f/_wave.spawnRate);    // Or can use a delay if want to use that instead, i.e. _wave.delay
         }
 
@@ -103,7 +104,7 @@ public class SpawnManager : MonoBehaviour
     {
         Debug.Log("Spawning Enemy " + index);    // + _spawnedObject.name
 
-        Transform _spawnPoint = spawnPoints[index];
+        Transform _spawnPoint = spawnPoints[index].transform;
         Instantiate(_spawnedObject, _spawnPoint.position, _spawnPoint.rotation);
     }
 
