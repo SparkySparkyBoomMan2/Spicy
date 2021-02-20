@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -52,7 +52,7 @@ public class bullet_default : MonoBehaviour
         if (enemy != null)
         {
             Debug.Log(enemy.name);
-            //enemy.TakeDamage(Damage);
+            enemy.Die();
         }
     }
 }
