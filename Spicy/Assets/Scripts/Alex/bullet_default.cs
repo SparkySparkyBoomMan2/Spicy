@@ -26,6 +26,7 @@ public class bullet_default : MonoBehaviour
        
         if (other.gameObject.tag == "Enemy")
         {
+            BulletImpact();
             DamageEnemy(other);
         }
         BulletImpact();
