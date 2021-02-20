@@ -89,7 +89,8 @@ public class SpawnManager : MonoBehaviour
 
         for (int i = 0; i < _wave.count; i++)
         {
-            spawnPoints[i].Spawn(spawnPoints[i].transform, 0);
+            spawnPoints[i].Spawn(0);
+            //spawnPoints[i].Spawn(spawnPoints[i].transform, 0);
             //Spawn(_wave.spawnedObject, i);
             yield return new WaitForSeconds(1f/_wave.spawnRate);    // Or can use a delay if want to use that instead, i.e. _wave.delay
         }

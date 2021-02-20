@@ -9,13 +9,11 @@ public class Spawner : MonoBehaviour
     // Could include a variable that goes into the array and selects which object to spawn
     // Would then have to update the spawnObject method
     public GameObject[] spawnableObjects;
-    public Transform parent;
 
     // Start is called before the first frame update
     void Start()
     {
         // Need to add failure-check code
-        //parent = GetComponent<Transform>();
     }
 
     // Correctly spawns a prefab of choice to the location of the parent object
@@ -26,8 +24,7 @@ public class Spawner : MonoBehaviour
         // and destruction of those spawn elements as well
         //Destroy(Instantiate(), delayTime);
 
-        Instantiate(spawnableObjects[index], this.transform);
-
+        GameObject newEnemy = Instantiate(spawnableObjects[index], this.transform.position, this.transform.rotation);
     }
 
     // Function that instantiates the passed object to the location of the parent spawn location
