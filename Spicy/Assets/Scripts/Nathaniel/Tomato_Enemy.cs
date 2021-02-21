@@ -14,7 +14,6 @@ public class Tomato_Enemy : MonoBehaviour
     Rigidbody2D rigidbody2d;
 
     public Animator animator;
-    bool dying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +68,6 @@ public class Tomato_Enemy : MonoBehaviour
     public void Die() //kills tomato enemy
     {
         animator.SetBool("isDead", false); //turns on explode animation
-        Destroy(gameObject, 0.8f); 
+        Destroy(gameObject, 1.04f); 
     }
 }

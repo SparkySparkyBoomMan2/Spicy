@@ -180,8 +180,6 @@ MonoBehaviour:
   walk_speed: 0.5
   wallDetect: {fileID: 7860909187144120931}
   animator: {fileID: 4483985024303876607}
-  deathEffect: {fileID: 7279121840714258720, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-    type: 3}
 --- !u!95 &4483985024303876607
 Animator:
   serializedVersion: 3
