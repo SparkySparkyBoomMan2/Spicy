@@ -14,7 +14,7 @@ public class Tomato_Enemy : MonoBehaviour
     Rigidbody2D rigidbody2d;
 
     public Animator animator;
-    public GameObject deathEffect;
+    bool dying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -56,21 +56,19 @@ public class Tomato_Enemy : MonoBehaviour
         }   
     }
 
-/*    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag.Equals("Bullet"))
+    /*    private void OnCollisionEnter2D(Collision2D collision)
         {
-            animator.SetBool("isDead", true);
-            Destroy(collision.gameObject, 3f);
-            Destroy(gameObject);
-        }
-    }*/
+            if (collision.gameObject.tag.Equals("Bullet"))
+            {
+                animator.SetBool("isDead", true);
+                Destroy(collision.gameObject, 3f);
+                Destroy(gameObject);
+            }
+        }*/
 
-    public void Die()
+    public void Die() //kills tomato enemy
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        animator.SetBool("isDead", true);
-        Destroy(gameObject);
-        
+        animator.SetBool("isDead", false); //turns on explode animation
+        Destroy(gameObject, 0.8f); 
     }
 }
