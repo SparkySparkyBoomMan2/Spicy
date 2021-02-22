@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -169,5 +169,5 @@ MonoBehaviour:
   rb: {fileID: 1192404989213313513}
   BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
     type: 3}
-  BulletSpeed: 11
+  BulletSpeed: 13
   Damage: 50
