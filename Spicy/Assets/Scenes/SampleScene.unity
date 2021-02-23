@@ -157,13 +157,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96776396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53595dc14b448074e8c15c210a88580f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Level: {fileID: 0}
+  text: {fileID: 0}
+  panelMainMenu: {fileID: 0}
+  panelPauseMenu: {fileID: 0}
+  panelLevelPlaying: {fileID: 0}
+  panelLevelComplete: {fileID: 0}
+  panelWaveInfo: {fileID: 0}
+  panelGameOver: {fileID: 0}
+  Levels: []
 --- !u!4 &96776398
 Transform:
   m_ObjectHideFlags: 0
@@ -10283,7 +10291,7 @@ PrefabInstance:
     - target: {fileID: 8568240687213182103, guid: 0c8ed3b55c733cc4a9a1222c530fa5c6,
         type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8568240687213182103, guid: 0c8ed3b55c733cc4a9a1222c530fa5c6,
         type: 3}
