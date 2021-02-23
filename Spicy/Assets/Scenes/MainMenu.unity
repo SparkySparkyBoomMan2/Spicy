@@ -492,5 +492,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174260, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_text
+      value: Super Spicy Gun Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174260, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -168.24588
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174260, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -78.40582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174263, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174263, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.334564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174263, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6256478161912174263, guid: ab59a60a101739e4ca3f2d54a61afbd3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 174
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab59a60a101739e4ca3f2d54a61afbd3, type: 3}
