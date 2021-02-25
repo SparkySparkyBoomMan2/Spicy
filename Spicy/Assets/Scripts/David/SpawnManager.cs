@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -141,8 +142,16 @@ public class SpawnManager : MonoBehaviour
         if (nextWave > waves.Length - 1)
         {
             Debug.Log("All waves complete");
-            // levelComplete();
+            levelComplete();
             // Logic for transitioning to level complete state -- goes back to level select state, next level unlocked
         }
+    }
+
+    void levelComplete()
+    {
+        // This will eventually pull up a cool UI screen that says you won and give you the option to go back to the map, repeat, or quit the game.
+        // For now, it will just take you back to the main menu
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
     }
 }
