@@ -13,6 +13,7 @@ namespace Tests
         public void Right()
         {
             Vector2 rightVect = new Vector2(1f, 0);
+
             var GameObject = new GameObject();
             var tomato = GameObject.GetComponent<Tomato_Enemy>();
             Vector2 tomato_position = tomato.getPosition();
