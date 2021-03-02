@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tomato_Enemy : MonoBehaviour
 {
     public Transform Tomato;
-    private float walk_speed = 3000;
+    private float walk_speed = 1.0f;
     
     bool moveRight = true;
     public Transform wallDetect;

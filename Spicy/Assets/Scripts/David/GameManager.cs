@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;
+
     // This class controls things like:
     // - UI Elements such as score
     // - Lives
@@ -26,18 +28,30 @@ public class GameManager : MonoBehaviour
     public enum State { MENU, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
     State _state;
 
-
-
-    public void PlayClicked()
+    // Sets up the singleton instance
+    private void Awake()
     {
-        SwitchState(State.INIT);
-    }
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
 
+        DontDestroyOnLoad(this.gameObject);
+    }
+    
     void Start()
     {
         SwitchState(State.MENU);
     }
 
+    public void PlayClicked()
+    {
+        SwitchState(State.INIT);
+    }
 
     public void SwitchState(State newState)
     {
