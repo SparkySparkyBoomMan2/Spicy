@@ -502,11 +502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsMenu2
       objectReference: {fileID: 0}
-    - target: {fileID: 7139569904064218252, guid: 9748dc5bfd8b5d14599c4df3b95a68bc,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
 --- !u!224 &6256478161653552738 stripped
