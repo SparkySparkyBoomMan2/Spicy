@@ -179,6 +179,7 @@ MonoBehaviour:
   Tomato: {fileID: 4483985024303876605}
   walk_speed: 0.5
   wallDetect: {fileID: 7860909187144120931}
+  currPosition: {x: 0, y: 0}
   animator: {fileID: 4483985024303876607}
 --- !u!95 &4483985024303876607
 Animator:

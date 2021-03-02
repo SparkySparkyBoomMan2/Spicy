@@ -5,8 +5,8 @@ using UnityEngine;
 public class Tomato_Enemy : MonoBehaviour
 {
     public Transform Tomato;
-    public float walk_speed;
-
+    private float walk_speed = 10;
+    
     bool moveRight = true;
     public Transform wallDetect;
 
@@ -24,14 +24,21 @@ public class Tomato_Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        runAnimations();
+        runMovement();
+    }
+
+    void runAnimations()
+    {
         currPosition = rigidbody2d.position; //gets position for animations
         //setting up animator
         animator.SetFloat("Horizontal", currPosition.x);
         animator.SetFloat("Horizontal", currPosition.y);
         animator.SetFloat("Speed", currPosition.sqrMagnitude);
-
-       // transform.Translate(Vector2.right * walk_speed * Time.deltaTime);
-
+    }
+    public int runMovement()
+    {
+        int dirFlag = 2;
         RaycastHit2D wallInfo = Physics2D.Raycast(wallDetect.position, Vector2.right, .01f);
         RaycastHit2D groundInfo = Physics2D.Raycast(wallDetect.position, Vector2.down, .01f);
 
@@ -42,32 +49,33 @@ public class Tomato_Enemy : MonoBehaviour
 
         if (wallInfo.collider == true) //detects wall collission
         {
-            if(moveRight == true)
+            if (moveRight == true)
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 moveRight = false;
+                dirFlag = 1;
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 moveRight = true;
+                dirFlag = 0;
             }
-        }   
+        }
+        return dirFlag;
     }
-
-    /*    private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.tag.Equals("Bullet"))
-            {
-                animator.SetBool("isDead", true);
-                Destroy(collision.gameObject, 3f);
-                Destroy(gameObject);
-            }
-        }*/
-
     public void Die() //kills tomato enemy
     {
         animator.SetBool("isDead", false); //turns on explode animation
         Destroy(gameObject, 1.04f); 
+    }
+
+    public void setSpeed(float spd)
+    {
+        this.walk_speed = spd;
+    }
+    public Vector2 getPosition()
+    {
+        return this.currPosition;
     }
 }
