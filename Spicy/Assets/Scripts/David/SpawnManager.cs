@@ -14,17 +14,27 @@ public class SpawnManager : MonoBehaviour
     }
 
     [System.Serializable]
+    // There are several of these mini waves per individual wave within a level
+    // I.e. Wave 1: Spawn 4 enemies, then wait 4 seconds and spawn 4 more, Wave 2: ...
+    public class MiniWave
+    {
+        public string name;                 // Mini wave name
+        public float spawnDelay = 0.4f;     // Time in between individual enemies spawning within a mini wave
+        public int count;                   // Number of enemies to spawn
+    }
+
+    [System.Serializable]
     // Tracks the necessary information needed for each wave, such as which object(s)/enemy to spawn, how many to spawn, and how quickly
     public class Wave
     {
-        public string name;             // Wave name
-        public Transform spawnedObject; // Could call this enemy instead if only using spawner for enemies  // Can make this into an array of enemy prefabs instead
-        public int count;               // Number of spawned enemies
-        public float spawnRate;         // How quickly enemies spawn in per wave
+        public string name;                 // Wave name
+        public List<MiniWave> miniWaves;    // A list of the various surges of waves that spawn per wave
+        public int miniWaveCount;           // Number of mini waves within overall wave
+        public float miniWaveRate;          // How quickly mini waves happen after one another
     }
 
-    public Wave[] waves;                                    // An array of the number of waves making up the current level
-    public Spawner[] spawnPoints;                         // An array of spawn locations (currently using the spawners - may use those instead and shift over some functionality over there)
+    public List<Wave> waves;                                // An array of the number of waves making up the current level
+    public List<Spawner> spawnPoints;                           // An array of spawn locations (currently using the spawners - may use those instead and shift over some functionality over there)
     private int nextWave = 0;                               // Index into waves to select which wave to spawn
     public float timeBetweenWaves = 5f;                     // Delay time between waves (Can use this for fancy text displaying name of wave before dissapearing)
     private float waveCountdown;                            // Countdown timer for time until next wave starts spawning (only starts counting down once all enemies with tag "Enemy" have been defeated)
@@ -34,15 +44,14 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         // Error checking to make sure the programmer set up the level correctly
-        if (spawnPoints.Length == 0)
+        if (spawnPoints.Count == 0)
         {
             Debug.LogError("No spawn points referenced");
         }
 
-        if (waves.Length == 0)
+        if (waves.Count == 0)
         {
             Debug.LogError("No waves created");
-
         }
 
         waveCountdown = timeBetweenWaves;
@@ -88,12 +97,13 @@ public class SpawnManager : MonoBehaviour
         Debug.Log("Spawning " + _wave.name);
         spawnState = SpawnState.SPAWNING;
 
-        for (int i = 0; i < _wave.count; i++)
+        // For each wave within the level. . .
+        for (int i = 0; i < _wave.miniWaveCount; i++)
         {
-            spawnPoints[i % spawnPoints.Length].Spawn(0);
-            //spawnPoints[i].Spawn(spawnPoints[i].transform, 0);
-            //Spawn(_wave.spawnedObject, i);
-            yield return new WaitForSeconds(1f/_wave.spawnRate);    // Or can use a delay if want to use that instead, i.e. _wave.delay
+            yield return StartCoroutine(SpawnMiniWave(_wave.miniWaves[i]));
+
+            yield return new WaitForSeconds(_wave.miniWaveRate);    // Or can use a delay if want to use that instead, i.e. _wave.delay
+
         }
 
         spawnState = SpawnState.WAITING;
@@ -101,13 +111,18 @@ public class SpawnManager : MonoBehaviour
         yield break;
     }
 
-    // Function that instantiates the passed object to the location of the parent spawn location
-    void Spawn(Transform _spawnedObject, int index)
+    // Coroutine that spawns individual mini waves within the current wave
+    IEnumerator SpawnMiniWave(MiniWave _miniWave)
     {
-        Debug.Log("Spawning Enemy " + index);    // + _spawnedObject.name
+        for (int i = 0; i < _miniWave.count; i++)
+        {
+            int randomSpawnLocation = Random.Range(0, spawnPoints.Count);       // i % spawnPoints.Count
+            Debug.Log("Spawn Location: " + randomSpawnLocation);
+            spawnPoints[randomSpawnLocation].Spawn(0);                          // RIGHT HERE NEED TO HANDLE WHICH ENEMY PREFAB TO CHOOSE
+            yield return new WaitForSeconds(_miniWave.spawnDelay);
+        }
 
-        Transform _spawnPoint = spawnPoints[index].transform;
-        Instantiate(_spawnedObject, _spawnPoint.position, _spawnPoint.rotation);
+        yield break;
     }
 
     // Checks and returns if there are any object tagged with "Enemy" in the scene
@@ -139,7 +154,7 @@ public class SpawnManager : MonoBehaviour
         nextWave++;
 
         // This runs when all waves are completed. Go to level won scenario
-        if (nextWave > waves.Length - 1)
+        if (nextWave > waves.Count - 1)
         {
             Debug.Log("All waves complete");
             levelComplete();
@@ -151,7 +166,7 @@ public class SpawnManager : MonoBehaviour
     {
         // This will eventually pull up a cool UI screen that says you won and give you the option to go back to the map, repeat, or quit the game.
         // For now, it will just take you back to the main menu
+        //GameManager.instance.panelLevelComplete.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-
     }
 }
