@@ -103,6 +103,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2031052024241902034, guid: 622bb2367cfc7f548b405c6187921af8,
+        type: 3}
+      propertyPath: jumpForce
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 2031052024241902035, guid: 622bb2367cfc7f548b405c6187921af8,
         type: 3}
       propertyPath: m_RootOrder
