@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class movement_tomato : MonoBehaviour
+public class Movement_Tomato : MonoBehaviour
 {
     bool randBool = false;
     private float walk_speed = 1.0f;
@@ -19,7 +19,7 @@ public class movement_tomato : MonoBehaviour
     {
         if(this.randBool == false)
         {
-
+             
         }
         return randBool;
     }

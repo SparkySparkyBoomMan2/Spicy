@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4880245116297131983, guid: c714e838dc951884795dc64c5c1f20ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4880245116297131985, guid: c714e838dc951884795dc64c5c1f20ef,
         type: 3}
       propertyPath: leftOffset.x

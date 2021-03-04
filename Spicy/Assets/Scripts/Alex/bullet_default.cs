@@ -48,7 +48,7 @@ public class bullet_default : MonoBehaviour
     //   - TakeDamage() function expected to be defined in Tomato_Enemy script!
     void DamageEnemy(Collision2D other)
     {
-        death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
+        Death_Tomato enemy = other.gameObject.GetComponent<Death_Tomato>();
         
         if (enemy != null)
         {

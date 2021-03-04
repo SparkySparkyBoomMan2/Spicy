@@ -103,6 +103,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2031052024241902030, guid: 622bb2367cfc7f548b405c6187921af8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2031052024241902034, guid: 622bb2367cfc7f548b405c6187921af8,
         type: 3}
       propertyPath: jumpForce

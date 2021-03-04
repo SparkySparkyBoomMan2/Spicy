@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7860909187144120931}
   m_Layer: 11
   m_Name: wallDetect
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,3 +239,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a299767a4a4e149b092398f08fc18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 4483985024303876607}

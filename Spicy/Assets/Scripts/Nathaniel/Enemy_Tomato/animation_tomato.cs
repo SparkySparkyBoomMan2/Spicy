@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class animation_tomato : MonoBehaviour
+public class Animation_Tomato : MonoBehaviour
 {
     public Animator animator;
     Vector2 currentPosition;
