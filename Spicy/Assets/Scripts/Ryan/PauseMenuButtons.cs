@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PauseMenuButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Resume()
     {
-        
+        GameManager.instance.Resume();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Restart()
     {
-        
+        GameManager.instance.Restart();
+    }
+
+    public void Options()
+    {
+        GameManager.instance.Options();
+    }
+
+    public void Quit()
+    {
+        Debug.Log("Application quit");
+        Application.Quit();
     }
 }

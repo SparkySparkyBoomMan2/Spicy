@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class OptionsMenuButtons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void MainMenu()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameManager.instance.MainMenu();
     }
 
     public void musicVolUpdate(float vol)

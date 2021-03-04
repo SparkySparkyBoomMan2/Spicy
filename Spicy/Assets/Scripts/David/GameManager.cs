@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] Levels;
 
-    public enum State { MENU, OPTIONS, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
+    public enum State { MENU, OPTIONS, INIT, PLAY, PAUSE, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
     State _state;
 
     // Sets up the singleton instance
@@ -58,10 +58,25 @@ public class GameManager : MonoBehaviour
         SwitchState(State.INIT);
     }
 
+    public void Restart()
+    {
+        SwitchState(State.INIT);
+    }
+
+    public void Resume()
+    {
+        SwitchState(State.PLAY);
+    }
+
     public void GameOver()
     {
         // When player runs out of lives and dies
         Debug.Log("Game Over");
+    }
+
+    public void MainMenu()
+    {
+        SwitchState(State.MENU);
     }
 
     public void Options()
@@ -104,6 +119,9 @@ public class GameManager : MonoBehaviour
             case State.PLAY:
                 // Turn on panel for HUD UI stuff, i.e. if there are lives or a score, activate them now
                 break;
+            case State.PAUSE:
+                panelPauseMenu.SetActive(true);
+                break;
             case State.LEVELCOMPLETED:
                 panelLevelComplete.SetActive(true);
                 break;
@@ -130,7 +148,13 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY:
                 // if lives > 0, instantiate the player and subtract 1 life else, game over
-
+                if (Input.GetKey("Escape"))
+                {
+                    Time.timeScale = 0f;
+                    SwitchState(State.PAUSE);
+                }
+                break;
+            case State.PAUSE:
                 break;
             case State.LEVELCOMPLETED:
                 break;
@@ -154,6 +178,10 @@ public class GameManager : MonoBehaviour
             case State.INIT:
                 break;
             case State.PLAY:
+                break;
+            case State.PAUSE:
+                panelPauseMenu.SetActive(false);
+                Time.timeScale = 1f;
                 break;
             case State.LEVELCOMPLETED:
                 panelLevelComplete.SetActive(false);
