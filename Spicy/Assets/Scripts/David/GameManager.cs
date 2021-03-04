@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        level -= 1;
         SwitchState(State.INIT);
     }
 
@@ -92,6 +93,7 @@ public class GameManager : MonoBehaviour
     public void SwitchState(State newState)
     {
         EndState();
+        _state = newState;
         BeginState(newState);
     }
 
@@ -118,11 +120,13 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY:
                 // Turn on panel for HUD UI stuff, i.e. if there are lives or a score, activate them now
+                Debug.Log("Playing!");
                 break;
             case State.PAUSE:
                 panelPauseMenu.SetActive(true);
                 break;
             case State.LEVELCOMPLETED:
+                Time.timeScale = 0f;
                 panelLevelComplete.SetActive(true);
                 break;
             case State.LOADLEVEL:
@@ -148,7 +152,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY:
                 // if lives > 0, instantiate the player and subtract 1 life else, game over
-                if (Input.GetKey("Escape"))
+                if (Input.GetKey(KeyCode.Escape))
                 {
                     Time.timeScale = 0f;
                     SwitchState(State.PAUSE);
@@ -184,6 +188,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1f;
                 break;
             case State.LEVELCOMPLETED:
+                Time.timeScale = 1f;
                 panelLevelComplete.SetActive(false);
                 break;
             case State.LOADLEVEL:
