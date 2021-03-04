@@ -8,6 +8,6 @@ public class Death_Player : MonoBehaviour
     public void DiePlayer()
     {
         Destroy(gameObject);
-        GameManager.instance.GameOver();
+        //GameManager.instance.GameOver();
     }
 }
