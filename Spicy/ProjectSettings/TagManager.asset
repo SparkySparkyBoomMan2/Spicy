@@ -9,6 +9,7 @@ TagManager:
   - Spawner
   - Bullet
   - PauseUI
+  - Player Spawn Location
   layers:
   - Default
   - TransparentFX

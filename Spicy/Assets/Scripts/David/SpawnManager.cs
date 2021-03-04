@@ -117,7 +117,7 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < _miniWave.count; i++)
         {
             int randomSpawnLocation = Random.Range(0, spawnPoints.Count);       // i % spawnPoints.Count
-            Debug.Log("Spawn Location: " + randomSpawnLocation);
+            //Debug.Log("Spawn Location: " + randomSpawnLocation);
             spawnPoints[randomSpawnLocation].Spawn(0);                          // RIGHT HERE NEED TO HANDLE WHICH ENEMY PREFAB TO CHOOSE
             yield return new WaitForSeconds(_miniWave.spawnDelay);
         }

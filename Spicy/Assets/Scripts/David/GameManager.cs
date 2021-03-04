@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
     // - Lives
     // - Handling going in and out of menus
 
-    // public GameObject Player;
+    public GameObject Player;
+    public float respawnDelay = 2f;
     public int lives = 3;
     public int level = 1;
+    private bool spawningPlayer = false;
+    private bool isRespawning = false;
 
     public GameObject panelMainMenu;
     public GameObject panelPauseMenu;
@@ -69,10 +72,40 @@ public class GameManager : MonoBehaviour
         SwitchState(State.PLAY);
     }
 
-    public void GameOver()
+    public void KillPlayer(GameObject player)
     {
-        // When player runs out of lives and dies
-        Debug.Log("Game Over");
+        Transform playerTransform = player.transform;
+        Destroy(player);
+        lives -= 1;
+        Debug.Log("Lives remaining: " + lives);
+        if (lives >= 0 && !isRespawning)
+        {
+            StartCoroutine(Respawn(playerTransform));
+        }
+        else
+        {
+            SwitchState(State.GAMEOVER);
+        }
+    }
+
+    public IEnumerator Respawn(Transform transform)
+    {
+        isRespawning = true;
+        yield return new WaitForSeconds(respawnDelay);
+        GameObject newPlayer = Instantiate(Player, transform);
+        newPlayer.transform.parent = null;
+        isRespawning = false;
+    }
+
+    public IEnumerator LoadLevelCoroutine()
+    {
+        spawningPlayer = true;
+        yield return new WaitForSeconds(0.2f);
+        Transform playerSpawnPoint = GameObject.FindGameObjectWithTag("Player Spawn Location").transform;
+        playerSpawnPoint.parent = null;
+        GameObject newPlayer = Instantiate(Player, playerSpawnPoint);
+        //newPlayer.transform.parent = null;
+        spawningPlayer = false;
     }
 
     public void MainMenu()
@@ -120,7 +153,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY:
                 // Turn on panel for HUD UI stuff, i.e. if there are lives or a score, activate them now
-                Debug.Log("Playing!");
+                // Player respawn here
                 break;
             case State.PAUSE:
                 panelPauseMenu.SetActive(true);
@@ -131,9 +164,15 @@ public class GameManager : MonoBehaviour
                 break;
             case State.LOADLEVEL:
                 // Load stuff into level -- may not need this step if we are using different scenes to house the various levels, but maybe for additional players, etc.
+                if (!spawningPlayer)
+                {
+                    StartCoroutine(LoadLevelCoroutine());
+                }
+                lives = 3;
                 SwitchState(State.PLAY);
                 break;
             case State.GAMEOVER:
+                Time.timeScale = 0f;
                 panelGameOver.SetActive(true);
                 break;
         }
@@ -194,6 +233,7 @@ public class GameManager : MonoBehaviour
             case State.LOADLEVEL:
                 break;
             case State.GAMEOVER:
+                Time.timeScale = 1f;
                 //panelLevelPlaying.SetActive(false);
                 panelGameOver.SetActive(false);
                 break;

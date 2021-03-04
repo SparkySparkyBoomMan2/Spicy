@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2864543939269887054}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Working Mein
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2864543939269887055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.436573, y: -1.7420965, z: -57.17585}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2864543939950328912}
@@ -341,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 1368463880797504454, guid: 6a91292df5da7db49a39fb88f656b9bd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5610113702381833220, guid: 6a91292df5da7db49a39fb88f656b9bd,
         type: 3}

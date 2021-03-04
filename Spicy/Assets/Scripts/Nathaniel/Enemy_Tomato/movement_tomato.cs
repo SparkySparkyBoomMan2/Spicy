@@ -43,7 +43,7 @@ public class Movement_Tomato : MonoBehaviour
         }
         else
         {
-            Debug.Log("Tomato Off Ground");
+            //Debug.Log("Tomato Off Ground");
             transform.Translate(Vector2.down * walk_speed * Time.deltaTime);
         }
 
