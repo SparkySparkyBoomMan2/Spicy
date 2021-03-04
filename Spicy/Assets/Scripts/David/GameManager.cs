@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,20 +13,21 @@ public class GameManager : MonoBehaviour
     // - Lives
     // - Handling going in and out of menus
 
-    public GameObject Player;
-    public GameObject Level;
-    public Text text;
+    // public GameObject Player;
+    public int lives = 3;
+    public int level = 1;
 
     public GameObject panelMainMenu;
     public GameObject panelPauseMenu;
-    public GameObject panelLevelPlaying;
+    public GameObject panelOptionsMenu;
     public GameObject panelLevelComplete;
-    public GameObject panelWaveInfo;
     public GameObject panelGameOver;
+    // public GameObject panelWaveInfo;                 // When implemented, will appear at the beginning of the level to show briefly the number of waves
+    // public GameObject panelLevelPlaying;             // This will be for any UI elements overlayed while playing, i.e. lives and maybe score or something
 
     public GameObject[] Levels;
 
-    public enum State { MENU, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
+    public enum State { MENU, OPTIONS, INIT, PLAY, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
     State _state;
 
     // Sets up the singleton instance
@@ -48,8 +50,11 @@ public class GameManager : MonoBehaviour
         SwitchState(State.MENU);
     }
 
-    public void PlayClicked()
+    // This function is the equivalent of the "MainMenuButtons.cs" PlayGame function. Get the functionality over there
+    // This will eventually lead to the map UI where we can select which level we want to play, but for now it will just setup and run the first level
+    public void PlayGame()
     {
+        level = 1;
         SwitchState(State.INIT);
     }
 
@@ -64,12 +69,19 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case State.MENU:
+                if (SceneManager.GetActiveScene().buildIndex != 0)
+                {
+                    SceneManager.LoadScene(0);
+                }
                 panelMainMenu.SetActive(true);
                 break;
+            case State.OPTIONS:
+                break;
             case State.INIT:
-                panelLevelPlaying.SetActive(true);
+                //panelLevelPlaying.SetActive(true);
                 // Set things like score, lives, etc. here too
-                Instantiate(Level); // May need to give a position here as well
+                //Instantiate(Level); // May need to give a position here as well
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + level);
                 SwitchState(State.LOADLEVEL);
                 break;
             case State.PLAY:
@@ -90,6 +102,8 @@ public class GameManager : MonoBehaviour
         switch (_state)
         {
             case State.MENU:
+                break;
+            case State.OPTIONS:
                 break;
             case State.INIT:
                 break;
@@ -112,6 +126,8 @@ public class GameManager : MonoBehaviour
             case State.MENU:
                 panelMainMenu.SetActive(false);
                 break;
+            case State.OPTIONS:
+                break;
             case State.INIT:
                 break;
             case State.PLAY:
@@ -122,7 +138,7 @@ public class GameManager : MonoBehaviour
             case State.LOADLEVEL:
                 break;
             case State.GAMEOVER:
-                panelLevelPlaying.SetActive(false);
+                //panelLevelPlaying.SetActive(false);
                 panelGameOver.SetActive(false);
                 break;
         }

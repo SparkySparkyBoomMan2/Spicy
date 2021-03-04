@@ -253,7 +253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2606962066039703082}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart Level
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3, type: 2}
   m_sharedMaterial: {fileID: -4355971526693568091, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3,
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 2606962065036557156}
   - component: {fileID: 2606962065036557157}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2606962066039703082}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To Main Menu
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3, type: 2}
   m_sharedMaterial: {fileID: -4355971526693568091, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3,
@@ -805,14 +805,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2606962066039703081}
-  - component: {fileID: 4893083490929661739}
+  - component: {fileID: 9079381627797535056}
   m_Layer: 5
   m_Name: LevelCompleteMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2606962066039703081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -838,7 +838,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4893083490929661739
+--- !u!114 &9079381627797535056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2606962066039703082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dee336281339ab44a599f855c7a76f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b2650a97afa6c48a07f3f669ba4686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5547018146880195011
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2606962066039703082}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2606962066039703082}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
