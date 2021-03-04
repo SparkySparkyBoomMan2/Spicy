@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class movement : MonoBehaviour
+using System;
+public class movement_tomato : MonoBehaviour
 {
+    System.Random GetRandom;
+    
     private float walk_speed = 1.0f;
     bool moveRight = true;
     public Transform wallDetect;
@@ -12,6 +14,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         runMovement();
+        Debug.Log("Rand" + GetRandom);
     }
 
     public int runMovement()

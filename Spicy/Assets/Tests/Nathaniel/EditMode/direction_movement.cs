@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -30,4 +30,4 @@ namespace Tests
             Assert.AreEqual(Vector2.right, tomato_position.y);
         }
     }
-}
+}*/

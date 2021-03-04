@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515326ebc961cb540b9a070b2fc9af38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallDetect: {fileID: 7860909187144120931}
 --- !u!114 &5604461004289396338
 MonoBehaviour:
   m_ObjectHideFlags: 0

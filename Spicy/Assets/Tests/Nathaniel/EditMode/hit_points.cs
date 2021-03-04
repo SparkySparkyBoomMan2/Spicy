@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -19,7 +19,7 @@ namespace Tests
             Debug.Log(finalHitPoints);
         }
 
-/*        [Test]
+*//*        [Test]
         public void set_hit_points_2_80()
         {
             //acting on a method
@@ -28,6 +28,7 @@ namespace Tests
             //asserting
             Assert.AreEqual(2, finalHitPoints);
             Debug.Log(finalHitPoints);
-        }*/
+        }*//*
     }
 }
+*/

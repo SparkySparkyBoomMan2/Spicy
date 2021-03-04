@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class death : MonoBehaviour
+public class death_tomato : MonoBehaviour
 {
     Animator animator;
 
