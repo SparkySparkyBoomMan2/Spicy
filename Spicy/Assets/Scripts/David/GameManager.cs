@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
         SwitchState(State.INIT);
     }
 
+    public void GameOver()
+    {
+        // When player runs out of lives and dies
+    }
+
     public void SwitchState(State newState)
     {
         EndState();
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
     void Update()
     {
         switch (_state)
