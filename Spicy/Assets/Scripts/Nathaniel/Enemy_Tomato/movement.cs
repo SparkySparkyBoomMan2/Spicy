@@ -2,40 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tomato_Enemy : MonoBehaviour
+public class movement : MonoBehaviour
 {
-    public Transform Tomato;
     private float walk_speed = 1.0f;
-    
     bool moveRight = true;
     public Transform wallDetect;
-
-    Vector2 currPosition;
-    Rigidbody2D rigidbody2d;
-
-    public Animator animator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-    }
 
     // Update is called once per frame
     void Update()
     {
-        runAnimations();
         runMovement();
     }
 
-    void runAnimations()
-    {
-        currPosition = rigidbody2d.position; //gets position for animations
-        //setting up animator
-        animator.SetFloat("Horizontal", currPosition.x);
-        animator.SetFloat("Horizontal", currPosition.y);
-        animator.SetFloat("Speed", currPosition.sqrMagnitude);
-    }
     public int runMovement()
     {
         int dirFlag = 2;
@@ -63,19 +41,5 @@ public class Tomato_Enemy : MonoBehaviour
             }
         }
         return dirFlag;
-    }
-    public void Die() //kills tomato enemy
-    {
-        animator.SetBool("isDead", false); //turns on explode animation
-        Destroy(gameObject, 1.04f); 
-    }
-
-    public void setSpeed(float spd)
-    {
-        this.walk_speed = spd;
-    }
-    public Vector2 getPosition()
-    {
-        return this.currPosition;
     }
 }

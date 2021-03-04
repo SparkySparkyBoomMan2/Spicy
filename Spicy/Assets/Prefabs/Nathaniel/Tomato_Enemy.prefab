@@ -42,9 +42,11 @@ GameObject:
   - component: {fileID: 4483985024303876602}
   - component: {fileID: 4483985024303876604}
   - component: {fileID: 4483985024303876603}
-  - component: {fileID: 4483985024303876600}
   - component: {fileID: 4483985024303876607}
   - component: {fileID: 692037879786288776}
+  - component: {fileID: 1717794428728175597}
+  - component: {fileID: 5604461004289396338}
+  - component: {fileID: -8397029108633781397}
   m_Layer: 11
   m_Name: Tomato_Enemy
   m_TagString: Enemy
@@ -164,23 +166,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4483985024303876600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483985024303876601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36becaddcb50dda4ba4e49a03ae5c44b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tomato: {fileID: 4483985024303876605}
-  walk_speed: 0.5
-  wallDetect: {fileID: 7860909187144120931}
-  currPosition: {x: 0, y: 0}
-  animator: {fileID: 4483985024303876607}
 --- !u!95 &4483985024303876607
 Animator:
   serializedVersion: 3
@@ -216,3 +201,40 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07999999
+--- !u!114 &1717794428728175597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483985024303876601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515326ebc961cb540b9a070b2fc9af38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5604461004289396338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483985024303876601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c8df17e0b1b7544b976ea6b90a2cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4483985024303876607}
+--- !u!114 &-8397029108633781397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483985024303876601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a299767a4a4e149b092398f08fc18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
