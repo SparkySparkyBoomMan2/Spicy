@@ -4,8 +4,7 @@ using UnityEngine;
 using System;
 public class movement_tomato : MonoBehaviour
 {
-    System.Random GetRandom;
-    
+    bool randBool = false;
     private float walk_speed = 1.0f;
     bool moveRight = true;
     public Transform wallDetect;
@@ -14,9 +13,16 @@ public class movement_tomato : MonoBehaviour
     void Update()
     {
         runMovement();
-        Debug.Log("Rand" + GetRandom);
     }
 
+    bool randGen()
+    {
+        if(this.randBool == false)
+        {
+
+        }
+        return randBool;
+    }
     public int runMovement()
     {
         int dirFlag = 2;
