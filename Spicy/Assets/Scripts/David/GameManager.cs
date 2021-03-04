@@ -64,6 +64,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
     }
 
+    public void Options()
+    {
+        SwitchState(State.OPTIONS);
+    }
+
+    public void LevelComplete()
+    {
+        SwitchState(State.LEVELCOMPLETED);
+    }
+
     public void SwitchState(State newState)
     {
         EndState();
@@ -82,6 +92,7 @@ public class GameManager : MonoBehaviour
                 panelMainMenu.SetActive(true);
                 break;
             case State.OPTIONS:
+                panelOptionsMenu.SetActive(true);
                 break;
             case State.INIT:
                 //panelLevelPlaying.SetActive(true);
@@ -91,11 +102,14 @@ public class GameManager : MonoBehaviour
                 SwitchState(State.LOADLEVEL);
                 break;
             case State.PLAY:
+                // Turn on panel for HUD UI stuff, i.e. if there are lives or a score, activate them now
                 break;
             case State.LEVELCOMPLETED:
                 panelLevelComplete.SetActive(true);
                 break;
             case State.LOADLEVEL:
+                // Load stuff into level -- may not need this step if we are using different scenes to house the various levels, but maybe for additional players, etc.
+                SwitchState(State.PLAY);
                 break;
             case State.GAMEOVER:
                 panelGameOver.SetActive(true);
@@ -116,6 +130,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.PLAY:
                 // if lives > 0, instantiate the player and subtract 1 life else, game over
+
                 break;
             case State.LEVELCOMPLETED:
                 break;
@@ -134,6 +149,7 @@ public class GameManager : MonoBehaviour
                 panelMainMenu.SetActive(false);
                 break;
             case State.OPTIONS:
+                panelOptionsMenu.SetActive(false);
                 break;
             case State.INIT:
                 break;

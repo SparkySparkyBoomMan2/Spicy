@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &309671852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927713694892961859, guid: 9748dc5bfd8b5d14599c4df3b95a68bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1776002412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &398030086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1020,7 @@ MonoBehaviour:
   level: 1
   panelMainMenu: {fileID: 6256478160550241047}
   panelPauseMenu: {fileID: 1541087232}
-  panelOptionsMenu: {fileID: 0}
+  panelOptionsMenu: {fileID: 309671852}
   panelLevelComplete: {fileID: 759861416}
   panelGameOver: {fileID: 932118610}
   Levels: []
