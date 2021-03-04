@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         // When player runs out of lives and dies
+        Debug.Log("Game Over");
     }
 
     public void SwitchState(State newState)
