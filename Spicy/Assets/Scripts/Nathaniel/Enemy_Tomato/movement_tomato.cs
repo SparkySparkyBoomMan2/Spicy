@@ -33,8 +33,8 @@ public class Movement_Tomato : MonoBehaviour
         RaycastHit2D groundInfo2 = Physics2D.Raycast(groundDetect2.position, Vector2.down, .01f);
 
         Debug.DrawLine(transform.position, wallDetect.position, Color.green);
-        Debug.DrawLine(transform.position, groundDetect1.position, Color.red);
-        Debug.DrawLine(transform.position, groundDetect2.position, Color.red);
+        Debug.DrawLine(transform.position, groundDetect1.position, Color.blue);
+        Debug.DrawLine(transform.position, groundDetect2.position, Color.blue);
 
         if (groundInfo1.collider == true || groundInfo2.collider == true) //trying to set only linear movement if on ground
         {
