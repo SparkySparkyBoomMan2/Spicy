@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Death_Tomato : MonoBehaviour
 {
-    public Animator anim;
+    public Animator animator;
 
     //for bullet_default to call and Tomoato Enemy dies
     public void Die() 
     {
         Debug.Log("Tomato Hit by Bullet");
-        anim.SetBool("isDead", false); //turns on explode animation
+        animator.SetBool("isDead", false); //turns on explode animation
         Destroy(gameObject, 1.04f);
         Debug.Log("Tomato Destroyed");
     }

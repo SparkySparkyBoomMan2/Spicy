@@ -40,13 +40,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4483985024303876605}
   - component: {fileID: 4483985024303876602}
-  - component: {fileID: 4483985024303876604}
   - component: {fileID: 4483985024303876603}
   - component: {fileID: 4483985024303876607}
   - component: {fileID: 692037879786288776}
-  - component: {fileID: 1717794428728175597}
-  - component: {fileID: 5604461004289396338}
-  - component: {fileID: -8397029108633781397}
+  - component: {fileID: 4683176351068681941}
+  - component: {fileID: 5885924164537205500}
+  - component: {fileID: 920807788449415339}
   m_Layer: 11
   m_Name: Tomato_Enemy
   m_TagString: Enemy
@@ -119,32 +118,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4483985024303876604
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483985024303876601}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0005278569, y: -0.06761452}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1019087, y: 0.02477096}
-  m_EdgeRadius: 0
 --- !u!50 &4483985024303876603
 Rigidbody2D:
   serializedVersion: 4
@@ -201,7 +174,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07999999
---- !u!114 &1717794428728175597
+--- !u!114 &4683176351068681941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallDetect: {fileID: 7860909187144120931}
---- !u!114 &5604461004289396338
+--- !u!114 &5885924164537205500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4483985024303876607}
---- !u!114 &-8397029108633781397
+--- !u!114 &920807788449415339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,4 +212,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a299767a4a4e149b092398f08fc18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 4483985024303876607}
+  animator: {fileID: 4483985024303876607}
