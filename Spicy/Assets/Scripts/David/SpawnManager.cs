@@ -166,7 +166,7 @@ public class SpawnManager : MonoBehaviour
     {
         // This will eventually pull up a cool UI screen that says you won and give you the option to go back to the map, repeat, or quit the game.
         // For now, it will just take you back to the main menu
-        //GameManager.instance.panelLevelComplete.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        GameManager.instance.LevelComplete();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
