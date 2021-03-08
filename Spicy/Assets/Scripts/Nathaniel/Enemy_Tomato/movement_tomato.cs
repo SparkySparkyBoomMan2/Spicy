@@ -2,29 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class Movement_Tomato : MonoBehaviour
+public class movement_tomato : MonoBehaviour
 {
-    bool randBool = false;
+
     private float walk_speed = 1.0f;
     bool moveRight = true;
     public Transform wallDetect;
     public Transform groundDetect1;
     public Transform groundDetect2;
-    Vector2 castDown = new Vector2(0, -2);
+
+
     // Update is called once per frame
     void Update()
     {
         runMovement();
     }
 
-    bool randGen()
-    {
-        if(this.randBool == false)
-        {
-             
-        }
-        return randBool;
-    }
+
     public int runMovement()
     {
         int dirFlag = 2;
