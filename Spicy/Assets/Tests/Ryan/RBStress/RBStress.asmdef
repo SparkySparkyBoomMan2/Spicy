@@ -2,7 +2,9 @@
     "name": "RBStress",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "RBScripts",
+        "DWScripts"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

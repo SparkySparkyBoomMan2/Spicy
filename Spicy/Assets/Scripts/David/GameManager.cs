@@ -239,4 +239,9 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public State GetState()
+    {
+        return _state;
+    }
 }
