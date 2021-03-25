@@ -13,7 +13,7 @@ namespace Tests
         public IEnumerator left()
         {
 
-            yield return 100;
+            yield return null;
 
             GameObject tomato = GameObject.FindWithTag("Enemy");
             Assert.That(tomato.transform.position.y > -9.75);
@@ -23,7 +23,7 @@ namespace Tests
         public IEnumerator right()
         {
 
-            yield return 100;
+            yield return null;
 
             GameObject tomato = GameObject.FindWithTag("Enemy");
             Assert.That(tomato.transform.position.y < 27.75);
