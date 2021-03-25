@@ -19,7 +19,7 @@ public class death_tomato : MonoBehaviour
     //for damage against player
 /*    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Collide with Enemy");
             DamagePlayer(collision);
