@@ -1,28 +1,56 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
 namespace Tests
 {
     public class spawn_too_many_enemies
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void spawn_too_many_enemiesSimplePasses()
+        [OneTimeSetUp]
+        public void LoadScene()
         {
-            // Use the Assert class to test conditions
+            SceneManager.LoadScene("SampleScene");
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
+        // Spawns a basic enemy and passes a frame.
+        // Does this until count X is reached or failure.
         [UnityTest]
-        public IEnumerator spawn_too_many_enemiesWithEnumeratorPasses()
+        public IEnumerator spawn_an_enemy_every_frame()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+
+
+            GameObject spawn1 = GameObject.FindGameObjectWithTag("Spawner");
+            Spawner spawner = spawn1.AddComponent<Spawner>();
+
+            GameObject tomato1 = GameObject.FindGameObjectWithTag("Enemy");
+
+            yield return new WaitForSeconds(1f);
+
+            //GameObject spawnerGameObject = new GameObject(name: "Spawner");
+            //Spawner spawner = spawnerGameObject.AddComponent<Spawner>();
+
+            //GameObject tomatoGameObject = new GameObject(name: "Tomato_Enemy");
+            //Tomato_Enemy = tomatoGameObject.AddComponent<Tomato_Enemy>();
+
+            //spawner.spawnableObjects[0] = tomato1;
+
+            int count = 0;
+            int total = 100;
+
+            spawner.transform.position = new Vector3(16, 10);
+
+            while (count < total)
+            {
+                spawner.Spawn(0);
+                count++;
+                yield return null;
+            }
+
+            Assert.IsTrue(count == total);
         }
     }
 }

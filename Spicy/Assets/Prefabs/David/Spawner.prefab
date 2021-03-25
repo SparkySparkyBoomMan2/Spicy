@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnableObjects:
-  - {fileID: 1869400104828105284, guid: 039dd189388f3b84a941b8b1918fdf78, type: 3}
-  parent: {fileID: 439587035345558247}
+  - {fileID: 4483985024303876601, guid: e9f5b13c00c269b4387eefaf26329a90, type: 3}

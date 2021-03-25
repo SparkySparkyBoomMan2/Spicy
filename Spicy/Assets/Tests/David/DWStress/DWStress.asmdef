@@ -3,7 +3,10 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "DWScripts"
+        "DWScripts",
+        "NpScript",
+        "DWPrefabs",
+        "NPPrefabs"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
