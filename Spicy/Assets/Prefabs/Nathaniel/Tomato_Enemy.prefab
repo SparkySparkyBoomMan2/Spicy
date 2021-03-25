@@ -74,8 +74,8 @@ GameObject:
   - component: {fileID: 4483985024303876607}
   - component: {fileID: 692037879786288776}
   - component: {fileID: 4683176351068681941}
-  - component: {fileID: 5885924164537205500}
   - component: {fileID: 920807788449415339}
+  - component: {fileID: 7998202231638326948}
   m_Layer: 11
   m_Name: Tomato_Enemy
   m_TagString: Enemy
@@ -221,19 +221,6 @@ MonoBehaviour:
   wallDetect: {fileID: 7860909187144120931}
   groundDetect1: {fileID: 1604753375322480967}
   groundDetect2: {fileID: 5680460460632740056}
---- !u!114 &5885924164537205500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483985024303876601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c8df17e0b1b7544b976ea6b90a2cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4483985024303876607}
 --- !u!114 &920807788449415339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +231,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24a299767a4a4e149b092398f08fc18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4483985024303876607}
+--- !u!114 &7998202231638326948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483985024303876601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c8df17e0b1b7544b976ea6b90a2cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4483985024303876607}

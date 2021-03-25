@@ -8,6 +8,6 @@ public class Death_Player : MonoBehaviour
     public void DiePlayer()
     {
         //Destroy(gameObject);
-        GameManager.instance.KillPlayer(gameObject);
+        //GameManager.instance.KillPlayer(gameObject);
     }
 }
