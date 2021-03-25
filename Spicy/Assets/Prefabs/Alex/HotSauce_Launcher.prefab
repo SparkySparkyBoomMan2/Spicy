@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1444885136}
   m_Layer: 11
   m_Name: HotSauce_Launcher
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
   gunRenderer: {fileID: 7475860667037709688}
   animator: {fileID: 1444885136}
   FireRateDelay: 1
-  ReloadTime: 1
 --- !u!95 &1444885136
 Animator:
   serializedVersion: 3

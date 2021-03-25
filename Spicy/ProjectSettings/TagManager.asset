@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - PauseUI
   - Player Spawn Location
+  - Gun
   layers:
   - Default
   - TransparentFX

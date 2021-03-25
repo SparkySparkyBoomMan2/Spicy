@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7674985327931419105}
   m_Layer: 10
   m_Name: gun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,4 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 257013681698751668, guid: 37da14cf3b479d045bd5c6ebe130d2b2, type: 3}
   gunRenderer: {fileID: 7998353565377808573}
+  animator: {fileID: 0}
   FireRateDelay: 0.5

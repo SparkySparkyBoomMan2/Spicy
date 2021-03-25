@@ -21,7 +21,7 @@ public class bullet_default : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
+        //Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
        
         if (other.gameObject.tag == "Enemy")
@@ -49,6 +49,7 @@ public class bullet_default : MonoBehaviour
     void DamageEnemy(Collision2D other)
     {
         death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
+        
         
         if (enemy != null)
         {

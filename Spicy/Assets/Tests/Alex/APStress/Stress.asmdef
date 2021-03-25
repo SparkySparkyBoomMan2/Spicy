@@ -2,7 +2,10 @@
     "name": "APStress",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "APTestingRef",
+        "NpScript",
+        "NPPrefabs"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
