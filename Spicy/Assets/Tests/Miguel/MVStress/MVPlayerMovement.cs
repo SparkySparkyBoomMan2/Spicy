@@ -21,13 +21,22 @@ namespace Tests
         [UnityTest]
         public IEnumerator DashOutOfBounds()
         {
+            float dashSpeed = 1f;
+            int i = 0;
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
             GameObject player = GameObject.Find("Player");
-            player.GetComponent<Movement>().dashSpeed = 10000;
-            player.GetComponent<Movement>().Dash(0, -1);  // Dash Down
-            yield return 60;
-            Assert.IsTrue(player.transform.position.y > -6);
+            while (i< 1000)
+            {
+                player.GetComponent<Movement>().dashSpeed = dashSpeed;
+                player.GetComponent<Movement>().Dash(0, -1);  // Dash Down
+                yield return 60;
+                Assert.IsTrue(player.transform.position.y > -6);
+                dashSpeed = 2 * dashSpeed;
+                Debug.Log("Dash Speed: " + dashSpeed);
+                Debug.Log("Loop Count: " + i);
+                i++;
+            }
         }
     }
 }

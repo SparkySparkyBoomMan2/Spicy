@@ -47,7 +47,7 @@ namespace Tests
             {
                 //eventually will stop if nothing happens, test is good
                 get { 
-                    return frameCount > 800; 
+                    return frameCount > 400; 
                     }
             }
 

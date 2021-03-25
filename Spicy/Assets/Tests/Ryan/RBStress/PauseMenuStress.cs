@@ -35,18 +35,17 @@ namespace Tests
             }
             
             GameObject menuTraverse = GameObject.FindWithTag("GameController");
-            //Need to get state information
-            menuTraverse.GetComponent<GameManager>().SwitchState(GameManager.State.PAUSE);
-            yield return null; //Minimal frame skip -> highest stress possible
-            Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PAUSE);
-            menuTraverse.GetComponent<GameManager>().Resume();
-            yield return null; //Minimal frame skip -> highest stress possible
-            Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PLAY);
-            // menuTraverse.GetComponent<GameManager>().Resume();
-            // Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PLAY);
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-
+                //Need to get state information
+                menuTraverse.GetComponent<GameManager>().SwitchState(GameManager.State.PAUSE);
+                yield return null; //Minimal frame skip -> highest stress possible
+                Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PAUSE);
+                menuTraverse.GetComponent<GameManager>().Resume();
+                yield return null; //Minimal frame skip -> highest stress possible
+                Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PLAY);
+                // menuTraverse.GetComponent<GameManager>().Resume();
+                // Assert.IsTrue(menuTraverse.GetComponent<GameManager>().GetState() == GameManager.State.PLAY);
+                // Use the Assert class to test conditions.
+                // Use yield to skip a frame.
         }
 
         /*[UnityTest]
