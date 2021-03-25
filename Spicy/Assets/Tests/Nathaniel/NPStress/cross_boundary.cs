@@ -3,31 +3,27 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-
+using UnityEngine.SceneManagement;
 namespace Tests
 {
     public class cross_boundary
     {
-
-        [UnityTest]
-        public IEnumerator left()
+        [OneTimeSetUp]
+        public void LoadScene()
         {
-
-            yield return null;
-
-            GameObject tomato = GameObject.FindWithTag("Enemy");
-            Assert.That(tomato.transform.position.y > -9.75);
-            Debug.Log("Left Test");
+            SceneManager.LoadScene("TestNP");
         }
         [UnityTest]
-        public IEnumerator right()
+        public IEnumerator beyondBorder()
         {
-
-            yield return null;
-
             GameObject tomato = GameObject.FindWithTag("Enemy");
-            Assert.That(tomato.transform.position.y < 27.75);
-            Debug.Log("Right Test");
+            GameObject ground = GameObject.FindWithTag("Ground");
+            tomato.GetComponent<movement_tomato>().walk_speed = 10f;
+
+            yield return new WaitForSeconds(1f);
+
+            Assert.IsTrue(tomato.transform.position.y > -9.75);
+            Debug.Log("Left Test");
         }
     }
 }
