@@ -13,11 +13,11 @@ public class Movement : MonoBehaviour
 
     [Space]
     [Header("Stats")]
-    public float speed = 10;
-    public float jumpForce = 50;
-    public float slideSpeed = 5;
-    public float wallJumpLerp = 10;
-    public float dashSpeed = 20;
+    public float speed = 8;
+    public float jumpForce = 17;
+    public float slideSpeed = 1;
+    public float wallJumpLerp = 5;
+    public float dashSpeed = 60;
 
     [Space]
     [Header("Booleans")]
@@ -165,7 +165,7 @@ public class Movement : MonoBehaviour
         jumpParticle.Play();
     }
 
-    private void Dash(float x, float y)
+    public void Dash(float x, float y)
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
