@@ -5,7 +5,7 @@ using System;
 public class movement_tomato : MonoBehaviour
 {
 
-    private float walk_speed = 1.0f;
+    public float walk_speed = 1.0f;
     bool moveRight = true;
     public Transform wallDetect;
     public Transform groundDetect1;
