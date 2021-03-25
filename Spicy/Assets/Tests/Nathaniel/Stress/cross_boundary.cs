@@ -16,7 +16,7 @@ namespace Tests
             yield return 100;
 
             GameObject tomato = GameObject.FindWithTag("Enemy");
-            Assert.That(tomato.transform.position.x > -9.75);
+            Assert.That(tomato.transform.position.y > -9.75);
             Debug.Log("Left Test");
         }
         [UnityTest]
@@ -26,7 +26,7 @@ namespace Tests
             yield return 100;
 
             GameObject tomato = GameObject.FindWithTag("Enemy");
-            Assert.That(tomato.transform.position.x < 27.75);
+            Assert.That(tomato.transform.position.y < 27.75);
             Debug.Log("Right Test");
         }
     }
