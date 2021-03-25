@@ -4,6 +4,8 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
+using System.Threading;
+
 namespace Tests
 {
     public class cross_boundary
@@ -11,19 +13,32 @@ namespace Tests
         [OneTimeSetUp]
         public void LoadScene()
         {
-            SceneManager.LoadScene("TestNP");
+            SceneManager.LoadScene("SampleScene");
         }
         [UnityTest]
         public IEnumerator beyondBorder()
         {
+            float speed = 1f;
+            bool borderBreak = false;
             GameObject tomato = GameObject.FindWithTag("Enemy");
-            GameObject ground = GameObject.FindWithTag("Ground");
-            tomato.GetComponent<movement_tomato>().walk_speed = 10f;
+            //tomato.GetComponent<movement_tomato>().walk_speed = speed;
 
+            while (speed < 10000)
+            {
+                tomato.GetComponent<movement_tomato>().walk_speed = speed;
+                if (tomato.transform.position.x < -3 | tomato.transform.position.x > 3)
+                {
+                    borderBreak = true;
+                    break;
+                }
+                speed++;
+                Thread.Sleep(1000);
+            }
+            Debug.Log("Speed break at:" + speed);
             yield return new WaitForSeconds(1f);
 
-            Assert.IsTrue(tomato.transform.position.y > -9.75);
-            Debug.Log("Left Test");
+            Assert.IsTrue(borderBreak);
+            
         }
     }
 }
