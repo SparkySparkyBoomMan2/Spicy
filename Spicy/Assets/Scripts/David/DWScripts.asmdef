@@ -1,14 +1,15 @@
 {
-    "name": "NpScript",
+    "name": "DWScripts",
     "references": [
-        "GUID:d64516cf171c53a45a40d077288d82f5"
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
+    "overrideReferences": true,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

@@ -2,7 +2,8 @@
     "name": "DWStress",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "DWScripts"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
