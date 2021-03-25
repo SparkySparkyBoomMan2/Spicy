@@ -1,5 +1,5 @@
 {
-    "name": "EditMode",
+    "name": "NPEditMode",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",

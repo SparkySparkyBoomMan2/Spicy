@@ -1,5 +1,5 @@
 {
-    "name": "Stress",
+    "name": "NPStress",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
