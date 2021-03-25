@@ -9,21 +9,24 @@ using System.Threading;
 namespace Tests
 {
     public class cross_boundary
-    {        
+    {   
+        //loads in the scene
         [OneTimeSetUp]
         public void LoadScene()
         {
             SceneManager.LoadScene("SampleScene");
         }
+
+        //used to test each speed
         [UnityTest]
         public IEnumerator speed_001f()
         {
             float speed = 1f;
 
-            GameObject tomato = GameObject.FindWithTag("Enemy");
-            tomato.transform.position = new Vector2(1.5f, -4f);
-            tomato.GetComponent<Rigidbody2D>().MovePosition(tomato.transform.position);
-            tomato.GetComponent<movement_tomato>().walk_speed = speed;
+            GameObject tomato = GameObject.FindWithTag("Enemy"); //grabs tomato object
+            tomato.transform.position = new Vector2(1.5f, -4f); //sets tomato vector position to new spot
+            tomato.GetComponent<Rigidbody2D>().MovePosition(tomato.transform.position); //moves tomato to position
+            tomato.GetComponent<movement_tomato>().walk_speed = speed; //set speed
 
             Debug.Log("Speed break at:" + speed);
             yield return new WaitForSeconds(2f);
