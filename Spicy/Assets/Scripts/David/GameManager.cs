@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        level -= 1;
+        level = 0;  // On reset, doesn't change build index number so loads same scene over without errors
         SwitchState(State.INIT);
     }
 
@@ -75,12 +75,13 @@ public class GameManager : MonoBehaviour
     public void KillPlayer(GameObject player)
     {
         Transform playerTransform = player.transform;
-        Destroy(player);
+        //Destroy(player);
+        player.SetActive(false);
         lives -= 1;
         Debug.Log("Lives remaining: " + lives);
         if (lives >= 0 && !isRespawning)
         {
-            StartCoroutine(Respawn(playerTransform));
+            StartCoroutine(Respawn(player));
         }
         else
         {
@@ -88,12 +89,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator Respawn(Transform transform)
+    public IEnumerator Respawn(GameObject player)
     {
         isRespawning = true;
         yield return new WaitForSeconds(respawnDelay);
-        GameObject newPlayer = Instantiate(Player, transform);
-        newPlayer.transform.parent = null;
+        // Respawn animation
+        // Temporary invincibility | Explosion killing nearby enemies within a certain radius
+        player.SetActive(true);
+        //GameObject newPlayer = Instantiate(Player, transform);
+        //newPlayer.transform.parent = null;
         isRespawning = false;
     }
 
@@ -137,6 +141,7 @@ public class GameManager : MonoBehaviour
             case State.MENU:
                 if (SceneManager.GetActiveScene().buildIndex != 0)
                 {
+                    level = 1;  // Resets level to 1 for selecting level to play (while only have levels playing in predetermined order)
                     SceneManager.LoadScene(0);
                 }
                 panelMainMenu.SetActive(true);
