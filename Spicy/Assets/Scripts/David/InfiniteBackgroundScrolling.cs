@@ -5,8 +5,9 @@ using UnityEngine;
 public class InfiniteBackgroundScrolling : MonoBehaviour
 {
     private float xLength, xStartPosition;
-    private float yLength, yStartPosition;
+    //private float yLength, yStartPosition;
     public float speed;
+    public int offset;
 
     void Start()
     {
@@ -15,12 +16,16 @@ public class InfiniteBackgroundScrolling : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.position = new Vector2(Mathf.Repeat(Time.deltaTime, speed), transform.position.y);
+        //transform.position = new Vector2(xStartPosition + Time.time * speed, transform.position.y);
 
+        transform.position = new Vector2(Mathf.Repeat(Time.time * speed, xLength) + offset * xLength, transform.position.y);
 
-
-        
+        //if (transform.position.x > xStartPosition + xLength)
+        //{
+        //    Vector2 offset = new Vector2(xLength * 3f, 0);
+       //     transform.position = (Vector2)transform.position - offset;
+        //}     
     }
 }
