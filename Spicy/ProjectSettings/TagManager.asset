@@ -48,11 +48,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: FarBackground
+    uniqueID: 1178059929
+    locked: 0
   - name: Background
     uniqueID: 833598607
     locked: 0
+  - name: Platform
+    uniqueID: 1021975319
+    locked: 0
   - name: Player
     uniqueID: 81802759
+    locked: 0
+  - name: Enemies
+    uniqueID: 2653186341
     locked: 0
   - name: Guns
     uniqueID: 2163429195

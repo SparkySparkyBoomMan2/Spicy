@@ -136,8 +136,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1641780955
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: befcb3595e6394c4b9ac18694538949c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515326ebc961cb540b9a070b2fc9af38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walk_speed: 1
   wallDetect: {fileID: 7860909187144120931}
   groundDetect1: {fileID: 1604753375322480967}
   groundDetect2: {fileID: 5680460460632740056}
