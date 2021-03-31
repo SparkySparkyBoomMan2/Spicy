@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    private int screenWidth = 360;
+    private int screenHeight = 240;
+
     // This class controls things like:
     // - UI Elements such as score
     // - Lives
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Screen.SetResolution(screenWidth, screenHeight, true);
+
         DontDestroyOnLoad(this.gameObject);
     }
     
@@ -77,8 +82,8 @@ public class GameManager : MonoBehaviour
         Transform playerTransform = player.transform;
         //Destroy(player);
         player.SetActive(false);
-        lives -= 1;
         Debug.Log("Lives remaining: " + lives);
+        lives -= 1;
         if (lives >= 0 && !isRespawning)
         {
             StartCoroutine(Respawn(player));

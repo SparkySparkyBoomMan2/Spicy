@@ -53,7 +53,7 @@ public class bullet_default : MonoBehaviour
         
         if (enemy != null)
         {
-            Debug.Log(enemy.name);
+            //Debug.Log(enemy.name);
             enemy.Die();
         }
     }

@@ -9,10 +9,10 @@ public class death_tomato : MonoBehaviour
     //for bullet_default to call and Tomoato Enemy dies
     public void Die() 
     {
-        Debug.Log("Tomato Hit by Bullet");
+        //Debug.Log("Tomato Hit by Bullet");
         animator.SetBool("isDead", false); //turns on explode animation
         Destroy(gameObject, 1.04f);
-        Debug.Log("Tomato Destroyed");
+        //Debug.Log("Tomato Destroyed");
     }
 
 
@@ -21,9 +21,9 @@ public class death_tomato : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Collide with Enemy");
+            //Debug.Log("Collide with Enemy");
             DamagePlayer(collision);
-            Debug.Log("Damage Player called");
+            //Debug.Log("Damage Player called");
         }
     }
     //Handles killing player
@@ -33,7 +33,7 @@ public class death_tomato : MonoBehaviour
 
         if (player != null)
         {
-            Debug.Log(player.name);
+            //Debug.Log(player.name);
             player.DiePlayer();
         }
     }

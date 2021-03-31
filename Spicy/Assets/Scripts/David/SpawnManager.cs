@@ -94,7 +94,7 @@ public class SpawnManager : MonoBehaviour
     // Alternatively, will need to pass off some of this functionality to the Spawner.cs script instead and let it handle spawning
     IEnumerator SpawnWave(Wave _wave)
     {
-        Debug.Log("Spawning " + _wave.name);
+        //Debug.Log("Spawning " + _wave.name);
         spawnState = SpawnState.SPAWNING;
 
         // For each wave within the level. . .

@@ -65,7 +65,7 @@ public class gun_default : MonoBehaviour
     public IEnumerator FireGun()
     {
         AllowFire = false;
-        Debug.Log("FIring gun");
+        //Debug.Log("FIring gun");
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, rot.z + 90);
