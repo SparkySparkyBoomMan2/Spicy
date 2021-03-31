@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    private int screenWidth = 360;
-    private int screenHeight = 240;
+    //private int screenWidth = 360;
+    //private int screenHeight = 240;
 
     // This class controls things like:
     // - UI Elements such as score
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Screen.SetResolution(screenWidth, screenHeight, true);
+        //Screen.SetResolution(screenWidth, screenHeight, true);
 
         DontDestroyOnLoad(this.gameObject);
     }
