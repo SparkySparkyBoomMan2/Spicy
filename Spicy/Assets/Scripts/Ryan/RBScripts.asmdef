@@ -1,7 +1,8 @@
 {
     "name": "RBScripts",
     "references": [
-        "GUID:d64516cf171c53a45a40d077288d82f5"
+        "GUID:d64516cf171c53a45a40d077288d82f5",
+        "GUID:efa45043feb7e4147a305b73b5cea642"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

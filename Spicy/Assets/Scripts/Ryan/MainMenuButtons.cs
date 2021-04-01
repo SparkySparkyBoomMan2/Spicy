@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    //private GameObject demoMutator;
+
     public void PlayGame()
     {
+        //demoMutator = GameObject.Find("DemoManager");
+        //demoMutator.GetComponent<DemoManager>().disableDemoFunc();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         GameManager.instance.PlayGame();
+        
     }
 
     public void Options()
