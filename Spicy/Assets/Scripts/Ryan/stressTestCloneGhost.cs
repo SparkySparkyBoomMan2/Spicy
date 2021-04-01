@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class cloneGhost : MonoBehaviour
+public class stressTestCloneGhost : MonoBehaviour
 {
     private GameObject ghost;
     private GameObject[] ghostList;
@@ -34,14 +34,6 @@ public class cloneGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        framerate = (int)(1f / Time.smoothDeltaTime);
-        //Conditional prints log at around 2800-2900 ghosts instantiated
-        if(framerate <= 10)
-        {
-            Debug.Log("FPS Unplayable threshold found at count: " + ghostCount);
-            //Debug.Log("FPS: " + framerate);
-        }
-
 
         //Tried this error condition with thousands of ghosts (5000+). Did not print the else condition ever, even
         //though there were clearly path destinations that were not equal when inspecting scene view in runtime.
@@ -49,17 +41,25 @@ public class cloneGhost : MonoBehaviour
         {
             ithTarget = ghostList[i].GetComponent<AIDestinationSetter>().target;
 
-            if (ithTarget.position == ghostList[0].GetComponent<AIDestinationSetter>().target.position)
-            {
-                //Debug.Log(ithTarget.position);
-            }
-            else
+            if (ithTarget.position != ghostList[0].GetComponent<AIDestinationSetter>().target.position)
             {
                 Debug.Log("Conflicting paths found.");
             }
+            else
+            {
+                Debug.Log(ithTarget.position);
+            }
             
         }
-        
+
+        framerate = (int)(1f / Time.smoothDeltaTime);
+        //Conditional prints log at around 2800-2900 ghosts instantiated
+        if (framerate <= 10)
+        {
+            Debug.Log("FPS Unplayable threshold found at count: " + ghostCount);
+            //Debug.Log("FPS: " + framerate);
+        }
+
     }
 
     //This crashes Unity
