@@ -14,6 +14,9 @@ public class gun_default : MonoBehaviour
      private bool AllowFire;
      private bool isReloading;
 
+     private float startTime;
+
+
     void Start()
     {
         AllowFire = true;
@@ -25,8 +28,20 @@ public class gun_default : MonoBehaviour
     {
         AimGun();
 
-        if (Input.GetMouseButton(0) && AllowFire && !isReloading)
+        if (Input.GetMouseButton(0))
+        {
+            Debug.Log("Trying to fire, and AllowFire == ["+ AllowFire + "] --- isReloading: " + isReloading);
+            Debug.Log("Time: " + Time.time + " ----- startTime: " + startTime);
+            if ((!AllowFire || isReloading) && Time.time - startTime > 5) 
+            {
+                AllowFire = true;
+                isReloading = false;
+            }
+        }
+
+        if (Input.GetMouseButton(0) && AllowFire &&!isReloading)
         {  
+            startTime = Time.time;  
             StartCoroutine(FireGun());
         }
         else if (Input.GetKey(KeyCode.R))
