@@ -11,10 +11,10 @@ public class gun_default : MonoBehaviour
    
     //AllowFire - when true, the gun is allowed to fire
     //isReloading - when true, gun is reloading
-     private bool AllowFire;
-     private bool isReloading;
+     protected bool AllowFire;
+     protected bool isReloading;
 
-    private float startTime;
+    protected float startTime;
 
 
     void Start()
@@ -77,7 +77,7 @@ public class gun_default : MonoBehaviour
     //Coroutine to "shoot" gun
     // * new bullet is instantiated
     // * fire rate is used to wait between shots
-    public IEnumerator FireGun()
+    public virtual IEnumerator FireGun()
     {
         AllowFire = false;
         //Debug.Log("FIring gun");
@@ -93,14 +93,14 @@ public class gun_default : MonoBehaviour
     //Coroutine to reload gun
     // * sets a parameter of the attatched animator to true (play animation)
     // * waits for animation to complete, then sets it to false
-    IEnumerator Reload()
+    public virtual IEnumerator Reload()
     {
-        isReloading = true;
-        animator.SetBool("isLauncherReload", true);
-        yield return new WaitForSeconds(1f);
-        animator.SetBool("isLauncherReload", false);
+        //isReloading = true;
+        //animator.SetBool("isLauncherReload", true);
+        //yield return new WaitForSeconds(1f);
+        //animator.SetBool("isLauncherReload", false);
         yield return new WaitForSeconds(.5f);
-        isReloading = false;
+        //isReloading = false;
     }
 
     

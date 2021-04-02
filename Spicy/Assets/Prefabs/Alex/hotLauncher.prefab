@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1807186157083217980}
   - component: {fileID: 1807186157083217971}
   - component: {fileID: 3269894328299155873}
-  - component: {fileID: 9127667892781127643}
+  - component: {fileID: 7061515565371469132}
   m_Layer: 11
   m_Name: test_Launcher
   m_TagString: Gun
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807186157083217981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009, y: -0.029, z: 0}
-  m_LocalScale: {x: 0.4387685, y: 0.40355912, z: 4.768188}
+  m_LocalPosition: {x: -0.175, y: -0.08, z: 0}
+  m_LocalScale: {x: 0.23440282, y: 0.21559295, z: 2.547304}
   m_Children:
   - {fileID: 5647873613544856202}
   m_Father: {fileID: 0}
@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: -2131538101
   m_SortingLayer: 6
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 6f4b63885b09a02489456ed95365dc86, type: 3}
+  m_Sprite: {fileID: -5197663279748844479, guid: f099eef15df0b2347a90538df2ebc500,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!114 &3269894328299155873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2541481239415706479, guid: 05169a77b04e0764baac2b44a7164725, type: 3}
   gunRenderer: {fileID: 1807186157083217971}
-  animator: {fileID: 9127667892781127643}
+  animator: {fileID: 7061515565371469132}
   FireRateDelay: 1
---- !u!95 &9127667892781127643
+--- !u!95 &7061515565371469132
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -110,7 +111,7 @@ Animator:
   m_GameObject: {fileID: 1807186157083217981}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42e1cfdf2a1c0f947813e6620aa7d829, type: 2}
+  m_Controller: {fileID: 9100000, guid: e19aa16df2501eb4784fd3589be1aa3b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -143,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987708878413298776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.38, y: -0.4, z: -86.71997}
+  m_LocalPosition: {x: 3.41, y: 0.169, z: -86.71997}
   m_LocalScale: {x: 11.491775, y: 12.4944, z: 10.574724}
   m_Children: []
   m_Father: {fileID: 1807186157083217980}
