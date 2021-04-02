@@ -14,7 +14,7 @@ public class gun_default : MonoBehaviour
      private bool AllowFire;
      private bool isReloading;
 
-     private float startTime;
+    private float startTime;
 
 
     void Start()
