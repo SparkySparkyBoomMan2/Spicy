@@ -11,14 +11,10 @@ namespace Tests
         [Test]
         public void isSpeed1f()
         {
-            bool isSpeedTrue = false;
+            float sp = 1.0f;
             GameObject tomato = GameObject.FindWithTag("Enemy"); //grabs tomato object
-            if(tomato.GetComponent<movement_tomato>().walk_speed == 1f)
-            {
-                isSpeedTrue = true;
-            }
 
-            Assert.IsTrue(isSpeedTrue);
+            Assert.That(tomato.GetComponent<movement_tomato>().walk_speed == sp);
         }
     }
 }
