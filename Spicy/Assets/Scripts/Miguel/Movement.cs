@@ -150,6 +150,17 @@ public class Movement : MonoBehaviour
                 /*if (coll.onWall && !coll.onGround)
                     WallJump();*/
             }
+
+
+            //If screen is double-tapped
+            foreach (var touch in Input.touches)
+            {
+                if (touch.tapCount == 2 && !hasDashed)  // Changed to Shift
+                {
+                    if(xRaw != 0 || yRaw != 0)
+                        Dash(xRaw, yRaw);
+                }
+            }
         }
 
        
