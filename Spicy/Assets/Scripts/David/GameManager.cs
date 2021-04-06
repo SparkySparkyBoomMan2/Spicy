@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SwitchState(State.MENU);
+        
     }
 
     // This function is the equivalent of the "MainMenuButtons.cs" PlayGame function. Get the functionality over there
