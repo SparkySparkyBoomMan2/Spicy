@@ -52,10 +52,20 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        float xRaw = Input.GetAxisRaw("Horizontal");
-        float yRaw = Input.GetAxisRaw("Vertical");
+        float x, y, xRaw, yRaw;
+        if (SystemInfo.deviceType == DeviceType.Desktop) 
+        {
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
+            xRaw = Input.GetAxisRaw("Horizontal");
+            yRaw = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            xRaw = x = Input.acceleration.x;
+            yRaw = y = Input.acceleration.y;
+        }
+        
         Vector2 dir = new Vector2(x, y);
 
         Walk(dir);
