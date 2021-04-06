@@ -39,14 +39,30 @@ public class gun_default : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && AllowFire &&!isReloading)
-        {  
-            startTime = Time.time;  
-            StartCoroutine(FireGun());
-        }
-        else if (Input.GetKey(KeyCode.R))
+        // Added check for if the platform is mobile
+        if (SystemInfo.deviceType == DeviceType.Desktop)
         {
-            StartCoroutine(Reload());
+            if (Input.GetMouseButton(0) && AllowFire &&!isReloading)
+            {  
+                startTime = Time.time;  
+                StartCoroutine(FireGun());
+            }
+            else if (Input.GetKey(KeyCode.R))
+            {
+                StartCoroutine(Reload());
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButton(0) && AllowFire &&!isReloading && Input.touchCount == 1)
+            {  
+                startTime = Time.time;  
+                StartCoroutine(FireGun());
+            }
+            else if (Input.GetKey(KeyCode.R))
+            {
+                StartCoroutine(Reload());
+            }
         }
 
     }

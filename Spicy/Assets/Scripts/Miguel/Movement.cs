@@ -53,6 +53,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         float x, y, xRaw, yRaw;
+        // Added check for if the platform is mobile
         if (SystemInfo.deviceType == DeviceType.Desktop) 
         {
             x = Input.GetAxis("Horizontal");
@@ -118,22 +119,40 @@ public class Movement : MonoBehaviour
         if (!coll.onWall || coll.onGround)
             wallSlide = false;
 
-        if (Input.GetButtonDown("Jump"))
+        // Added check for if the platform is mobile
+        if (SystemInfo.deviceType == DeviceType.Desktop)
         {
-            anim.SetTrigger("jump");
+            if (Input.GetButtonDown("Jump"))
+            {
+                anim.SetTrigger("jump");
 
-            if (coll.onGround)
-                Jump(Vector2.up, false);
-            /*if (coll.onWall && !coll.onGround)
-                WallJump();*/
+                if (coll.onGround)
+                    Jump(Vector2.up, false);
+                /*if (coll.onWall && !coll.onGround)
+                    WallJump();*/
+            }
+
+            /*if (Input.GetButtonDown("Fire1") && !hasDashed) */
+            if (Input.GetButtonDown("Fire3") && !hasDashed)  // Changed to Shift
+            {
+                if(xRaw != 0 || yRaw != 0)
+                    Dash(xRaw, yRaw);
+            }
+        }
+        else
+        {
+            if (Input.touchCount > 1 )//&& Input.touches[0].phase == TouchPhase.Began)
+            {
+                anim.SetTrigger("jump");
+
+                if (coll.onGround)
+                    Jump(Vector2.up, false);
+                /*if (coll.onWall && !coll.onGround)
+                    WallJump();*/
+            }
         }
 
-        /*if (Input.GetButtonDown("Fire1") && !hasDashed) */
-        if (Input.GetButtonDown("Fire3") && !hasDashed)  // Changed to Shift
-        {
-            if(xRaw != 0 || yRaw != 0)
-                Dash(xRaw, yRaw);
-        }
+       
 
         if (coll.onGround && !groundTouch)
         {
