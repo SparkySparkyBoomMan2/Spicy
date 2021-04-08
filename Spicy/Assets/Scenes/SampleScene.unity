@@ -253,46 +253,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: VelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1.0000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.alignToDirection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.randomDirectionAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
-        type: 3}
-      propertyPath: ShapeModule.sphericalDirectionAmount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c370d2003c43d8428b3d1a9eca9bb0e, type: 3}
 --- !u!1 &282990299

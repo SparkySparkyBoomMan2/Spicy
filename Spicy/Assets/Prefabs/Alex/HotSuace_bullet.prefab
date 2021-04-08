@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1192404989213313513}
-  BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
+  BulletExplode: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
     type: 3}
   BulletSpeed: 13
   Damage: 50
