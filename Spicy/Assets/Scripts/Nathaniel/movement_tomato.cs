@@ -7,23 +7,36 @@ public class movement_tomato : MonoBehaviour
 
     public float walk_speed = 1.0f;
     bool moveRight = true;
+    bool isDeath = false;
     System.Random random = new System.Random();
     int randVal;
     public Transform wallDetectRight;
     public Transform wallDetectLeft;
     public Transform groundDetect1;
     public Transform groundDetect2;
+    Rigidbody2D rigidbody2d;
+
 
     private void Start()
     {
         randVal = random.Next(2);
         Debug.Log("RandVal " + randVal);
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
     {
-
-        runMovement();
+        if(isDeath == false)
+        {
+            runMovement();
+        }
+        else
+        {
+            rigidbody2d.isKinematic = true;
+            rigidbody2d.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation; 
+            Debug.Log("Frozen should work.");
+        }
+        
 
     }
 
@@ -32,12 +45,10 @@ public class movement_tomato : MonoBehaviour
     {
         int dirFlag = 2;
         RaycastHit2D wallInfoRight = Physics2D.Raycast(wallDetectRight.position, Vector2.right, .01f);
-        //RaycastHit2D wallInfoLeft = Physics2D.Raycast(wallDetectLeft.position, Vector2.left, .01f);
         RaycastHit2D groundInfo1 = Physics2D.Raycast(groundDetect1.position, Vector2.down, .01f);
         RaycastHit2D groundInfo2 = Physics2D.Raycast(groundDetect2.position, Vector2.down, .01f);
 
         Debug.DrawLine(transform.position, wallDetectRight.position, Color.green);
-        //Debug.DrawLine(transform.position, wallDetectLeft.position, Color.blue);
         Debug.DrawLine(transform.position, groundDetect1.position, Color.blue);
         Debug.DrawLine(transform.position, groundDetect2.position, Color.red);
 
@@ -79,5 +90,10 @@ public class movement_tomato : MonoBehaviour
         }
 
         return dirFlag;
+    }
+
+    public void freezeTomato()
+    {
+        isDeath = true;
     }
 }

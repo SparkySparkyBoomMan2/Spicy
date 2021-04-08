@@ -5,10 +5,13 @@ using UnityEngine;
 public class death_tomato : MonoBehaviour
 {
     public Animator animator;
+    bool isDead = false;
 
     //for bullet_default to call and Tomoato Enemy dies
     public void Die() 
     {
+        isDead = true;
+        freezeT();
         //Debug.Log("Tomato Hit by Bullet");
         animator.SetBool("isDead", false); //turns on explode animation
         Destroy(gameObject, 1.04f);
@@ -31,10 +34,18 @@ public class death_tomato : MonoBehaviour
     {
         Death_Player player = other.gameObject.GetComponent<Death_Player>();
 
-        if (player != null)
+        if (player != null & isDead == false)
         {
             //Debug.Log(player.name);
             player.DiePlayer();
+        }
+    }
+    void freezeT()
+    {
+        movement_tomato triggerFreeze = gameObject.GetComponent<movement_tomato>();
+        if (triggerFreeze != null)
+        {
+            triggerFreeze.freezeTomato();
         }
     }
 
