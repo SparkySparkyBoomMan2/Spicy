@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7860909187144120931}
   m_Layer: 11
-  m_Name: wallDetect
+  m_Name: wallDetectRight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,7 @@ Transform:
   - {fileID: 7860909187144120931}
   - {fileID: 1604753375322480967}
   - {fileID: 5680460460632740056}
+  - {fileID: 193167249237796414}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,7 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walk_speed: 1
-  wallDetect: {fileID: 7860909187144120931}
+  wallDetectRight: {fileID: 7860909187144120931}
+  wallDetectLeft: {fileID: 193167249237796414}
   groundDetect1: {fileID: 1604753375322480967}
   groundDetect2: {fileID: 5680460460632740056}
 --- !u!114 &920807788449415339
@@ -248,6 +250,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4483985024303876607}
+--- !u!1 &4664756469637491684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193167249237796414}
+  m_Layer: 11
+  m_Name: wallDetectLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193167249237796414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4664756469637491684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4483985024303876605}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8040338466505242587
 GameObject:
   m_ObjectHideFlags: 0

@@ -275,6 +275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
         type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279121840714258726, guid: 8c370d2003c43d8428b3d1a9eca9bb0e,
+        type: 3}
       propertyPath: ShapeModule.alignToDirection
       value: 0
       objectReference: {fileID: 0}
@@ -10603,12 +10608,12 @@ PrefabInstance:
     - target: {fileID: 4483985024303876605, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.18
+      value: 6.79
       objectReference: {fileID: 0}
     - target: {fileID: 4483985024303876605, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -5.55
       objectReference: {fileID: 0}
     - target: {fileID: 4483985024303876605, guid: e9f5b13c00c269b4387eefaf26329a90,
         type: 3}
