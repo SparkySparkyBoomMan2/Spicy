@@ -8,6 +8,7 @@ public class gun_HotSauce_Launcher : gun_default
     //Coroutine to "shoot" gun
     // * new bullet is instantiated
     // * fire rate is used to wait between shots
+    
     public override IEnumerator FireGun()
     {
         AllowFire = false;
@@ -24,10 +25,11 @@ public class gun_HotSauce_Launcher : gun_default
         
         //yield return new WaitForSeconds(1f);
         
+        yield return new WaitForSeconds(FireRateDelay);
         animator.SetBool("isFiring", false);
         AllowFire = true;
 
-        yield return new WaitForSeconds(FireRateDelay);
+        
     }
 
     //Coroutine to reload gun
