@@ -13,7 +13,7 @@ public class gun_HotSauce_Launcher : gun_default
         AllowFire = false;
         animator.SetBool("isFiring", true);
 
-        yield return new WaitForSeconds(.75f);
+        //yield return new WaitForSeconds(.75f);
 
         //Debug.Log("FIring gun");
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
@@ -22,10 +22,12 @@ public class gun_HotSauce_Launcher : gun_default
 
         Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
         
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
         
         animator.SetBool("isFiring", false);
         AllowFire = true;
+
+        yield return new WaitForSeconds(FireRateDelay);
     }
 
     //Coroutine to reload gun

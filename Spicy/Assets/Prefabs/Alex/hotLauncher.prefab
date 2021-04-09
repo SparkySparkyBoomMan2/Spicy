@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1807186157083217971}
   - component: {fileID: 3269894328299155873}
   - component: {fileID: 7061515565371469132}
-  m_Layer: 11
-  m_Name: test_Launcher
+  m_Layer: 12
+  m_Name: hotLauncher
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   bullet: {fileID: 2541481239415706479, guid: 05169a77b04e0764baac2b44a7164725, type: 3}
   gunRenderer: {fileID: 1807186157083217971}
   animator: {fileID: 7061515565371469132}
-  FireRateDelay: 1
+  FireRateDelay: 3
 --- !u!95 &7061515565371469132
 Animator:
   serializedVersion: 3
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5647873613544856202}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1192404989213313513}
   - component: {fileID: 6886242504003545575}
   - component: {fileID: 8705969383602980045}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: HotSuace_bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
