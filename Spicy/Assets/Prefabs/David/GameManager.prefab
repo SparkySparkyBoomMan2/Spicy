@@ -232,22 +232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3946596665839563354}
     m_Modifications:
-    - target: {fileID: 267475433, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 336900823, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 410714365, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 452471433, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6927713694892961856, guid: 9748dc5bfd8b5d14599c4df3b95a68bc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -357,11 +341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptionsMenu2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927713694892961859, guid: 9748dc5bfd8b5d14599c4df3b95a68bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9748dc5bfd8b5d14599c4df3b95a68bc, type: 3}
@@ -494,11 +473,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveOverlay
       objectReference: {fileID: 0}
-    - target: {fileID: 8552324637637811110, guid: 7dcf83a14490d6844aa23eb8cc3183c9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dcf83a14490d6844aa23eb8cc3183c9, type: 3}
 --- !u!224 &4641756783702896856 stripped
@@ -623,11 +597,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 3799249988319784699, guid: 968edeb937552964390e579879098fa5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968edeb937552964390e579879098fa5, type: 3}
@@ -760,11 +729,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelCompleteMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2606962066039703082, guid: 8b978f4e6904c1e48aba7f33a13fe86c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b978f4e6904c1e48aba7f33a13fe86c, type: 3}
 --- !u!1 &1362597195619979740 stripped
@@ -790,11 +754,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameOverMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170955786047622845, guid: 20a7b819d2625ef43b959573f0d5ced5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6170955786047622846, guid: 20a7b819d2625ef43b959573f0d5ced5,
         type: 3}

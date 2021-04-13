@@ -227,6 +227,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.OPTIONS:
                 panelOptionsMenu.SetActive(false);
+                Time.timeScale = 0f;
                 break;
             case State.INIT:
                 break;
@@ -253,5 +254,10 @@ public class GameManager : MonoBehaviour
     public State GetState()
     {
         return _state;
+    }
+    
+    public void OptionsToPause()
+    {
+        SwitchState(State.PAUSE);
     }
 }
