@@ -8,11 +8,12 @@ public class bullet_default : MonoBehaviour
     public ParticleSystem BulletExplode;
     public float BulletSpeed;
     public int Damage = 50;
-    void Start()
+    public virtual void Start()
     {
         //Makes the bullet have a starting velocity
         //might change depending on instantiated rotation of bullet
-        rb.velocity = new Vector3(transform.right.y, transform.right.x * -1, transform.right.z) * BulletSpeed;
+        //rb.velocity = new Vector3(transform.right.y, transform.right.x, transform.right.z) * BulletSpeed;
+        rb.velocity = new Vector3(transform.right.x * -1, transform.right.y * -1, transform.right.z) * BulletSpeed;
     }
     void FixedUpdate()
     {
@@ -21,7 +22,7 @@ public class bullet_default : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
+        Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
        
         if (other.gameObject.tag == "Enemy")

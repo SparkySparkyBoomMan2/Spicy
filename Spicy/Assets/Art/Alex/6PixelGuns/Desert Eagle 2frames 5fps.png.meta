@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: ae0797615d4a06d4fa658d1806a00fc8
+guid: 60c7bbe0fd1e09d4f9ca4e0590e8e1a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2975111107856561463
-    second: DesertEagle_Start
+      213: 8330439707656528115
+    second: Desert Eagle 2frames 5fps_0
   - first:
-      213: 42987741699574373
-    second: DesertEagle_Reload
-  - first:
-      213: -1289061746894026671
-    second: DesertEagle_Mag
-  - first:
-      213: -1596560787854386702
-    second: DesertEagle_End
+      213: 3680385022307740124
+    second: Desert Eagle 2frames 5fps_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -95,89 +89,59 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DesertEagle_Start
+      name: Desert Eagle 2frames 5fps_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 72
-        width: 62
-        height: 33
+        x: 2
+        y: 33
+        width: 43
+        height: 28
       alignment: 9
-      pivot: {x: 0.22899471, y: 0.49001637}
+      pivot: {x: 0.79004174, y: 0.4635323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 735fb1f2ac7b94920800000000000000
-      internalID: 2975111107856561463
+      spriteID: 3f02dad07caab9370800000000000000
+      internalID: 8330439707656528115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DesertEagle_Reload
+      name: Desert Eagle 2frames 5fps_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 37
-        width: 79
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 1
+        width: 48
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7826211, y: 0.4192507}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56a03b19f19b89000800000000000000
-      internalID: 42987741699574373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DesertEagle_Mag
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 37
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15846d2cb255c1ee0800000000000000
-      internalID: -1289061746894026671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DesertEagle_End
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 0
-        width: 62
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f91f912c60e7d9e0800000000000000
-      internalID: -1596560787854386702
+      spriteID: cd92253adaa531330800000000000000
+      internalID: 3680385022307740124
       vertices: []
       indices: 
       edges: []

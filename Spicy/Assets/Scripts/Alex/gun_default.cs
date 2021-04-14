@@ -30,8 +30,8 @@ public class gun_default : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            Debug.Log("Trying to fire, and AllowFire == ["+ AllowFire + "] --- isReloading: " + isReloading);
-            Debug.Log("Time: " + Time.time + " ----- startTime: " + startTime);
+            //Debug.Log("Trying to fire, and AllowFire == ["+ AllowFire + "] --- isReloading: " + isReloading);
+            //Debug.Log("Time: " + Time.time + " ----- startTime: " + startTime);
             if ((!AllowFire || isReloading) && Time.time - startTime > 5) 
             {
                 AllowFire = true;
@@ -64,13 +64,15 @@ public class gun_default : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         //Flips gun across y axis if mouse cursor crosses the gun's y axis
-        if (transform.rotation.z > .7f || transform.rotation.z < -.7f)
+        if ((transform.rotation.z > .7f || transform.rotation.z < -.7f) && transform.localScale.y > 0)
         {
-            gunRenderer.flipY = true;
+            //gunRenderer.flipY = true;
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
         }
-        else
+        else if ((transform.rotation.z < .7f && transform.rotation.z > -.7f))
         {
-            gunRenderer.flipY = false;
+            //gunRenderer.flipY = false;
+            transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
         }
     }
 
@@ -83,9 +85,11 @@ public class gun_default : MonoBehaviour
         //Debug.Log("FIring gun");
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
-        rot = new Vector3(rot.x, rot.y, rot.z + 90);
+        rot = new Vector3(rot.x, rot.y, rot.z + 180);
+        //rot = new Vector3(rot.x, rot.y, rot.z);
 
         Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
+        //Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.identity);
         yield return new WaitForSeconds(FireRateDelay);
         AllowFire = true;
     }
