@@ -8,7 +8,7 @@ public class GhostMasterAI : MonoBehaviour
     
     public Transform target;
 
-    public float speed = 200f;
+    public float speed = 400f;
     public float nextWaypointDistance = 3f;
 
     Transform enemyGFX;
@@ -25,6 +25,7 @@ public class GhostMasterAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        enemyGFX = GetComponent<Transform>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
 
@@ -72,14 +73,14 @@ public class GhostMasterAI : MonoBehaviour
             currentWaypoint++;
         }
 
-        /*if (force.x >= 0.01f)
+        if (rb.velocity.x <= 0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
         }
-        else if (force.x <= 0.01f)
+        else if (rb.velocity.x >= 0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
-        }*/
+        }
     }
     
 }

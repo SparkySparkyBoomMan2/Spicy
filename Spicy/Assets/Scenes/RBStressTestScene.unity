@@ -244,7 +244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 582697698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1624ab0e586ef4843831a4813b765faa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fc4dd5a5ead64a4c8e0ebe833213e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &709481530
@@ -9631,31 +9631,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1547361136428993434, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1979654630348583751, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1979654630348583751, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1979654630348583751, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6590158584912399666, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
-        type: 3}
-      propertyPath: speed
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 6590158584912399666, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
         type: 3}
       propertyPath: target
@@ -9679,7 +9654,7 @@ PrefabInstance:
     - target: {fileID: 7763579167965212248, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1482.6744
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7763579167965212248, guid: 2c3612c7745a6b748b2ac6ae8aeeb2f4,
         type: 3}
