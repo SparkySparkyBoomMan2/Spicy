@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5510374569695035092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.295, y: 0.096, z: -86.71997}
+  m_LocalPosition: {x: -0.008, y: 0.067, z: -86.71997}
   m_LocalScale: {x: 11.491775, y: 12.4944, z: 10.574724}
   m_Children: []
   m_Father: {fileID: 5690686207382557360}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5690686207382557360}
   - component: {fileID: 5690686207382557375}
-  - component: {fileID: 6335732106377970314}
+  - component: {fileID: -1624983304016163737}
   - component: {fileID: 3896317597471862720}
   m_Layer: 12
   m_Name: handgun
@@ -115,7 +115,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6335732106377970314
+--- !u!114 &-1624983304016163737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,13 +124,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5690686207382557361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c25b7425bb551438b9a9fe1bdfc30c, type: 3}
+  m_Script: {fileID: 11500000, guid: d159d2fc88dab054eb4d23ddf2656bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2645757011652376697, guid: 791c36916cb8f3541b7f60bb899761fb, type: 3}
   gunRenderer: {fileID: 5690686207382557375}
   animator: {fileID: 3896317597471862720}
-  FireRateDelay: 0.35
+  FireRateDelay: 0.4
 --- !u!95 &3896317597471862720
 Animator:
   serializedVersion: 3
@@ -141,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 5690686207382557361}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c7ff8aafb6c9c044b73d9ec1ffeafb9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

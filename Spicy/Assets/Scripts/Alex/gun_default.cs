@@ -80,7 +80,7 @@ public class gun_default : MonoBehaviour
     // * new bullet is instantiated
     // * fire rate is used to wait between shots
     public virtual IEnumerator FireGun()
-    {
+    {//
         AllowFire = false;
         //Debug.Log("FIring gun");
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
