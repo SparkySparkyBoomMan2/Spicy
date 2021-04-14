@@ -8,12 +8,17 @@ public class bullet_default : MonoBehaviour
     public ParticleSystem BulletExplode;
     public float BulletSpeed;
     public int Damage = 50;
+
+    public Animator animator;
+
     public virtual void Start()
     {
         //Makes the bullet have a starting velocity
         //might change depending on instantiated rotation of bullet
         //rb.velocity = new Vector3(transform.right.y, transform.right.x, transform.right.z) * BulletSpeed;
         rb.velocity = new Vector3(transform.right.x * -1, transform.right.y * -1, transform.right.z) * BulletSpeed;
+
+        //animator.SetBool("bulletMoving", true);
     }
     void FixedUpdate()
     {

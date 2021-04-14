@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1693067887873237759}
   - component: {fileID: 5603153517647931156}
   - component: {fileID: -3701389397328730016}
+  - component: {fileID: 891945460265554862}
   m_Layer: 12
   m_Name: regBullet
   m_TagString: Bullet
@@ -121,8 +122,9 @@ MonoBehaviour:
   rb: {fileID: 1693067887873237759}
   BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
     type: 3}
-  BulletSpeed: 30
+  BulletSpeed: 25
   Damage: 50
+  animator: {fileID: 891945460265554862}
 --- !u!60 &-3701389397328730016
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +159,22 @@ PolygonCollider2D:
       - {x: 0.07493351, y: -0.017981548}
       - {x: 0.07324473, y: 0.013674514}
       - {x: 0.05774818, y: 0.014818849}
+--- !u!95 &891945460265554862
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645757011652376697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae6d47db6cff77a498f0445de207ee28, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
