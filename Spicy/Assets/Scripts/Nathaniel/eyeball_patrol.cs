@@ -29,6 +29,7 @@ public class eyeball_patrol : MonoBehaviour
             Patrol();
         }
     }
+
     private void FixedUpdate()
     {
         if (isPatrol)
@@ -36,6 +37,8 @@ public class eyeball_patrol : MonoBehaviour
             isFlip = Physics2D.OverlapCircle(isWallCheck.position, 0.1f, wallLayer);
         }
     }
+
+    //controls eyeball patrol movement
     void Patrol()
     {
         if (isFlip || bodyCollider.IsTouchingLayers(wallLayer))
@@ -45,6 +48,7 @@ public class eyeball_patrol : MonoBehaviour
         rg2d.velocity = new Vector2(flySpeed * Time.fixedDeltaTime, rg2d.velocity.y);
     }
 
+    //flips patrolling
     void Flip()
     {
         isPatrol = false;
