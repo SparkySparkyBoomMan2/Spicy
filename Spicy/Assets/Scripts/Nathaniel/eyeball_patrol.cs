@@ -63,7 +63,7 @@ public class eyeball_patrol : MonoBehaviour
     {
         if (isPatrol)
         {
-            isFlip = Physics2D.OverlapCircle(isObjectCheck.position, 0.1f, wallLayer); 
+            isFlip = Physics2D.OverlapCircle(isObjectCheck.position, 0.1f, wallLayer); //can be used for a platform or objects. put ! in front of Physics
         }
     }
 
@@ -86,7 +86,6 @@ public class eyeball_patrol : MonoBehaviour
         isPatrol = true;
     }
 
-    //fire eyeball at player location with controlling rate of fire
     void Attack()
     {
         //attack player
@@ -98,7 +97,6 @@ public class eyeball_patrol : MonoBehaviour
 
     }
 
-    //create sight zone for enemy
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
