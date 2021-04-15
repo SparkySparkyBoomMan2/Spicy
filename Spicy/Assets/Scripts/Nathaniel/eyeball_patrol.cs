@@ -104,4 +104,10 @@ public class eyeball_patrol : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, rangeAttack);
     }
+
+    //to be called by gun script
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
