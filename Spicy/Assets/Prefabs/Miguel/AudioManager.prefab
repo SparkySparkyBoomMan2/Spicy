@@ -56,3 +56,21 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Flamenco3
+    clip: {fileID: 8300000, guid: 55cb572d7d4398a45b7c7c15074b3708, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Flamenco4
+    clip: {fileID: 8300000, guid: ba893b5726b09f44ab003722a5aacc78, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Flamenco5
+    clip: {fileID: 8300000, guid: 6bbd26363003e7f45babfe3f7cbce72c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
