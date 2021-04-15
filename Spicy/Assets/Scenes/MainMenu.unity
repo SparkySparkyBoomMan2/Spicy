@@ -490,6 +490,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3946596664577045161, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 3946596664577045162, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_SizeDelta.x

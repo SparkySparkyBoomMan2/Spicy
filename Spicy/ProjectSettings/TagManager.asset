@@ -11,6 +11,7 @@ TagManager:
   - PauseUI
   - Player Spawn Location
   - Gun
+  - MainMenu
   layers:
   - Default
   - TransparentFX
