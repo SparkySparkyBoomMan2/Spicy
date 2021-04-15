@@ -42,6 +42,8 @@ public class AudioManager : MonoBehaviour
             Play("Flamenco1");
         else if (sceneName == "Level 1")
             Play("Flamenco2");
+        else if (sceneName == "Level 2")
+            Play("Flamenco3");
         //Play("");        
     }
 
