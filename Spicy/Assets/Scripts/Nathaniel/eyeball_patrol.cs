@@ -8,15 +8,16 @@ public class eyeball_patrol : MonoBehaviour
     public float rangeAttack;
     public float rateOfFire = 1f;
     private float nextFire;
-    Vector2 playerPosition;
+    private float distanceFromPlayer;
 
     [HideInInspector]
     public bool isPatrol;
     private bool isFlip;
 
     public Rigidbody2D rg2d;
-    public Transform isWallCheck;
+    public Transform isObjectCheck;
     public LayerMask wallLayer;
+    public LayerMask enemyLayer;
     public Collider2D bodyCollider;
     private Transform player;
 
@@ -37,7 +38,7 @@ public class eyeball_patrol : MonoBehaviour
         {
             Patrol();
         }
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);//calcs distance between eyeball guy and player
+        distanceFromPlayer = Vector2.Distance(player.position, transform.position);//calcs distance between eyeball guy and player
         
         Debug.Log("Distant from player " + distanceFromPlayer);
 
@@ -62,14 +63,14 @@ public class eyeball_patrol : MonoBehaviour
     {
         if (isPatrol)
         {
-            isFlip = Physics2D.OverlapCircle(isWallCheck.position, 0.1f, wallLayer); //can be used for a platform. put ! in front of Physics
+            isFlip = Physics2D.OverlapCircle(isObjectCheck.position, 0.1f, wallLayer); //can be used for a platform or objects. put ! in front of Physics
         }
     }
 
     //controls eyeball patrol movement
     void Patrol()
     {
-        if (isFlip || bodyCollider.IsTouchingLayers(wallLayer))
+        if (isFlip || bodyCollider.IsTouchingLayers(wallLayer) || bodyCollider.IsTouchingLayers(enemyLayer))
         {
             Flip();
         }

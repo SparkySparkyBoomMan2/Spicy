@@ -7,6 +7,8 @@ public class projectile_eye : MonoBehaviour
     GameObject target;
     public float speedProjectile;
     Rigidbody2D rigidProjectile;
+    Transform projPrefab;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,5 @@ public class projectile_eye : MonoBehaviour
         Vector2 moveTowardsPosition = (target.transform.position - transform.position).normalized * speedProjectile;
         rigidProjectile.velocity = new Vector2(moveTowardsPosition.x, moveTowardsPosition.y);
         Destroy(this.gameObject, 2);
-        Debug.Log("Projectile Hit Player");
     }
 }
