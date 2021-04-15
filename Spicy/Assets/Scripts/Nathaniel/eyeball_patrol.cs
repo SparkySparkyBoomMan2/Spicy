@@ -108,6 +108,6 @@ public class eyeball_patrol : MonoBehaviour
     //to be called by gun script
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

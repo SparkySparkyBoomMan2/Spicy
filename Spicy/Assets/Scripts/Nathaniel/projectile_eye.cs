@@ -14,7 +14,7 @@ public class projectile_eye : MonoBehaviour
     {
         rigidProjectile = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Gun");
-        Vector2 moveTowardsPosition = (target.transform.position - transform.position).normalized * speedProjectile;
+        Vector2 moveTowardsPosition = (target.transform.position - transform.position) * speedProjectile;
         rigidProjectile.velocity = new Vector2(moveTowardsPosition.x, moveTowardsPosition.y);
         Destroy(this.gameObject, 2);
     }
