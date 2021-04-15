@@ -8,7 +8,7 @@ public class relocateTargetConst : MonoBehaviour
 
     private IEnumerator targetSubR;
 
-    float waitTime = 2.0f;
+    float waitTime = 5.0f;
 
     // Start is called before the first frame update
     void Start()

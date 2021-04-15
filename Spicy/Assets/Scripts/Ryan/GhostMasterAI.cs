@@ -8,17 +8,17 @@ public class GhostMasterAI : MonoBehaviour
     
     public Transform target;
 
-    public float speed = 400f;
-    public float nextWaypointDistance = 3f;
+    public float speed = 200f;
+    public float nextWaypointDistance = 2f;
 
-    Transform enemyGFX;
+    public Transform enemyGFX;
 
-    Path path; //path to follow
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    public Path path; //path to follow
+    public int currentWaypoint = 0;
+    public bool reachedEndOfPath = false;
 
-    Seeker seeker;
-    Rigidbody2D rb;
+    public Seeker seeker;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class GhostMasterAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         if (path == null)
             return;
@@ -56,7 +56,8 @@ public class GhostMasterAI : MonoBehaviour
         {
             reachedEndOfPath = true;
             return;
-        } else
+        } 
+        else
         {
             reachedEndOfPath = false;
         }

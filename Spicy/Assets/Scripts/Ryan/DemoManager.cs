@@ -45,7 +45,7 @@ public class DemoManager : MonoBehaviour
             demoPlayer.GetComponent<GameManager>().PlayGame();
             //mainMenuHandler = transform.Find("MainMenu").gameObject;
             //mainMenuHandler.SetActive(false);
-            disableDemoFunc();
+            
         }
         
     }
@@ -53,13 +53,15 @@ public class DemoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (demoModeActive)
+        {
             if (Input.anyKey)
             {
                 //Switch State to main menu
                 Debug.Log("Stop The demo.");
-                
+                Destroy(gameObject);
                 demoPlayer.GetComponent<GameManager>().SwitchState(GameManager.State.MENU);
+                disableDemoFunc();
             }
             else
             {
@@ -68,6 +70,8 @@ public class DemoManager : MonoBehaviour
                 //replacing it with an a* routine that either fails miserably,
                 //or epitomizes the concept of "RIP AND TEAR"
             }
+        }
+           
        
         
         //if key is pressed, stop demo.
@@ -78,5 +82,6 @@ public class DemoManager : MonoBehaviour
     public void disableDemoFunc()
     {
         demoModeActive = false;
+        
     }
 }
