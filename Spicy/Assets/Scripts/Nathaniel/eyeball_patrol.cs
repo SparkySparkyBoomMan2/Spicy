@@ -5,6 +5,10 @@ using UnityEngine;
 public class eyeball_patrol : MonoBehaviour
 {
     public float flySpeed = 1f;
+    public float rangeAttack;
+    public float rateOfFire = 1f;
+    private float nextFire;
+    Vector2 playerPosition;
 
     [HideInInspector]
     public bool isPatrol;
@@ -14,11 +18,16 @@ public class eyeball_patrol : MonoBehaviour
     public Transform isWallCheck;
     public LayerMask wallLayer;
     public Collider2D bodyCollider;
+    private Transform player;
+
+    public GameObject projectile;
+    public GameObject projectileParent;
 
     // Start is called before the first frame update
     void Start()
     {
         isPatrol = true;
+        player = GameObject.FindGameObjectWithTag("Gun").transform;
     }
 
     // Update is called once per frame
@@ -28,13 +37,32 @@ public class eyeball_patrol : MonoBehaviour
         {
             Patrol();
         }
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);//calcs distance between eyeball guy and player
+        
+        Debug.Log("Distant from player " + distanceFromPlayer);
+
+        if(distanceFromPlayer <= rangeAttack)
+        {
+            Debug.Log("Is within player range");
+            if(player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0) //flips to player direction
+            {
+                Flip();
+            }
+            isPatrol = false;
+            //rg2d.velocity = Vector2.zero;
+            Attack();
+        }
+        else
+        {
+            isPatrol = true;
+        }
     }
 
     private void FixedUpdate()
     {
         if (isPatrol)
         {
-            isFlip = Physics2D.OverlapCircle(isWallCheck.position, 0.1f, wallLayer);
+            isFlip = Physics2D.OverlapCircle(isWallCheck.position, 0.1f, wallLayer); //can be used for a platform. put ! in front of Physics
         }
     }
 
@@ -48,12 +76,29 @@ public class eyeball_patrol : MonoBehaviour
         rg2d.velocity = new Vector2(flySpeed * Time.fixedDeltaTime, rg2d.velocity.y);
     }
 
-    //flips patrolling
+    //flips patrolling 
     void Flip()
     {
         isPatrol = false;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         flySpeed *= -1;
         isPatrol = true;
+    }
+
+    void Attack()
+    {
+        //attack player
+        if (nextFire < Time.time)
+        {
+            Instantiate(projectile, projectileParent.transform.position, Quaternion.identity);
+            nextFire = Time.time + rateOfFire;
+        }
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, rangeAttack);
     }
 }
