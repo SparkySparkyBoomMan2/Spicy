@@ -34,6 +34,7 @@ public class DemoManager : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+           
     }
 
     // Start is called before the first frame update
@@ -61,7 +62,7 @@ public class DemoManager : MonoBehaviour
                 Debug.Log("Stop The demo.");
                 Destroy(gameObject);
                 demoPlayer.GetComponent<GameManager>().SwitchState(GameManager.State.MENU);
-                disableDemoFunc();
+                
             }
             else
             {
