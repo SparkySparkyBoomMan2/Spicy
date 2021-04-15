@@ -8,32 +8,46 @@ public class DemoManager : MonoBehaviour
 {
     //private bool firstPass = true;
     public bool demoModeActive = true;
-    public GameObject demoPlayer;
+    private GameObject demoPlayer;      //to control operation of demo mode
+    private GameObject mainMenuHandler;  //needs to be transform to disable?
 
-    /*private static DemoManager instance = null;
+    private static DemoManager dInstance = null;
+    
+    public static DemoManager DInstance
+    {
+        get
+        {
+            return dInstance;
+        }
+    }
+
     void Awake()
     {
-        if (instance == null)
+        if (dInstance == null)
         {
-            instance = this;
+            dInstance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("demo instance created.");
         }
-        else if (instance != this)
+        else if (dInstance != this)
         {
             Destroy(this.gameObject);
             return;
         }
-    }*/
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        
         if (demoModeActive) {
             demoPlayer = GameObject.FindWithTag("GameController");
-            DontDestroyOnLoad(this.gameObject);
             demoPlayer.GetComponent<GameManager>().PlayGame();
+            //mainMenuHandler = transform.Find("MainMenu").gameObject;
+            //mainMenuHandler.SetActive(false);
             disableDemoFunc();
-        }    
+        }
+        
     }
 
     // Update is called once per frame
@@ -49,7 +63,10 @@ public class DemoManager : MonoBehaviour
             }
             else
             {
-                
+                //just spin... i guess
+                //or maybe we can override the player movement script,
+                //replacing it with an a* routine that either fails miserably,
+                //or epitomizes the concept of "RIP AND TEAR"
             }
        
         
