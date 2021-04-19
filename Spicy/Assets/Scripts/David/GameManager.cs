@@ -26,8 +26,10 @@ public class GameManager : MonoBehaviour
     public GameObject panelMainMenu;
     public GameObject panelPauseMenu;
     public GameObject panelOptionsMenu;
+    public GameObject panelLevelSelectMenu;
     public GameObject panelLevelComplete;
     public GameObject panelGameOver;
+    public GameObject panelWaveOverlay;
     // public GameObject panelWaveInfo;                 // When implemented, will appear at the beginning of the level to show briefly the number of waves
     // public GameObject panelLevelPlaying;             // This will be for any UI elements overlayed while playing, i.e. lives and maybe score or something
 
