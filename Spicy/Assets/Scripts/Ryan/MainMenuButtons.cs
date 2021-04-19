@@ -13,7 +13,7 @@ public class MainMenuButtons : MonoBehaviour
         //demoMutator = GameObject.Find("DemoManager");
         //demoMutator.GetComponent<DemoManager>().disableDemoFunc();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        GameManager.instance.PlayGame();
+        GameManager.instance.SwitchState(GameManager.State.LEVELSELECT);
         
     }
 

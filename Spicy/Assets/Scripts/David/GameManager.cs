@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public float respawnDelay = 2f;
     public int lives = 3;
+    
+    [HideInInspector]
     public int level = 1;
+
     private bool spawningPlayer = false;
     private bool isRespawning = false;
 
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] Levels;
 
-    public enum State { MENU, OPTIONS, INIT, PLAY, PAUSE, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
+    public enum State { MENU, OPTIONS, INIT, PLAY, PAUSE, LEVELSELECT, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
     State _state;
 
     // Sets up the singleton instance
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
     // This will eventually lead to the map UI where we can select which level we want to play, but for now it will just setup and run the first level
     public void PlayGame()
     {
-        level = 1;
+        //level = 1;
         SwitchState(State.INIT);
     }
 
@@ -129,6 +132,11 @@ public class GameManager : MonoBehaviour
         SwitchState(State.OPTIONS);
     }
 
+    public void OptionsToPause()
+    {
+        SwitchState(State.PAUSE);
+    }
+
     public void LevelComplete()
     {
         SwitchState(State.LEVELCOMPLETED);
@@ -155,6 +163,9 @@ public class GameManager : MonoBehaviour
                 break;
             case State.OPTIONS:
                 panelOptionsMenu.SetActive(true);
+                break;
+            case State.LEVELSELECT:
+                panelLevelSelectMenu.SetActive(true);
                 break;
             case State.INIT:
                 //panelLevelPlaying.SetActive(true);
@@ -199,6 +210,8 @@ public class GameManager : MonoBehaviour
                 break;
             case State.OPTIONS:
                 break;
+            case State.LEVELSELECT:
+                break;
             case State.INIT:
                 break;
             case State.PLAY:
@@ -231,6 +244,9 @@ public class GameManager : MonoBehaviour
                 panelOptionsMenu.SetActive(false);
                 Time.timeScale = 0f;
                 break;
+            case State.LEVELSELECT:
+                panelLevelSelectMenu.SetActive(false);
+                break;
             case State.INIT:
                 break;
             case State.PLAY:
@@ -256,10 +272,5 @@ public class GameManager : MonoBehaviour
     public State GetState()
     {
         return _state;
-    }
-    
-    public void OptionsToPause()
-    {
-        SwitchState(State.PAUSE);
     }
 }
