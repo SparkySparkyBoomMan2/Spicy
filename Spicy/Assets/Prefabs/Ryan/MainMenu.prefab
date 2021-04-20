@@ -167,10 +167,10 @@ RectTransform:
   m_Father: {fileID: 6256478161680193260}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 98.97662, y: -51}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000038147, y: -0.000013351}
+  m_SizeDelta: {x: 204.68823, y: 51.2164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6256478160578697453
 CanvasRenderer:
@@ -824,7 +824,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 754, y: 431}
+  m_SizeDelta: {x: 790, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6256478161323669658
 CanvasRenderer:
@@ -853,8 +853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3045001923454373135, guid: fc584d329b77b9545b9c9c8bb829e553,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba63bd1950d9d264097883bcc563e298, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -876,7 +875,7 @@ GameObject:
   - component: {fileID: 6256478161680193261}
   m_Layer: 5
   m_Name: MainMenu
-  m_TagString: Untagged
+  m_TagString: MainMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,8 +950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 166}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 45, y: 174}
+  m_SizeDelta: {x: 200, y: 66.334564}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6256478161912174261
 CanvasRenderer:
@@ -981,7 +980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spicy
+  m_text: Super Spicy Gun Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3, type: 2}
   m_sharedMaterial: {fileID: -4355971526693568091, guid: efd8a2bc584b26c43ad7b1c0bf8e9dd3,
@@ -1045,7 +1044,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -168.24588, y: 0, z: -78.40582, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

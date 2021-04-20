@@ -19,6 +19,11 @@ public class PauseMenuButtons : MonoBehaviour
         GameManager.instance.Options();
     }
 
+    public void ToMainMenu()
+    {
+        GameManager.instance.MainMenu();
+    }
+
     public void Quit()
     {
         Debug.Log("Application quit");

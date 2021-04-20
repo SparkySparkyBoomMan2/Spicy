@@ -347,6 +347,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 179164859551512149, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362597195619979740, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2127363055716494398, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -420,12 +430,12 @@ PrefabInstance:
     - target: {fileID: 3946596663950851029, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3946596664260846273, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3946596664284580064, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
@@ -490,12 +500,12 @@ PrefabInstance:
     - target: {fileID: 3946596664302717109, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3946596664334995691, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3946596664577045161, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
@@ -522,6 +532,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6260300519412818473, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_text
+      value: To Previous Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260300519412818475, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6417448396903031107, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -541,6 +561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LevelThree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162556664702257596, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4000ae155a3a004c8633ec96b77fe6b, type: 3}
