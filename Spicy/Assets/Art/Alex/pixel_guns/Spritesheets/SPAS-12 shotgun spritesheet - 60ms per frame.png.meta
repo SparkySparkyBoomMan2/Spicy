@@ -1,7 +1,61 @@
 fileFormatVersion: 2
 guid: 6b50e4f86ccd8db4f810b75240b04f08
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 750603884624419271
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_0
+  - first:
+      213: 4516539729703204445
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_1
+  - first:
+      213: -7462875090726052828
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_2
+  - first:
+      213: -235974281038409138
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_3
+  - first:
+      213: -852052713386810360
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_4
+  - first:
+      213: 7798928249669965323
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_6
+  - first:
+      213: -4568420832417651544
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_8
+  - first:
+      213: 5120483268418882703
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_10
+  - first:
+      213: 856926722581301312
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_11
+  - first:
+      213: 6883810352295275640
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_12
+  - first:
+      213: -5457879403758717048
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_13
+  - first:
+      213: -8186424210284301447
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_14
+  - first:
+      213: -1194024892119735721
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_15
+  - first:
+      213: -3194598847828584365
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_16
+  - first:
+      213: -9207591583632621645
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_17
+  - first:
+      213: 6681501273363087642
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_18
+  - first:
+      213: 9186388761265867209
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_19
+  - first:
+      213: 9003402007945599717
+    second: SPAS-12 shotgun spritesheet - 60ms per frame_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +94,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +118,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +151,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 859
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9127325, y: 0.5750949}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c91116914eaa6a00800000000000000
+      internalID: 750603884624419271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 809
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.91867113, y: 0.62202895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56f5ea54f8fdae30800000000000000
+      internalID: 4516539729703204445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 759
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9131283, y: 0.59707344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c992e15aa8e6890800000000000000
+      internalID: -7462875090726052828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 709
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.92429394, y: 0.62354696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42d39244a6a9bcf0800000000000000
+      internalID: -235974281038409138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 659
+        width: 108
+        height: 31
+      alignment: 9
+      pivot: {x: 0.92287856, y: 0.62045586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804eba05296ec24f0800000000000000
+      internalID: -852052713386810360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 609
+        width: 114
+        height: 31
+      alignment: 9
+      pivot: {x: 0.93085736, y: 0.62972134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06565e2ceb5b3c60800000000000000
+      internalID: 7798928249669965323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 559
+        width: 125
+        height: 30
+      alignment: 9
+      pivot: {x: 0.9320062, y: 0.6531942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4604b1575b990c0800000000000000
+      internalID: -4568420832417651544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 509
+        width: 120
+        height: 32
+      alignment: 9
+      pivot: {x: 0.9308573, y: 0.63464355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c4074376c9f0740800000000000000
+      internalID: 5120483268418882703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 459
+        width: 110
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9308572, y: 0.6111893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0488ff1605a64eb00800000000000000
+      internalID: 856926722581301312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 409
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.92499524, y: 0.62045485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c67bd1b05388f50800000000000000
+      internalID: 6883810352295275640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_13
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 359
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9279264, y: 0.6297204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8877a007997b144b0800000000000000
+      internalID: -5457879403758717048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 309
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9191332, y: 0.5833917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973b855ed8af36e80800000000000000
+      internalID: -8186424210284301447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 259
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9162021, y: 0.5833917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752aa34dfa8fd6fe0800000000000000
+      internalID: -1194024892119735721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_16
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 209
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9162021, y: 0.5741262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3581e4b06418aa3d0800000000000000
+      internalID: -3194598847828584365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 159
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9103402, y: 0.5741257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf73b41d30183080800000000000000
+      internalID: -9207591583632621645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 109
+        width: 98
+        height: 31
+      alignment: 9
+      pivot: {x: 0.9132711, y: 0.5463289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11802d020679bc50800000000000000
+      internalID: 6681501273363087642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 59
+        width: 102
+        height: 31
+      alignment: 9
+      pivot: {x: 0.88016814, y: 0.5370626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c984e328eb9c7f70800000000000000
+      internalID: 9186388761265867209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPAS-12 shotgun spritesheet - 60ms per frame_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 9
+        width: 104
+        height: 31
+      alignment: 9
+      pivot: {x: 0.8590478, y: 0.53706217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ead2a59c6282fc70800000000000000
+      internalID: 9003402007945599717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
