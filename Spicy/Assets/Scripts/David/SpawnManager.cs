@@ -36,6 +36,7 @@ public class SpawnManager : MonoBehaviour
     public List<Wave> waves;                                // An array of the number of waves making up the current level
     public List<Spawner> spawnPoints;                       // An array of spawn locations (currently using the spawners - may use those instead and shift over some functionality over there)
     private int nextWave = 0;                               // Index into waves to select which wave to spawn
+    private float panelWaveOverlayDelay = 2;                // A delay value for the display stating a new wave on screen
     public float timeBetweenWaves = 5f;                     // Delay time between waves (Can use this for fancy text displaying name of wave before dissapearing)
     private float waveCountdown;                            // Countdown timer for time until next wave starts spawning (only starts counting down once all enemies with tag "Enemy" have been defeated)
     private float timeBetweenSearches = 0.5f;               // This helps alleviate the taxing call in EnemyIsAlive() - mostly for performance boosting. Smaller = more accuracy, larger = better performance
@@ -54,6 +55,7 @@ public class SpawnManager : MonoBehaviour
             Debug.LogError("No waves created");
         }
 
+        StartCoroutine(DisplayNextWave());
         waveCountdown = timeBetweenWaves;
     }
 
@@ -65,6 +67,10 @@ public class SpawnManager : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
+                if (!(nextWave + 1 == waves.Count))
+                {
+                    StartCoroutine(DisplayNextWave());
+                }
                 waveFinished();
             }
             else
@@ -87,6 +93,14 @@ public class SpawnManager : MonoBehaviour
         {
             waveCountdown -= Time.deltaTime;
         }
+    }
+
+    IEnumerator DisplayNextWave()
+    {
+        GameManager.instance.panelWaveOverlay.SetActive(true);
+        yield return new WaitForSeconds(panelWaveOverlayDelay);
+        GameManager.instance.panelWaveOverlay.SetActive(false);
+        yield break;
     }
 
     // Coroutine that changes the state to SPAWNING and spawns the next wave
@@ -118,7 +132,7 @@ public class SpawnManager : MonoBehaviour
         {
             int randomSpawnLocation = Random.Range(0, spawnPoints.Count);       // i % spawnPoints.Count
             //Debug.Log("Spawn Location: " + randomSpawnLocation);
-            spawnPoints[randomSpawnLocation].Spawn(0);                          // RIGHT HERE NEED TO HANDLE WHICH ENEMY PREFAB TO CHOOSE
+            spawnPoints[randomSpawnLocation].Spawn(Random.Range(0, spawnPoints[randomSpawnLocation].spawnableObjects.Length));                          // RIGHT HERE NEED TO HANDLE WHICH ENEMY PREFAB TO CHOOSE
             yield return new WaitForSeconds(_miniWave.spawnDelay);
         }
 
