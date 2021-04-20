@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public static AudioManager instance;
 
-    // Start is called before the first frame update
     void Awake()
     {
         // Singleton pattern here
@@ -40,6 +39,7 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    // Start is called before the first frame update
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
