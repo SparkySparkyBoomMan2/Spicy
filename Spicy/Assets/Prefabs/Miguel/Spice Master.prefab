@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2864543939269887054}
   m_Layer: 10
-  m_Name: Working Mein
+  m_Name: Spice Master
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

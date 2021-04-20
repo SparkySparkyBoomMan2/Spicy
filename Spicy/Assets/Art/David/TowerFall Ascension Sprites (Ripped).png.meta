@@ -11,6 +11,30 @@ TextureImporter:
   - first:
       213: -7857411734553557132
     second: Roman4
+  - first:
+      213: -1734228216034712568
+    second: OctocatDefeated1
+  - first:
+      213: 6484000941905878505
+    second: OctocatDefeated2
+  - first:
+      213: 6083055244237104785
+    second: OctocatDefeated3
+  - first:
+      213: -6869039043076193519
+    second: OctocatDefeated4
+  - first:
+      213: -4960428007723383498
+    second: OctocatDefeated5
+  - first:
+      213: 7878703743501154490
+    second: OctocatDefeated6
+  - first:
+      213: -4232491802574524695
+    second: OctocatDefeated7
+  - first:
+      213: -5513956531389894540
+    second: OctocatDefeated8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -154,6 +178,174 @@ TextureImporter:
       bones: []
       spriteID: 47703f368add4f290800000000000000
       internalID: -7857411734553557132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated1
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1827
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804aac730a8cee7e0800000000000000
+      internalID: -1734228216034712568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated2
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1827
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed1991c08ccbf950800000000000000
+      internalID: 6484000941905878505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated3
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1827
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19664d5e38a5b6450800000000000000
+      internalID: 6083055244237104785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated4
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1827
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113872152654ca0a0800000000000000
+      internalID: -6869039043076193519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated5
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1763
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635cfb92205092bb0800000000000000
+      internalID: -4960428007723383498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated6
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1763
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab83de1cf47c65d60800000000000000
+      internalID: 7878703743501154490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated7
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1763
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeeac8512b2345c0800000000000000
+      internalID: -4232491802574524695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OctocatDefeated8
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1763
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4707f87bfbd7a73b0800000000000000
+      internalID: -5513956531389894540
       vertices: []
       indices: 
       edges: []
