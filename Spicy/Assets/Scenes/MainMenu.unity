@@ -382,6 +382,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2127363057023848744, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127363057023848745, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127363057023848745, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 218
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127363057023848746, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_text
+      value: Level Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127363057023848746, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -262.23947
+      objectReference: {fileID: 0}
     - target: {fileID: 2525228542505203039, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -391,6 +416,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LevelFour
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596663950851029, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596664260846273, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3946596664284580064, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
@@ -452,6 +487,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3946596664302717109, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596664334995691, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3946596664577045161, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_IsActive
@@ -471,6 +516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LevelTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260300518439867007, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6417448396903031107, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
