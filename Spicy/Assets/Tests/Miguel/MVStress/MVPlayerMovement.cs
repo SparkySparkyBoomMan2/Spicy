@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
+// This stress tests the dash speed of the player by testing when or if they go out of bounds
 namespace Tests
 {
     public class MVPlayerMovement

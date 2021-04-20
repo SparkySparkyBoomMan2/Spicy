@@ -15,8 +15,8 @@ public class Octocat : MonoBehaviour
     public Transform attackPoint7;  // Attack point for right high projectile
     public Transform attackPoint8;  // Attack point for moderately downwards right projectile
     public Transform attackPoint9;  // Attack point for moderately downwards left projectile
-    public Transform attackPoint10;  // Attack point for slightly downwards right projectile
-    public Transform attackPoint11;  // Attack point for slightly downwards left projectile
+    public Transform attackPoint10; // Attack point for slightly downwards right projectile
+    public Transform attackPoint11; // Attack point for slightly downwards left projectile
     public GameObject projectile;   // Octocat projectile
     public int health = 30;         // Octocat health
     public SpriteRenderer rend;     // For changing sprite color when damaged
@@ -27,8 +27,8 @@ public class Octocat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = attackWaitTime;
-        orignal = rend.color;
+        time = attackWaitTime;      // Set wait time
+        orignal = rend.color;       // Get the original color of the sprite
     }
 
     // Update is called once per frame
@@ -60,24 +60,26 @@ public class Octocat : MonoBehaviour
             // Decorator pattern here
             if (health == 28)
             {
-                attack = new Attack1(attack);
+                attack = new Attack1(attack);   // Shoot 3 projectiles
             }
             else if (health == 24)
             {
-                attack = new Attack2(attack);
+                attack = new Attack2(attack);   // Shoot 5 projectiles
             }
             else if (health == 20)
             {
-                attack = new Attack3(attack);
+                attack = new Attack3(attack);   // Shoot 9 projectiles
             }
             else if (health == 16)
             {
-                attack = new Attack4(attack);
+                attack = new Attack4(attack);   // Shoot 9 * 3 (27) projectiles
             }
             else if (health == 10)
             {
-                attack = new Attack5(attack);
+                attack = new Attack5(attack);   // Shoot 31 projectiles
             }
+            // Ocotcat defeated
+            //     Deactivate octocat, instantiate animated object 'defeated', and destroy game object
             else if (health <= 0)
             {
                 this.gameObject.SetActive(false);
@@ -87,11 +89,13 @@ public class Octocat : MonoBehaviour
         }
     }
 
+    // Used for invoking sprite color back to it original color
     void ResetColor()
     {
         rend.color = orignal;
     }
 
+    // Instantiates multiple attacks
     public IEnumerator MultiAttack()
     {
         yield return new WaitForSeconds(0.2f);
@@ -109,6 +113,7 @@ public class Octocat : MonoBehaviour
         }
     }
 
+    // Octocat's attack that changes based on decorator pattern's ReturnAttack() function
     public void Attack()
     {
         if(attack.ReturnAttack() >= 0)
