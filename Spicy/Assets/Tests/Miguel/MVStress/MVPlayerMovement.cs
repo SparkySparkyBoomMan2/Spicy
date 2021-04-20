@@ -1,11 +1,18 @@
-﻿using System.Collections;
+﻿/* MVPlayerMovement.cs
+ * 
+ * Miguel Villanueva
+ * CS 383
+ * March 25, 2021
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-// This stress tests the dash speed of the player by testing when or if they go out of bounds
+// This stress test tests the dash speed of the player by testing when or if they go out of bounds
 namespace Tests
 {
     public class MVPlayerMovement

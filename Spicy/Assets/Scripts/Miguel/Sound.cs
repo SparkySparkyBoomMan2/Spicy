@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* Sound.cs
+ * 
+ * Miguel Villanueva
+ * CS 383
+ * April 1, 2021
+ */
+
+using UnityEngine;
 using UnityEngine.Audio;
 
 [System.Serializable]

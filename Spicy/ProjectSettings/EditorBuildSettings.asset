@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MVTestMovementScene.unity
     guid: 0f826eef704e57c4c945dad012faf99f
   - enabled: 1
+    path: Assets/Scenes/MVOctocatTestScene.unity
+    guid: 97b54992d19b6384eae4d3868dc03932
+  - enabled: 1
     path: Assets/Scenes/APTestScene.unity
     guid: 145721d4c58aedd449b42e4075e5b1dc
   m_configObjects: {}

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* Octocat.cs
+ * 
+ * Miguel Villanueva
+ * CS 383
+ * April 20, 2021
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

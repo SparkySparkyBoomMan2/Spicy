@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* AudioManager.cs
+ * 
+ * Miguel Villanueva
+ * CS 383
+ * April 1, 2021
+ */
+
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System;
