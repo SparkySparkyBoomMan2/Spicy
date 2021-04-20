@@ -54,13 +54,41 @@ public class bullet_default : MonoBehaviour
     //   - TakeDamage() function expected to be defined in Tomato_Enemy script!
     void DamageEnemy(Collision2D other)
     {
-        death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
         
         
-        if (enemy != null)
+        if (other.gameObject.name == "Tomato_Enemy(Clone)" || other.gameObject.name == "Tomato_Enemy" )
         {
-            //Debug.Log(enemy.name);
-            enemy.Die();
+            //Debug.Log("Hitting tomato");
+            death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
+            if (enemy != null)
+            {
+                //Debug.Log(enemy.name);
+                enemy.Die();
+            }
+            
         }
+        else if (other.gameObject.name == "FlyingEyeball(Clone)" || other.gameObject.name == "FlyingEyeball" )
+        {
+            //Debug.Log("Hitting eyeball");
+            
+
+            // Only temporary while the eyeball does not have a death handler
+            Destroy(other.gameObject, 0.05f);
+            //Debug.Log("BOOMBAP");
+            /*
+            death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
+            if (enemy != null)
+            {
+                //Debug.Log(enemy.name);
+                enemy.Die();
+            }
+            */
+        }
+        else
+        {
+            //Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
+        }
+      
+
     }
 }
