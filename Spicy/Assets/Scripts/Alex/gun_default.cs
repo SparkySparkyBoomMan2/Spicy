@@ -70,10 +70,12 @@ public class gun_default : MonoBehaviour
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //Vector3 currentRotation = transform.localRotation.eulerAngles;
 
         //Flips gun across y axis if mouse cursor crosses the gun's y axis
         //Flips localScale of object, so it affects the children as well
+        /*
         if ((transform.rotation.z > .7f || transform.rotation.z < -.7f) && transform.localScale.y > 0)
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
@@ -81,6 +83,47 @@ public class gun_default : MonoBehaviour
         else if ((transform.rotation.z < .7f && transform.rotation.z > -.7f))
         {
             transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
+        }
+        */
+
+
+        GameObject player = GameObject.Find("Player Variant");
+
+        if (player != null)
+        {
+            //Debug.Log("We good fam?");
+            var script = player.GetComponent<Movement>();
+            if (script != null)
+            {
+                //Debug.Log("We good fam? -- here is side: " + script.side);
+
+                if (script.side > 0 && transform.localScale.y < 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
+                }
+                else if (script.side < 0 && transform.localScale.y > 0 )
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
+                }
+
+                if (script.side > 0)
+                {
+                    angle = Mathf.Clamp(angle, -90, 90);
+                }
+                else if (script.side < 0)
+                {   
+                    bool isNeg = false;
+                    if (angle < 0)
+                        isNeg = true;
+
+                    angle = Mathf.Clamp(Mathf.Abs(angle), 90, 180);
+
+                    if (isNeg)
+                        angle *= -1;
+                }
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                //Debug.Log("angle is: " + angle);
+            }
         }
     }
 
