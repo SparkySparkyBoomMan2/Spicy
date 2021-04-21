@@ -54,6 +54,8 @@ public class Octocat : MonoBehaviour
         else
             time -= Time.deltaTime;
     }
+
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     {
         // If octocat is hit decrease health
@@ -95,6 +97,48 @@ public class Octocat : MonoBehaviour
             }
         }
     }
+*/
+
+    public void DamageOctocat()
+    {
+        // If octocat is hit decrease health
+        //     Also indicate damage by briefly turning sprite red 
+        //     Additionally change octocat attacks based on remaining health
+
+        health -= 1;
+        rend.color = Color.red;
+        Invoke(nameof(ResetColor), 0.5f);
+        // Decorator pattern here
+        if (health == 28)
+        {
+            attack = new Attack1(attack);   // Shoot 3 projectiles
+        }
+        else if (health == 24)
+        {
+            attack = new Attack2(attack);   // Shoot 5 projectiles
+        }
+        else if (health == 20)
+        {
+            attack = new Attack3(attack);   // Shoot 9 projectiles
+        }
+        else if (health == 16)
+        {
+            attack = new Attack4(attack);   // Shoot 9 * 3 (27) projectiles
+        }
+        else if (health == 10)
+        {
+            attack = new Attack5(attack);   // Shoot 31 projectiles
+        }
+        // Ocotcat defeated
+        //     Deactivate octocat, instantiate animated object 'defeated', and destroy game object
+        else if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+            Instantiate(defeated, transform.position, transform.rotation);
+            Destroy(this.gameObject);
+        }
+    }
+
 
     // Used for invoking sprite color back to it original color
     void ResetColor()

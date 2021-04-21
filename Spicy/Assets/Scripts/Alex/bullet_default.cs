@@ -4,36 +4,31 @@ using UnityEngine;
 
 public class bullet_default : MonoBehaviour
 {
+    // rb - Rigidbody attatched to each bullet
+    // bulletImpact - particle system which plays when bullet impacts something
+    // buuletSpeed - variable to change how fast bullet travels
     public Rigidbody2D rb;
-    public ParticleSystem BulletExplode;
-    public float BulletSpeed;
-
-    public Animator animator;
+    public ParticleSystem bulletImpact;
+    public float bulletSpeed;
 
     public virtual void Start()
     {
-        //Makes the bullet have a starting velocity
-        //might change depending on instantiated rotation of bullet
-        //rb.velocity = new Vector3(transform.right.y, transform.right.x, transform.right.z) * BulletSpeed;
-        rb.velocity = new Vector3(transform.right.x * -1, transform.right.y * -1, transform.right.z) * BulletSpeed;
-
-        //animator.SetBool("bulletMoving", true);
-    }
-    void FixedUpdate()
-    {
-        
+        //Gives the bullet a starting velocity
+        //May change depending on instantiated rotation of bullet
+        rb.velocity = new Vector3(transform.right.x * -1, transform.right.y * -1, transform.right.z) * bulletSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
-       
+        //If bullet collides with an enemy, damange/kill that enemy
         if (other.gameObject.tag == "Enemy")
         {
-            BulletImpact();
             DamageEnemy(other);
         }
+        
+        //Destroy the bullet, and play the particle effect for bullet impact
         BulletImpact();
     }
 
@@ -42,52 +37,49 @@ public class bullet_default : MonoBehaviour
     // * particle system is destroyed in a seperate script
     void BulletImpact()
     {
-        Instantiate(BulletExplode, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
+        Instantiate(bulletImpact, new Vector2 (transform.position.x, transform.position.y), Quaternion.identity);
         Destroy(gameObject);
     }
 
     //If the object collided with is an enemy, damage that enemy
-    // * for now, only designed to work with tomato enemy
-    // * takes off 'damage' amount of health
-    //   - defined in public global variable
-    //   - TakeDamage() function expected to be defined in Tomato_Enemy script!
+    // * For all enemies besides boss, it is a one hit kill
+    //   - Enemies which have their own "die" function will have that called
+    //   - Otherwise, this script can just destroy that game object
+    // * The Octocat boss damage is held in its own script for now
     void DamageEnemy(Collision2D other)
     {
-        
-        
+        //When the bullet collides with a tomato enemy
         if (other.gameObject.name == "Tomato_Enemy(Clone)" || other.gameObject.name == "Tomato_Enemy" )
         {
             //Debug.Log("Hitting tomato");
+            //Gets a reference to the tomato enemy script that contaions the "die" function
+            //Then if it's not null, call the die function
             death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
             if (enemy != null)
             {
-                //Debug.Log(enemy.name);
                 enemy.Die();
-            }
-            
+            } 
         }
+        //When the bullet collides with an eyeball enemy
         else if (other.gameObject.name == "FlyingEyeball(Clone)" || other.gameObject.name == "FlyingEyeball" )
         {
             //Debug.Log("Hitting eyeball");
-            
-
             // Only temporary while the eyeball does not have a death handler
             Destroy(other.gameObject, 0.05f);
-            //Debug.Log("BOOMBAP");
-            /*
-            death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
-            if (enemy != null)
-            {
-                //Debug.Log(enemy.name);
-                enemy.Die();
-            }
-            */
         }
-        else
+        else if (other.gameObject.name == "Octocat(Clone)" || other.gameObject.name == "Octocat")
+        //When the bullet collides with the Octocat Boss
         {
-            //Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
+            //Gets a reference to the Octocat script that contaions the "DamageOctocat" function
+            //Then if it's not null, call the DamageOctocat function
+            //Since it's a boss, not a one-hit kill
+            Octocat boss =  other.gameObject.GetComponent<Octocat>();
+            if (boss != null)
+            {
+                boss.DamageOctocat();
+            }
         }
-      
 
+        Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
     }
 }

@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7678732436867955756}
-  BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
+  bulletImpact: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
     type: 3}
-  BulletSpeed: 25
+  bulletSpeed: 25
   animator: {fileID: 8182611276176821629}
 --- !u!95 &8182611276176821629
 Animator:
