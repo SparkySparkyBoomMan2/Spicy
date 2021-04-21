@@ -123,7 +123,6 @@ MonoBehaviour:
   BulletExplode: {fileID: 5767722287970395276, guid: b614b69289e01e544a9fab91ae18a12e,
     type: 3}
   BulletSpeed: 25
-  Damage: 50
   animator: {fileID: 891945460265554862}
 --- !u!60 &-3701389397328730016
 PolygonCollider2D:
