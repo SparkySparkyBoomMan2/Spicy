@@ -7,7 +7,6 @@ public class bullet_default : MonoBehaviour
     public Rigidbody2D rb;
     public ParticleSystem BulletExplode;
     public float BulletSpeed;
-    public int Damage = 50;
 
     public Animator animator;
 
@@ -27,7 +26,7 @@ public class bullet_default : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
+        //Debug.Log("Bullet is impacting --[" + other.gameObject.tag + "]");
 
        
         if (other.gameObject.tag == "Enemy")

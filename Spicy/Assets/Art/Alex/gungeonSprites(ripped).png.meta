@@ -1,0 +1,1112 @@
+fileFormatVersion: 2
+guid: 91ad064343ad59041ad8886919c6258d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mac10_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 261
+        width: 78
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5884157, y: 0.52386177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b1027f393587930800000000000000
+      internalID: 4141151752338545459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 436
+        width: 129
+        height: 82
+      alignment: 9
+      pivot: {x: 0.12892525, y: 0.27737725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fe544fe23311f80800000000000000
+      internalID: -8137666774922039545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 346
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.2130629, y: 0.37916207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02297b90efc85c220800000000000000
+      internalID: 2505563790414156320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 436
+        width: 129
+        height: 82
+      alignment: 9
+      pivot: {x: 0.13206825, y: 0.29716602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5e90513a99ea810800000000000000
+      internalID: 1778527828569613814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 265
+        width: 89
+        height: 47
+      alignment: 9
+      pivot: {x: 0.64129984, y: 0.45684358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6689de2fa1aff78f0800000000000000
+      internalID: -540438436609419162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_2
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 346
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.21801236, y: 0.3532689}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c8a6ab493ce45b0800000000000000
+      internalID: -5382149461111042931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_3
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 260
+        width: 94
+        height: 56
+      alignment: 9
+      pivot: {x: 0.59925747, y: 0.45653534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44713a8ea706b920800000000000000
+      internalID: 3005598247540585548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_3
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 436
+        width: 129
+        height: 82
+      alignment: 9
+      pivot: {x: 0.15408112, y: 0.31200764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5fe9911cb6e7ff0800000000000000
+      internalID: -36473269869677101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_3
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 346
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.24274574, y: 0.36190018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259e5417c3ca60730800000000000000
+      internalID: 3965045897544722770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_4
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 260
+        width: 128
+        height: 56
+      alignment: 9
+      pivot: {x: 0.46196747, y: 0.48551124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0642148017ff0bd0800000000000000
+      internalID: -2661637204445346294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_4
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 436
+        width: 121
+        height: 82
+      alignment: 9
+      pivot: {x: 0.1680898, y: 0.30211323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75da42a7a118d5870800000000000000
+      internalID: 8673230408103800151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_4
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 330
+        width: 97
+        height: 63
+      alignment: 9
+      pivot: {x: 0.32434836, y: 0.5257559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8342ab3fafcd1b670800000000000000
+      internalID: 8552860137742279736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_5
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 436
+        width: 129
+        height: 69
+      alignment: 9
+      pivot: {x: 0.15408112, y: 0.40593156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee837e746c2c40140800000000000000
+      internalID: 4685083669237807342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_5
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 346
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.20316966, y: 0.3446376}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4005c4831e516a50800000000000000
+      internalID: 6512589974079340622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_5
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 260
+        width: 87
+        height: 54
+      alignment: 9
+      pivot: {x: 0.6305563, y: 0.44741312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a448b6629a40170800000000000000
+      internalID: 8143820008670382729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_6
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 436
+        width: 129
+        height: 69
+      alignment: 9
+      pivot: {x: 0.13206872, y: 0.29422617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b107537a0780586b0800000000000000
+      internalID: -5294816506969493477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_6
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 342
+        width: 168
+        height: 55
+      alignment: 9
+      pivot: {x: 0.096746534, y: 0.35248414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3705d029cfff2690800000000000000
+      internalID: -7624594404810619073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_6
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 260
+        width: 87
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5746032, y: 0.39324522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5401a69859eb800800000000000000
+      internalID: 630105415300957613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_7
+      rect:
+        serializedVersion: 2
+        x: 3306
+        y: 436
+        width: 125
+        height: 73
+      alignment: 9
+      pivot: {x: 0.14625587, y: 0.32217282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15a3359b35f1da80800000000000000
+      internalID: -8443698190087903972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_7
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 338
+        width: 168
+        height: 59
+      alignment: 9
+      pivot: {x: 0.09191749, y: 0.4174908}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3b725e1277ac110800000000000000
+      internalID: 1281968031402537981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_7
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 258
+        width: 128
+        height: 56
+      alignment: 9
+      pivot: {x: 0.40492058, y: 0.4492907}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3e4bb917acb9200800000000000000
+      internalID: 187966398758446036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_8
+      rect:
+        serializedVersion: 2
+        x: 3856
+        y: 436
+        width: 121
+        height: 69
+      alignment: 9
+      pivot: {x: 0.13791524, y: 0.33538067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06f3880a711dc5b0800000000000000
+      internalID: -5346597966792362482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_8
+      rect:
+        serializedVersion: 2
+        x: 3862
+        y: 338
+        width: 146
+        height: 76
+      alignment: 9
+      pivot: {x: 0.091552734, y: 0.35588112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880297af95aa29e30800000000000000
+      internalID: 4508853480382341256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_8
+      rect:
+        serializedVersion: 2
+        x: 3843
+        y: 260
+        width: 91
+        height: 56
+      alignment: 9
+      pivot: {x: 0.64265054, y: 0.4203148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4460e70266a22fe0800000000000000
+      internalID: -1215226009467460529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_9
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 260
+        width: 90
+        height: 59
+      alignment: 9
+      pivot: {x: 0.63522136, y: 0.37623674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209d4d66ec6c08a80800000000000000
+      internalID: -8466548709665744638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_9
+      rect:
+        serializedVersion: 2
+        x: 4405
+        y: 337
+        width: 178
+        height: 77
+      alignment: 9
+      pivot: {x: 0.12851672, y: 0.38409463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39ac5c0469721d70800000000000000
+      internalID: 9012399274932873535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_9
+      rect:
+        serializedVersion: 2
+        x: 4406
+        y: 436
+        width: 129
+        height: 69
+      alignment: 9
+      pivot: {x: 0.14779024, y: 0.35889778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02846e207ab84d020800000000000000
+      internalID: 2365669253700798496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_10
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 337
+        width: 182
+        height: 73
+      alignment: 9
+      pivot: {x: 0.18125966, y: 0.4333145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d00a73dccde2fb80800000000000000
+      internalID: -8362360094096490287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_10
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 436
+        width: 134
+        height: 69
+      alignment: 9
+      pivot: {x: 0.15185182, y: 0.32362255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bac58a07e79b02d0800000000000000
+      internalID: -3311386082431087948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_10
+      rect:
+        serializedVersion: 2
+        x: 4950
+        y: 260
+        width: 88
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5783636, y: 0.53181607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ede2321b545f3d0800000000000000
+      internalID: -3173553735310844413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_11
+      rect:
+        serializedVersion: 2
+        x: 5494
+        y: 260
+        width: 137
+        height: 51
+      alignment: 9
+      pivot: {x: 0.42004663, y: 0.46022782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c329b6724a192abf0800000000000000
+      internalID: -314528889740488132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_11
+      rect:
+        serializedVersion: 2
+        x: 5494
+        y: 337
+        width: 189
+        height: 52
+      alignment: 9
+      pivot: {x: 0.20379671, y: 0.4531913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd63cf6952b071e0800000000000000
+      internalID: -2202064120587260461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_11
+      rect:
+        serializedVersion: 2
+        x: 5505
+        y: 436
+        width: 129
+        height: 77
+      alignment: 9
+      pivot: {x: 0.14149937, y: 0.27872655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74730afb8b716d960800000000000000
+      internalID: 7626309101254883143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_12
+      rect:
+        serializedVersion: 2
+        x: 6044
+        y: 260
+        width: 90
+        height: 51
+      alignment: 9
+      pivot: {x: 0.6308431, y: 0.48460898}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79121d8a09a361c0800000000000000
+      internalID: -4511576538913564293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_12
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 436
+        width: 142
+        height: 77
+      alignment: 9
+      pivot: {x: 0.13513699, y: 0.31648988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119dcfda5901accb0800000000000000
+      internalID: -4843040214228346607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_12
+      rect:
+        serializedVersion: 2
+        x: 6050
+        y: 337
+        width: 183
+        height: 52
+      alignment: 9
+      pivot: {x: 0.21688226, y: 0.5000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef950f881d1c87a80800000000000000
+      internalID: -8468805993580439042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_13
+      rect:
+        serializedVersion: 2
+        x: 6604
+        y: 436
+        width: 142
+        height: 82
+      alignment: 9
+      pivot: {x: 0.15725063, y: 0.30853307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b62c8ac860cbcd70800000000000000
+      internalID: 9064550231320569522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_13
+      rect:
+        serializedVersion: 2
+        x: 6595
+        y: 338
+        width: 182
+        height: 55
+      alignment: 9
+      pivot: {x: 0.18944776, y: 0.4714555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7ad4669615e9140800000000000000
+      internalID: 4728306171915380661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_13
+      rect:
+        serializedVersion: 2
+        x: 6595
+        y: 260
+        width: 94
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5918748, y: 0.45382392}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedb5703022781840800000000000000
+      internalID: 5195027652749409771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_14
+      rect:
+        serializedVersion: 2
+        x: 7156
+        y: 436
+        width: 138
+        height: 77
+      alignment: 9
+      pivot: {x: 0.11937415, y: 0.3314197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434f9a1d750e66530800000000000000
+      internalID: 3848009599419020340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_14
+      rect:
+        serializedVersion: 2
+        x: 7164
+        y: 344
+        width: 164
+        height: 49
+      alignment: 9
+      pivot: {x: 0.095825195, y: 0.37048215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6745b73a46cf09220800000000000000
+      internalID: 2490768103105582198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_14
+      rect:
+        serializedVersion: 2
+        x: 7145
+        y: 260
+        width: 135
+        height: 56
+      alignment: 9
+      pivot: {x: 0.42687356, y: 0.3992642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3755a00a0f21b3ac0800000000000000
+      internalID: -3874482229735697037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_15
+      rect:
+        serializedVersion: 2
+        x: 7706
+        y: 436
+        width: 151
+        height: 73
+      alignment: 9
+      pivot: {x: 0.11239846, y: 0.28748813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91473c63cd6dcad0800000000000000
+      internalID: -2680365517113966181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_15
+      rect:
+        serializedVersion: 2
+        x: 7715
+        y: 337
+        width: 82
+        height: 56
+      alignment: 9
+      pivot: {x: 0.15602373, y: 0.37408012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ea4bac8aa187590800000000000000
+      internalID: -7676356252595343817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_15
+      rect:
+        serializedVersion: 2
+        x: 7696
+        y: 260
+        width: 144
+        height: 56
+      alignment: 9
+      pivot: {x: 0.39226955, y: 0.41185597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f495a43f4585caae0800000000000000
+      internalID: -1536756250957948593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rainbowGun_16
+      rect:
+        serializedVersion: 2
+        x: 8256
+        y: 433
+        width: 172
+        height: 85
+      alignment: 9
+      pivot: {x: 0.09412473, y: 0.25112233}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9569dd42f373d660800000000000000
+      internalID: 7409393296479970716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handCannon_16
+      rect:
+        serializedVersion: 2
+        x: 8265
+        y: 342
+        width: 82
+        height: 51
+      alignment: 9
+      pivot: {x: 0.11301924, y: 0.33408192}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a581ca5e18cb4fc10800000000000000
+      internalID: 2086499793469446234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mac10_16
+      rect:
+        serializedVersion: 2
+        x: 8246
+        y: 260
+        width: 88
+        height: 56
+      alignment: 9
+      pivot: {x: 0.6362194, y: 0.43704006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da20c490064a13d00800000000000000
+      internalID: 950721728731677357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
