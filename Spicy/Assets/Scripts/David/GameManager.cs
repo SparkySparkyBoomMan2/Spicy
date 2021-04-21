@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
+    public static GameManager instance = null;  // breaches encapsulation
+
+    public GameManager getInstance()
+    {
+        return instance;
+    }
 
     //private int screenWidth = 360;
     //private int screenHeight = 240;
@@ -19,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public float respawnDelay = 2f;
     public int lives = 3;
+
+    public static int testingLives = 3;
     
     [HideInInspector]
     public int level = 1;
