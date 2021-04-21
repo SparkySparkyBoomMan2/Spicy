@@ -3,7 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
+// README comments:
+/* What does this prefab do:
+ * - This prefab generates waves of enemies by using prefab object and instantiating them in desired places
+ * - This prefab utilizes a mini wave feature, meaning there are mini waves spawning within each parent wave
+ *      - Within wave 1, 2 enemies spawn right away, 3 seconds later another 2 more enemies spawn, then 2 more, etc.
+ * 
+ * Why do you need it:
+ * - If you are incorporating waves of enemies in your game and want a bit more variety than just set enemies as specific intervals, this asset is for you
+ * - If you don't want to worry about creating a wave manager from scratch, this is for you
+ * - If you want flexibility in your wave design, this is for you
+ * 
+ * How to Use:
+ * - Requires child transforms at desired locations added into the public list of Spawners to work
+ *      - If not using the additional asset "Spawner", will need to adjust code so that this Spawn Manager handles instantiation, instead of the "Spawner" asset
+ * - Set number of waves
+ * - Set number of spawn points
+ * - Set delay time between waves
+ * - For each wave,
+ *      - (Optional) Name wave for clearer asset management
+ *      - Set number of mini waves within parent wave --> *** This must be the same value as within the size of mini waves for each parent wave ***
+ *      - Set delay between each mini wave
+ *      - For each mini wave,
+ *          - (Optional) Name mini wave for clearer asset management
+ *          - Set spawn delay
+ *          - Set the number of enemies spanwing during mini wave
+ * 
+ * Other important information:
+ *  - Additional asset highly recommended for optimal use -- "Spawner"
+ *  - Within "Spawner" asset is where prefabs are placed for desired spawnable objects
+ *  - Spawn Manager allows as many waves and mini waves within each wave as desired
+ */
 
 // This class handles the management behind the "waves" of spawned enemies in a level
 public class SpawnManager : MonoBehaviour
@@ -182,5 +212,10 @@ public class SpawnManager : MonoBehaviour
         // For now, it will just take you back to the main menu
         GameManager.instance.LevelComplete();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public virtual void onSetup()
+    {
+        // Use me in child class :)
     }
 }
