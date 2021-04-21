@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class gun_default : MonoBehaviour
 {
+    // bullet - GameObject for bullet which is attatched to script in inspector
+    // gunRenderer - SpriteRenderer for gun which script is attatched to 
+    // animator - Animation controller for specifc weapon attatched to script
+    // FireRateDelay - Time in seconds which weapon will wait after firing each bullet
+
+    //AllowFire - when true, the gun is allowed to fire
+    //isReloading - when true, gun is reloading
+
+    //startTime - used to check if AllowFire and isReloading have been set for too long
+    // - (used to fix issue where these would be false, and then gun would be set inactive)
     public GameObject bullet;
     public SpriteRenderer gunRenderer;
     public Animator animator;
     public float FireRateDelay;
-   
-    //AllowFire - when true, the gun is allowed to fire
-    //isReloading - when true, gun is reloading
-     protected bool AllowFire;
-     protected bool isReloading;
-
+    protected bool AllowFire;
+    protected bool isReloading;
     protected float startTime;
 
 
@@ -30,8 +36,9 @@ public class gun_default : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            //Debug.Log("Trying to fire, and AllowFire == ["+ AllowFire + "] --- isReloading: " + isReloading);
-            //Debug.Log("Time: " + Time.time + " ----- startTime: " + startTime);
+            // If AllowFire or isReloading is set, and it has been more than 5 seconds since the FireGun coroutine has been called
+            // - then set both to true
+            // - fixes issue where these variables stay false when gun is set inactive
             if ((!AllowFire || isReloading) && Time.time - startTime > 5) 
             {
                 AllowFire = true;
@@ -39,19 +46,21 @@ public class gun_default : MonoBehaviour
             }
         }
 
+        //If fire button is pressed, and we are not violating the fire rate, and the player is not reloading, then fire weapon
         if (Input.GetMouseButton(0) && AllowFire &&!isReloading)
         {  
             startTime = Time.time;  
             StartCoroutine(FireGun());
         }
+        //If weapon reloads, then reload weapon
         else if (Input.GetKey(KeyCode.R))
         {
-            StartCoroutine(Reload());
+            //StartCoroutine(Reload());
         }
 
     }
 
-    //Moves gun to aim towards mouse pointer
+    //Moves gun to aim towards mouse pointer consistently
     void AimGun()
     {
         var mousePos = Input.mousePosition;
@@ -64,14 +73,13 @@ public class gun_default : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         //Flips gun across y axis if mouse cursor crosses the gun's y axis
+        //Flips localScale of object, so it affects the children as well
         if ((transform.rotation.z > .7f || transform.rotation.z < -.7f) && transform.localScale.y > 0)
         {
-            //gunRenderer.flipY = true;
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
         }
         else if ((transform.rotation.z < .7f && transform.rotation.z > -.7f))
         {
-            //gunRenderer.flipY = false;
             transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
         }
     }
@@ -82,15 +90,15 @@ public class gun_default : MonoBehaviour
     public virtual IEnumerator FireGun()
     {//
         AllowFire = false;
+        animator.SetBool("isFiring", true);
         //Debug.Log("FIring gun");
         //Rotation added on z-axis changes angle the "bullet" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, rot.z + 180);
-        //rot = new Vector3(rot.x, rot.y, rot.z);
 
         Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
-        //Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.identity);
         yield return new WaitForSeconds(FireRateDelay);
+        animator.SetBool("isFiring", false);
         AllowFire = true;
     }
 
@@ -103,7 +111,7 @@ public class gun_default : MonoBehaviour
         //animator.SetBool("isLauncherReload", true);
         //yield return new WaitForSeconds(1f);
         //animator.SetBool("isLauncherReload", false);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0f);
         //isReloading = false;
     }
 

@@ -46,7 +46,7 @@ public class bullet_default : MonoBehaviour
     //   - Enemies which have their own "die" function will have that called
     //   - Otherwise, this script can just destroy that game object
     // * The Octocat boss damage is held in its own script for now
-    void DamageEnemy(Collision2D other)
+    public void DamageEnemy(Collision2D other)
     {
         //When the bullet collides with a tomato enemy
         if (other.gameObject.name == "Tomato_Enemy(Clone)" || other.gameObject.name == "Tomato_Enemy" )
@@ -80,6 +80,6 @@ public class bullet_default : MonoBehaviour
             }
         }
 
-        Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
+        //Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
     }
 }

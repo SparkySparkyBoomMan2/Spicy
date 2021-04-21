@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponHandler : MonoBehaviour
 {
 
-    // Weapon handler which allows the player to select which weapon is equipped by pressing 1-4 on keyboard
+    // Weapon handler which allows the player to select which weapon is equipped by pressing 1-6 on keyboard
     // (subject to change if more/less weapons later on)
 
     //Index of currently selected weapon

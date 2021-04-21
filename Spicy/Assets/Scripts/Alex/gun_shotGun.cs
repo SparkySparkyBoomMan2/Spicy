@@ -9,6 +9,7 @@ public class gun_shotGun : gun_default
     // * new bullet is instantiated
     // * fire rate is used to wait between shots
     
+    //Overrided from base class to have multiple spawn points and fire multiple bullets
     public override IEnumerator FireGun()
     {
         AllowFire = false;
@@ -37,20 +38,5 @@ public class gun_shotGun : gun_default
 
         
     }
-
-    //Coroutine to reload gun
-    // * sets a parameter of the attatched animator to true (play animation)
-    // * waits for animation to complete, then sets it to false
-    //public override IEnumerator Reload()
-    //{
-        /*
-        isReloading = true;
-        animator.SetBool("isLauncherReload", true);
-        yield return new WaitForSeconds(1f);
-        animator.SetBool("isLauncherReload", false);
-        yield return new WaitForSeconds(.5f);
-        isReloading = false;
-        */
-    //}
 
 }

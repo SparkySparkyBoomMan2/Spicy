@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5620093254013544437}
   - component: {fileID: 5620093254013544442}
-  - component: {fileID: 5620093254013544434}
   - component: {fileID: 3825092976953170565}
+  - component: {fileID: -6569492270825361830}
   m_Layer: 12
   m_Name: mac10Gun
   m_TagString: Gun
@@ -85,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5620093254013544434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5620093254013544436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b44fd402c40a964c9df1c1212ccf754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 6438238484436051626, guid: bcc29765dac07fb4393b9e77244800c6, type: 3}
-  gunRenderer: {fileID: 5620093254013544442}
-  animator: {fileID: 3825092976953170565}
-  FireRateDelay: 0.1
 --- !u!95 &3825092976953170565
 Animator:
   serializedVersion: 3
@@ -120,6 +104,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6569492270825361830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620093254013544436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c25b7425bb551438b9a9fe1bdfc30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6438238484436051626, guid: bcc29765dac07fb4393b9e77244800c6, type: 3}
+  gunRenderer: {fileID: 5620093254013544442}
+  animator: {fileID: 3825092976953170565}
+  FireRateDelay: 0.1
 --- !u!1 &5728364888507534225
 GameObject:
   m_ObjectHideFlags: 0
