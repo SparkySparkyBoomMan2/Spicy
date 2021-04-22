@@ -15,7 +15,7 @@ public class WeaponHolder : MonoBehaviour
     // (starts with 0 at child 1, and goes on)
 
 
-    public static WeaponHolder instance = null;
+    private static WeaponHolder instance = null;
     public static object lockThis = new object();
     public int selectedWeapon = 0;
 
