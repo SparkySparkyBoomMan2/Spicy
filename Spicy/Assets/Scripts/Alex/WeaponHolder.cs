@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponHandler : MonoBehaviour
+public class WeaponHolder : MonoBehaviour
 {
 
     // Weapon handler which allows the player to select which weapon is equipped by pressing 1-6 on keyboard

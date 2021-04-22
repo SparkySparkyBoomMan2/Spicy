@@ -146,7 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c25b7425bb551438b9a9fe1bdfc30c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2645757011652376697, guid: 791c36916cb8f3541b7f60bb899761fb, type: 3}
-  gunRenderer: {fileID: 5690686207382557375}
+  weaponRenderer: {fileID: 5690686207382557375}
   animator: {fileID: 3896317597471862720}
+  projectile: {fileID: 2645757011652376697, guid: 791c36916cb8f3541b7f60bb899761fb,
+    type: 3}
   FireRateDelay: 0.4

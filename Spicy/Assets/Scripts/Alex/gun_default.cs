@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gun_default : MonoBehaviour
+public class gun_default : Weapon
 {
-    // bullet - GameObject for bullet which is attatched to script in inspector
-    // gunRenderer - SpriteRenderer for gun which script is attatched to 
-    // animator - Animation controller for specifc weapon attatched to script
-    // FireRateDelay - Time in seconds which weapon will wait after firing each bullet
+    // projectile - GameObject for projectile which is attatched to script in inspector
+    // FireRateDelay - Time in seconds which weapon will wait after firing each projectile
 
     //AllowFire - when true, the gun is allowed to fire
     //isReloading - when true, gun is reloading
 
     //startTime - used to check if AllowFire and isReloading have been set for too long
     // - (used to fix issue where these would be false, and then gun would be set inactive)
-    public GameObject bullet;
-    public SpriteRenderer gunRenderer;
-    public Animator animator;
+    public GameObject projectile;
     public float FireRateDelay;
     protected bool AllowFire;
     protected bool isReloading;
@@ -136,18 +132,18 @@ public class gun_default : MonoBehaviour
     }
 
     //Coroutine to "shoot" gun
-    // * new bullet is instantiated
+    // * new projectile is instantiated
     // * fire rate is used to wait between shots
     public virtual IEnumerator FireGun()
     {//
         AllowFire = false;
         animator.SetBool("isFiring", true);
         //Debug.Log("FIring gun");
-        //Rotation added on z-axis changes angle the "bullet" is instantiated at
+        //Rotation added on z-axis changes angle the "projectile" is instantiated at
         Vector3 rot = transform.GetChild(0).rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y, rot.z + 180);
 
-        Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
+        Instantiate(projectile, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
         yield return new WaitForSeconds(FireRateDelay);
         animator.SetBool("isFiring", false);
         AllowFire = true;

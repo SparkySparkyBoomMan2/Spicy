@@ -6,7 +6,7 @@ public class gun_handCannon : gun_default
 {    
 
     //Coroutine to "shoot" gun
-    // * new bullet is instantiated
+    // * new projectile is instantiated
     // * fire rate is used to wait between shots
     
     //Overrided from base class to incorporate an extra wait time before firing, to emphasize type of weapon
@@ -20,7 +20,7 @@ public class gun_handCannon : gun_default
 
         yield return new WaitForSeconds(0.20f);
 
-        Instantiate(bullet, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
+        Instantiate(projectile, new Vector2 (transform.GetChild(0).position.x, transform.GetChild(0).position.y), Quaternion.Euler(rot));
         
         yield return new WaitForSeconds(FireRateDelay);
         animator.SetBool("isFiring", false);
