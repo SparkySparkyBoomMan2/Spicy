@@ -40,11 +40,11 @@ public class eyeball_patrol : MonoBehaviour
         }
         distanceFromPlayer = Vector2.Distance(player.position, transform.position);//calcs distance between eyeball guy and player
         
-        Debug.Log("Distant from player " + distanceFromPlayer);
+        //Debug.Log("Distant from player " + distanceFromPlayer);
 
         if(distanceFromPlayer <= rangeAttack)
         {
-            Debug.Log("Is within player range");
+            //Debug.Log("Is within player range");
             if(player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0) //flips to player direction
             {
                 Flip();
@@ -111,3 +111,5 @@ public class eyeball_patrol : MonoBehaviour
         Destroy(this.gameObject);
     }
 }
+
+

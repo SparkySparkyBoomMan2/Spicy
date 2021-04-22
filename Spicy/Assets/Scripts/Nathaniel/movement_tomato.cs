@@ -7,14 +7,16 @@ public class movement_tomato : MonoBehaviour
 
     public float walk_speed = 1.0f;
     bool moveRight = true;
-    bool isDeath = false;
+    protected bool isDeath = false;
+    bool isMoving = false;
     System.Random random = new System.Random();
     int randVal;
     public Transform wallDetectRight;
     public Transform wallDetectLeft;
     public Transform groundDetect1;
     public Transform groundDetect2;
-    Rigidbody2D rigidbody2d;
+    protected Rigidbody2D rigidbody2d;
+
 
 
     private void Start()
@@ -28,22 +30,23 @@ public class movement_tomato : MonoBehaviour
     {
         if(isDeath == false)
         {
-            runMovement();
+            RunMovement();
         }
         else
         {
+            //freezes tomato
             rigidbody2d.isKinematic = true;
-            rigidbody2d.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation; 
+            rigidbody2d.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
             Debug.Log("Frozen should work.");
         }
-        
+
 
     }
 
 
-    public int runMovement()
+    public virtual bool RunMovement()
     {
-        int dirFlag = 2;
+        
         RaycastHit2D wallInfoRight = Physics2D.Raycast(wallDetectRight.position, Vector2.right, .01f);
         RaycastHit2D groundInfo1 = Physics2D.Raycast(groundDetect1.position, Vector2.down, .01f);
         RaycastHit2D groundInfo2 = Physics2D.Raycast(groundDetect2.position, Vector2.down, .01f);
@@ -54,6 +57,7 @@ public class movement_tomato : MonoBehaviour
 
         if (groundInfo1.collider == true || groundInfo2.collider == true) //trying to set only linear movement if on ground
         {
+            isMoving = true;
             //Debug.Log("Tomato On Ground");
             if(randVal == 1)
             {
@@ -69,6 +73,7 @@ public class movement_tomato : MonoBehaviour
         }
         else
         {
+            isMoving = false;
             //Debug.Log("Tomato Off Ground");
             transform.Translate(Vector2.down * walk_speed * Time.deltaTime);
         }
@@ -79,21 +84,40 @@ public class movement_tomato : MonoBehaviour
             {
                 transform.eulerAngles = new Vector2(0, 180);
                 moveRight = false;
-                dirFlag = 1;
             }
             else
             {
                 transform.eulerAngles = new Vector2(0, 0);
                 moveRight = true;
-                dirFlag = 0;
             }
         }
 
-        return dirFlag;
+        return isMoving;
     }
 
-    public void freezeTomato()
+    public virtual void FreezeTomato()
+    {
+        Debug.Log("Freeze virtual.");
+        isDeath = true;
+    }
+}
+
+public class move_option : movement_tomato
+{
+    public override void FreezeTomato()
     {
         isDeath = true;
+        rigidbody2d.isKinematic = true;
+        rigidbody2d.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+        Debug.Log("Freeze override.");
+    }
+    private void Update()
+    {
+        if (isDeath)
+        {
+            rigidbody2d.isKinematic = true;
+            rigidbody2d.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+            Debug.Log("Frozen should work.");
+        }
     }
 }

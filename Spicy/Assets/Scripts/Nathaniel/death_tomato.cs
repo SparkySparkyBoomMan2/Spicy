@@ -11,7 +11,7 @@ public class death_tomato : MonoBehaviour
     public void Die() 
     {
         isDead = true;
-        freezeT();
+        FreezeTomato();
         //Debug.Log("Tomato Hit by Bullet");
         animator.SetBool("isDead", false); //turns on explode animation
         Destroy(gameObject, 1.04f);
@@ -30,7 +30,7 @@ public class death_tomato : MonoBehaviour
         }
     }
     //Handles killing player
-    void DamagePlayer(Collision2D other)
+    public void DamagePlayer(Collision2D other)
     {
         Death_Player player = other.gameObject.GetComponent<Death_Player>();
 
@@ -40,12 +40,12 @@ public class death_tomato : MonoBehaviour
             player.DiePlayer();
         }
     }
-    void freezeT()
+     void FreezeTomato()
     {
         movement_tomato triggerFreeze = gameObject.GetComponent<movement_tomato>();
         if (triggerFreeze != null)
         {
-            triggerFreeze.freezeTomato();
+            triggerFreeze.FreezeTomato();
         }
     }
 
