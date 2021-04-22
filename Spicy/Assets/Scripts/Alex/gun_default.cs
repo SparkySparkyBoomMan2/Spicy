@@ -86,29 +86,35 @@ public class gun_default : MonoBehaviour
         }
         */
 
-
+        //Get the player's gameobject and store it
         GameObject player = GameObject.Find("Player Variant");
 
         if (player != null)
         {
-            //Debug.Log("We good fam?");
+            //If the player is not null, get the movement script and store it
             var script = player.GetComponent<Movement>();
             if (script != null)
             {
-                //Debug.Log("We good fam? -- here is side: " + script.side);
 
+                //If the script is not null, then check the "script.side" variable to see what direction the player is facing, and flip the gun accordingly
                 if (script.side > 0 && transform.localScale.y < 0)
                 {
                     transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
+
                 }
                 else if (script.side < 0 && transform.localScale.y > 0 )
                 {
                     transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
                 }
 
+
+                //Lock the rotation of the gun so the player cannot fire directly behind them
+                //i.e. the player must shoot in the direction they move for the most part
+                //(still rough)
+
                 if (script.side > 0)
                 {
-                    angle = Mathf.Clamp(angle, -90, 90);
+                    angle = Mathf.Clamp(angle, -115, 115);
                 }
                 else if (script.side < 0)
                 {   
@@ -116,11 +122,13 @@ public class gun_default : MonoBehaviour
                     if (angle < 0)
                         isNeg = true;
 
-                    angle = Mathf.Clamp(Mathf.Abs(angle), 90, 180);
+                    angle = Mathf.Clamp(Mathf.Abs(angle), 65, 180);
 
                     if (isNeg)
                         angle *= -1;
                 }
+                
+                //Here is where the rotation for the gun is actually set
                 transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
                 //Debug.Log("angle is: " + angle);
             }

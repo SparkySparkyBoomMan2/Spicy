@@ -54,18 +54,19 @@ public class bullet_default : MonoBehaviour
             //Debug.Log("Hitting tomato");
             //Gets a reference to the tomato enemy script that contaions the "die" function
             //Then if it's not null, call the die function
-            death_tomato enemy = other.gameObject.GetComponent<death_tomato>();
-            if (enemy != null)
-            {
-                enemy.Die();
-            } 
+            death_tomato tomato = other.gameObject.GetComponent<death_tomato>();
+            if (tomato != null)
+                tomato.Die();
         }
         //When the bullet collides with an eyeball enemy
         else if (other.gameObject.name == "FlyingEyeball(Clone)" || other.gameObject.name == "FlyingEyeball" )
         {
             //Debug.Log("Hitting eyeball");
-            // Only temporary while the eyeball does not have a death handler
-            Destroy(other.gameObject, 0.05f);
+            //Gets a reference to the eyeball enemy script that contaions the "die" function
+            //Then if it's not null, call the die function
+            eyeball_patrol eyeball = other.gameObject.GetComponent<eyeball_patrol>();
+            if (eyeball != null)
+                eyeball.Die();
         }
         else if (other.gameObject.name == "Octocat(Clone)" || other.gameObject.name == "Octocat")
         //When the bullet collides with the Octocat Boss
@@ -75,9 +76,7 @@ public class bullet_default : MonoBehaviour
             //Since it's a boss, not a one-hit kill
             Octocat boss =  other.gameObject.GetComponent<Octocat>();
             if (boss != null)
-            {
                 boss.DamageOctocat();
-            }
         }
 
         //Debug.Log("Hitting ---> [" + other.gameObject.name + "]");
