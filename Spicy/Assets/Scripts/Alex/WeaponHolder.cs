@@ -1,16 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WeaponHolder : MonoBehaviour
 {
+
+    //Singleton pattern class
 
     // Weapon handler which allows the player to select which weapon is equipped by pressing 1-6 on keyboard
     // (subject to change if more/less weapons later on)
 
     //Index of currently selected weapon
     // (starts with 0 at child 1, and goes on)
+
+
+    public static WeaponHolder instance = null;
+    public static object lockThis = new object();
     public int selectedWeapon = 0;
+
+    //The when the Singleton is first created, the instance will be null, and will be the only time we need to create a new singleton
+    public static WeaponHolder GetInstance
+    {
+        get
+        {   
+            //Any time a new instance tries to be created that isn't the first, it will return
+            if (instance == null)
+            {
+                //If it is the first, then we perform a lock in order to guarantee thread saftey
+                lock(lockThis)
+                {
+                    //Check again that the instance is null, and then create a new instance
+                    if (instance == null)
+                        instance = new WeaponHolder();
+
+                    return instance;
+                }
+            }
+            return instance;
+        }
+    }
+
+
     void Start()
     {
         selectWeapon();
