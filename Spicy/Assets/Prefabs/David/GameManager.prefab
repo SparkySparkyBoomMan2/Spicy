@@ -56,6 +56,8 @@ MonoBehaviour:
   panelLevelComplete: {fileID: 1362597195619979740}
   panelGameOver: {fileID: 7162556664702257596}
   panelWaveOverlay: {fileID: 4641756783702896859}
+  WeaponFactory: {fileID: 1165925475765097876, guid: efe97b1fd49e7ce419a026864b42ed03,
+    type: 3}
   Levels: []
 --- !u!1 &3946596665258511859
 GameObject:

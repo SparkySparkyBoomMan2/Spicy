@@ -2,8 +2,9 @@
     "name": "APTestingRef",
     "references": [
         "GUID:2ac648223316725488914d73a7b51d74",
+        "GUID:5050e9f54884a8e4e90eafdf298bbd0d",
         "GUID:9e788869d89b59047ad5c9087bb2b88d",
-        "GUID:5050e9f54884a8e4e90eafdf298bbd0d"
+        "GUID:d64516cf171c53a45a40d077288d82f5"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

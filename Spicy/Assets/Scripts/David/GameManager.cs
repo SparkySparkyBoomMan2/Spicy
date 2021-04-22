@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     // public GameObject panelWaveInfo;                 // When implemented, will appear at the beginning of the level to show briefly the number of waves
     // public GameObject panelLevelPlaying;             // This will be for any UI elements overlayed while playing, i.e. lives and maybe score or something
 
+    public GameObject WeaponFactory;
+
     public GameObject[] Levels;
 
     public enum State { MENU, OPTIONS, INIT, PLAY, PAUSE, LEVELSELECT, LEVELCOMPLETED, LOADLEVEL, GAMEOVER }
@@ -54,6 +56,10 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+
+            
+            //Factory weaponFactory = new Factory();
+            //var weapon = weaponFactory.makeWeapon(2);
         }
         else if (instance != this)
         {
@@ -93,6 +99,7 @@ public class GameManager : MonoBehaviour
     {
         Transform playerTransform = player.transform;
         //Destroy(player);
+        WeaponFactory.SetActive(false); //used for Alex's weapon factory
         player.SetActive(false);
         Debug.Log("Lives remaining: " + lives);
         lives -= 1;
@@ -113,6 +120,7 @@ public class GameManager : MonoBehaviour
         // Respawn animation
         // Temporary invincibility | Explosion killing nearby enemies within a certain radius
         player.SetActive(true);
+        WeaponFactory.SetActive(true); //used for Alex's weapon factory
         //GameObject newPlayer = Instantiate(Player, transform);
         //newPlayer.transform.parent = null;
         isRespawning = false;

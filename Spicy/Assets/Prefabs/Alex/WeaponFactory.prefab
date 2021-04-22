@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8568240687213182120
+--- !u!1 &1165925475765097876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,61 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8568240687213182102}
-  - component: {fileID: 8568240687213182103}
+  - component: {fileID: 1165925475765097866}
+  - component: {fileID: 1165925475765097877}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: WeaponFactory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8568240687213182102
+--- !u!4 &1165925475765097866
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8568240687213182120}
+  m_GameObject: {fileID: 1165925475765097876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 4, z: 0}
+  m_LocalPosition: {x: 449, y: 324.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8568240687213182103
+--- !u!114 &1165925475765097877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8568240687213182120}
+  m_GameObject: {fileID: 1165925475765097876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ecfe178fc162ef4b877a26c8d5035bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 2584def959af5c743befd498959dc862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - name: Wave 1
-    miniWaves: []
-    miniWaveCount: 0
-    miniWaveRate: 0
-  - name: Wave 2
-    miniWaves: []
-    miniWaveCount: 0
-    miniWaveRate: 0
-  - name: Wave 3
-    miniWaves: []
-    miniWaveCount: 0
-    miniWaveRate: 0
-  - name: Wave 4
-    miniWaves: []
-    miniWaveCount: 0
-    miniWaveRate: 0
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeBetweenWaves: 5
+  WeaponHolder: {fileID: 3136889710614639098, guid: f14d52cfff11caa4db254f32aec8862d,
+    type: 3}
