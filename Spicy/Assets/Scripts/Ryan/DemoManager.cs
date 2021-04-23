@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class DemoManager : MonoBehaviour
 {
     //private bool firstPass = true;
-    public bool demoModeActive = true;
+    //When i mean false, i really mean run just this once
+    private static bool demoModeActive = false;
+    private static bool demoCheck = false;
     private GameObject demoPlayer;      //to control operation of demo mode
     private GameObject mainMenuHandler;  //needs to be transform to disable?
 
@@ -38,13 +40,17 @@ public class DemoManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void DoDemo()
+    void Start()
     {
-        if (demoModeActive) {
+        if (!demoModeActive) {
+            demoModeActive = true;
             demoPlayer = GameObject.FindWithTag("GameController");
             demoPlayer.GetComponent<GameManager>().PlayGame();
+
+            //disableDemoFunc();
             //mainMenuHandler = transform.Find("MainMenu").gameObject;
             //mainMenuHandler.SetActive(false);
+            GameManager.instance.panelMainMenu.SetActive(false);
             
         }
         
@@ -53,15 +59,15 @@ public class DemoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (demoModeActive)
+        if (!demoCheck)
         {
             if (Input.anyKey)
             {
                 //Switch State to main menu
+                demoCheck = true;
                 Debug.Log("Stop The demo.");
-                Destroy(gameObject);
                 demoPlayer.GetComponent<GameManager>().SwitchState(GameManager.State.MENU);
-                
+                Destroy(gameObject);                
             }
             else
             {
@@ -71,17 +77,20 @@ public class DemoManager : MonoBehaviour
                 //or epitomizes the concept of "RIP AND TEAR"
             }
         }
-           
-       
-        
+
+
+
         //if key is pressed, stop demo.
-        
+
         //else, continue.
     }
 
-    public void disableDemoFunc()
-    {
-        demoModeActive = false;
-        
-    }
+    /*if (demoActive)
+        {
+            //GameObject.FindGameObjectWithTag("Demo").GetComponent<DemoManager>().DoDemo();
+            demoObject = GameObject.FindWithTag("Demo");
+            demoObject.GetComponent<DemoManager>().DoDemo();
+    //DemoManager.dInstance.DoDemo();
+    disableDemoFunc();
+    }*/
 }

@@ -1917,12 +1917,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!4 &859079389 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7363731414687624224, guid: 4745026d3f524bf489e85360bf57b98e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1431730236}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &901488427
 GameObject:
   m_ObjectHideFlags: 0
@@ -9642,11 +9636,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 582697699}
-    - target: {fileID: 808993974403709535, guid: 4745026d3f524bf489e85360bf57b98e,
-        type: 3}
-      propertyPath: enemyGFX
-      value: 
-      objectReference: {fileID: 859079389}
     - target: {fileID: 6955767453215457209, guid: 4745026d3f524bf489e85360bf57b98e,
         type: 3}
       propertyPath: m_RootOrder

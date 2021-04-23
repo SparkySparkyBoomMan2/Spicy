@@ -9,14 +9,16 @@ public class PassiveGhost : GhostMasterAI
     private PGhostState _state = null;
 
 
+
     //Not sure if i need this...
-    /*
-    public PassiveGhost(PGhostState state)
+    //Default to idle state?
+    /*public PassiveGhost(PGhostState state)
     {
         Debug.Log("Constructor entered.");
         this.TransitionTo(state);
-    }
-    */
+    }*/
+
+
 
     public void TransitionTo(PGhostState state)
     {
@@ -56,11 +58,34 @@ public class PassiveGhost : GhostMasterAI
     }*/
 
 
+
+    //for damage against player
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //Debug.Log("Collide with Enemy");
+            GameManager.instance.KillPlayer(playerLoc);
+            //Debug.Log("Damage Player called");
+        }
+        if(collision.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     //MAY NEED TO PUT BELOW IN EACH CONCRETE STATE
     // Update is called once per frame
     public override void FixedUpdate()
     {
-        if(path == null)
+        if (playerLoc != null)
+        {
+            dest = playerLoc.GetComponent<Transform>();
+            target = dest;
+        }
+
+
+        if (path == null)
         {
             return;
         }

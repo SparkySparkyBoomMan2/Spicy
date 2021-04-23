@@ -59,7 +59,7 @@ public class bullet_default : MonoBehaviour
                 tomato.Die();
         }
         //When the bullet collides with an eyeball enemy
-        else if (other.gameObject.name == "FlyingEyeball(Clone)" || other.gameObject.name == "FlyingEyeball" )
+        else if (other.gameObject.name == "FlyingEyeball(Clone)" || other.gameObject.name == "FlyingEyeball")
         {
             //Debug.Log("Hitting eyeball");
             //Gets a reference to the eyeball enemy script that contaions the "die" function
@@ -67,6 +67,13 @@ public class bullet_default : MonoBehaviour
             eyeball_patrol eyeball = other.gameObject.GetComponent<eyeball_patrol>();
             if (eyeball != null)
                 eyeball.Die();
+        }
+        //When the bullet collides with a ghost enemy
+        else if (other.gameObject.name == "GhostEnemyNew(Clone)" || other.gameObject.name == "GhostEnemyNew")
+        {
+            GhostMasterAI ghost = other.gameObject.GetComponent<GhostMasterAI>();
+            if (ghost != null)
+                ghost.Die();
         }
         else if (other.gameObject.name == "Octocat(Clone)" || other.gameObject.name == "Octocat")
         //When the bullet collides with the Octocat Boss

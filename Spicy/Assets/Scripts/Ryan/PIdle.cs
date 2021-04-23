@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PIdle : PGhostState
 {
+
     public override void HandleIdle()
     {
 
