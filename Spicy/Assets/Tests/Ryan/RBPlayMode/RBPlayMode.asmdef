@@ -2,7 +2,8 @@
     "name": "RBPlayMode",
     "references": [
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "RBScripts"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
