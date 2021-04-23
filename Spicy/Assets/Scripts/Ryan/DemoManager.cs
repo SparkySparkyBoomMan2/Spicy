@@ -38,9 +38,8 @@ public class DemoManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void DoDemo()
     {
-        
         if (demoModeActive) {
             demoPlayer = GameObject.FindWithTag("GameController");
             demoPlayer.GetComponent<GameManager>().PlayGame();

@@ -2,9 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class passiveGhost : GhostMasterAI
+public class PassiveGhost : GhostMasterAI
 {
 
+    //Get a state descriptor
+    private PGhostState _state = null;
+
+
+    //Not sure if i need this...
+    /*
+    public PassiveGhost(PGhostState state)
+    {
+        Debug.Log("Constructor entered.");
+        this.TransitionTo(state);
+    }
+    */
+
+    public void TransitionTo(PGhostState state)
+    {
+        Debug.Log("Transitioning state.");
+        this._state = state;
+        this._state.SetContext(this);
+    }
+
+    //The context delegates part of its behavior to the current State object.
+    public void RequestIdle()
+    {
+        Debug.Log("Request to Idle made.");
+        this._state.HandleIdle();
+    }
+
+    public void RequestChase()
+    {
+        Debug.Log("Request to Chase made.");
+        this._state.HandleChase();
+    }
+
+
+    //CS0208 and CS0214 - managed types cannot have pointers even in unsafe context
+    /*public void setCurrent(PGhostState *s)
+    {
+        current = s;
+    }
+    
+    public void chase()
+    {
+        current->chase(this);
+    }
+
+    public void idle()
+    {
+        current->idle(this);
+    }*/
+
+
+    //MAY NEED TO PUT BELOW IN EACH CONCRETE STATE
     // Update is called once per frame
     public override void FixedUpdate()
     {
@@ -24,7 +76,7 @@ public class passiveGhost : GhostMasterAI
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * 0.75f * Time.deltaTime;
+        Vector2 force = direction * speed * 0.5f * Time.deltaTime;
 
         if(!reachedEndOfPath)
         {

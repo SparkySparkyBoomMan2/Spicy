@@ -49,9 +49,11 @@ public class GhostMasterAI : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
+        //To prevent erroneous runtime errors
         if (path == null)
             return;
 
+        //
         if(currentWaypoint >= path.vectorPath.Count)
         {
             reachedEndOfPath = true;
@@ -65,12 +67,14 @@ public class GhostMasterAI : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
+        //Make sure no more force if where ghost needs to be
         if (!reachedEndOfPath)
         {
             rb.AddForce(force);
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
 
         if(distance < nextWaypointDistance)
         {

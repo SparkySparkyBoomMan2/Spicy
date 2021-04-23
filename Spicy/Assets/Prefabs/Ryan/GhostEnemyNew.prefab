@@ -195,3 +195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  speed: 200
+  nextWaypointDistance: 2
+  enemyGFX: {fileID: 0}
+  currentWaypoint: 0
+  reachedEndOfPath: 0
+  seeker: {fileID: 0}
+  rb: {fileID: 0}

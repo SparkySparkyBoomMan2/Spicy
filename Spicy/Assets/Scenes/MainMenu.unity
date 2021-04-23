@@ -512,6 +512,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3946596665596757841}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946596665813515672, guid: f4000ae155a3a004c8633ec96b77fe6b,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3946596665839563353, guid: f4000ae155a3a004c8633ec96b77fe6b,
         type: 3}
       propertyPath: m_Camera
@@ -584,6 +614,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4000ae155a3a004c8633ec96b77fe6b, type: 3}
+--- !u!1 &3946596665596757841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6260300518439867007, guid: f4000ae155a3a004c8633ec96b77fe6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3946596665596757840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5492345908653044841
 PrefabInstance:
   m_ObjectHideFlags: 0

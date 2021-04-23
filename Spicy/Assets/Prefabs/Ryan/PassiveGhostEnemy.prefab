@@ -194,3 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cb1ec2980b0964387317e1a9255a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 200
+  nextWaypointDistance: 2
+  enemyGFX: {fileID: 7363731414687624224}
+  currentWaypoint: 0
+  reachedEndOfPath: 0
+  seeker: {fileID: 0}
+  rb: {fileID: 0}
