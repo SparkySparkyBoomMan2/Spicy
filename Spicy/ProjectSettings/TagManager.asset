@@ -12,6 +12,8 @@ TagManager:
   - Player Spawn Location
   - Gun
   - MainMenu
+  - WeaponHolder
+  - Demo
   layers:
   - Default
   - TransparentFX

@@ -17,15 +17,6 @@ public class OptionsMenuButtons : MonoBehaviour
         
     }
 
-    public void musicVolUpdate(float vol)
-    {
-        Debug.Log(vol);
-    }
-    public void soundVolUpdate(float vol)
-    {
-        float volume = vol;
-        Debug.Log(volume);
-    }
     public void OnValueChanged(float vol)
     {
         Debug.Log(vol);

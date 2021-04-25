@@ -34,10 +34,9 @@ public class stressTestCloneGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Tried this error condition with thousands of ghosts (5000+). Did not print the else condition ever, even
         //though there were clearly path destinations that were not equal when inspecting scene view in runtime.
-        for (int i = 0; i < 5; i++)
+        /*for (int i = 0; i < 5; i++)
         {
             ithTarget = ghostList[i].GetComponent<AIDestinationSetter>().target;
 
@@ -50,9 +49,10 @@ public class stressTestCloneGhost : MonoBehaviour
                 Debug.Log(ithTarget.position);
             }
             
-        }
+        }*/
 
         framerate = (int)(1f / Time.smoothDeltaTime);
+        Debug.Log("FPS: " + framerate);
         //Conditional prints log at around 2800-2900 ghosts instantiated
         if (framerate <= 10)
         {
@@ -87,7 +87,7 @@ public class stressTestCloneGhost : MonoBehaviour
         {
             Instantiate(ghost, new Vector2(0f, 1f), Quaternion.identity);
             ghostCount++;
-            if (ghostCount % 100 == 0)
+            if (ghostCount % 10 == 0)
             {
                 Debug.Log(ghostCount);
             }

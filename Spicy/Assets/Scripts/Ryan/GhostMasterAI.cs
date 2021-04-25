@@ -19,6 +19,8 @@ public class GhostMasterAI : MonoBehaviour
 
     public Seeker seeker;
     public Rigidbody2D rb;
+    public Transform dest;
+    public GameObject playerLoc;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +28,37 @@ public class GhostMasterAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         enemyGFX = GetComponent<Transform>();
+        playerLoc = GameObject.Find("Player Variant");
+        if(playerLoc != null)
+        {
+            dest = playerLoc.GetComponent<Transform>();
+        }
+            
+        target = dest;
+        
+        //Specialize
+        //Instantiate(new PassiveGhost(new PIdle()), new Vector3(0, 0, 0), Quaternion.identity);
+        //var context = new PassiveGhost(new PIdle());
+        //context.RequestIdle();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
 
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    //for damage against player
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //Debug.Log("Collide with Enemy");
+            GameManager.instance.KillPlayer(playerLoc);
+            //Debug.Log("Damage Player called");
+        }
     }
 
     void UpdatePath()
@@ -49,9 +79,18 @@ public class GhostMasterAI : MonoBehaviour
     // Update is called once per frame
     public virtual void FixedUpdate()
     {
+        if (playerLoc != null)
+        {
+            dest = playerLoc.GetComponent<Transform>();
+            target = dest;
+        }
+        
+
+        //To prevent erroneous runtime errors
         if (path == null)
             return;
 
+        //
         if(currentWaypoint >= path.vectorPath.Count)
         {
             reachedEndOfPath = true;
@@ -65,12 +104,14 @@ public class GhostMasterAI : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
+        //Make sure no more force if where ghost needs to be
         if (!reachedEndOfPath)
         {
             rb.AddForce(force);
         }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
 
         if(distance < nextWaypointDistance)
         {
