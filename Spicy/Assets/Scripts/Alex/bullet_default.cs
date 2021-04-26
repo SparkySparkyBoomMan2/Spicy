@@ -69,11 +69,13 @@ public class bullet_default : MonoBehaviour
                 eyeball.Die();
         }
         //When the bullet collides with a ghost enemy
-        else if (other.gameObject.name == "GhostEnemyNew(Clone)" || other.gameObject.name == "GhostEnemyNew")
+        else if (other.gameObject.name == "GhostEnemyNew(Clone)" || other.gameObject.name == "GhostEnemyNew" || other.gameObject.name == "PassiveGhostEnemy(Clone)" || other.gameObject.name == "PassiveGhostEnemy")
         {
             GhostMasterAI ghost = other.gameObject.GetComponent<GhostMasterAI>();
             if (ghost != null)
                 ghost.Die();
+            else
+                Destroy(other.gameObject, 0.05f);
         }
         else if (other.gameObject.name == "Octocat(Clone)" || other.gameObject.name == "Octocat")
         //When the bullet collides with the Octocat Boss

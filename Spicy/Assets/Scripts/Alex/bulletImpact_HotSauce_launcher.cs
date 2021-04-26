@@ -36,6 +36,14 @@ public class bulletImpact_HotSauce_launcher : bulletImpact_default
             other.GetComponent<CircleCollider2D>().enabled = false;
             Destroy(other.gameObject, 0.05f);
         }
+        else if (other.gameObject.name == "GhostEnemyNew(Clone)" || other.gameObject.name == "GhostEnemyNew" || other.gameObject.name == "PassiveGhostEnemy(Clone)" || other.gameObject.name == "PassiveGhostEnemy")
+        {
+            GhostMasterAI ghost = other.gameObject.GetComponent<GhostMasterAI>();
+            if (ghost != null)
+                ghost.Die();
+            else
+                Destroy(other.gameObject, 0.05f);
+        }
         else if (other.name == "Octocat(Clone)" || other.name == "Octocat")
         //When any hot sauce particle collides with the Octocat Boss
         {

@@ -66,12 +66,12 @@ public class gun_default : Weapon
         mousePos.y = mousePos.y - objectPos.y;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         //Vector3 currentRotation = transform.localRotation.eulerAngles;
 
         //Flips gun across y axis if mouse cursor crosses the gun's y axis
         //Flips localScale of object, so it affects the children as well
-        /*
+        
         if ((transform.rotation.z > .7f || transform.rotation.z < -.7f) && transform.localScale.y > 0)
         {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1,transform.localScale.z);
@@ -80,9 +80,10 @@ public class gun_default : Weapon
         {
             transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y) ,transform.localScale.z);
         }
-        */
+        
 
         //Get the player's gameobject and store it
+        /*
         GameObject player = GameObject.Find("Player Variant");
 
         if (player != null)
@@ -107,7 +108,7 @@ public class gun_default : Weapon
                 //Lock the rotation of the gun so the player cannot fire directly behind them
                 //i.e. the player must shoot in the direction they move for the most part
                 //(still rough)
-
+                
                 if (script.side > 0)
                 {
                     angle = Mathf.Clamp(angle, -115, 115);
@@ -129,6 +130,7 @@ public class gun_default : Weapon
                 //Debug.Log("angle is: " + angle);
             }
         }
+        */
     }
 
     //Coroutine to "shoot" gun

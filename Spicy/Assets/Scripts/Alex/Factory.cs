@@ -33,7 +33,7 @@ public class Factory : MonoBehaviour
             
 
             gun.transform.localPosition = new Vector3(1.638f, -0.96f, 57.17585f);
-            gun.transform.localScale = new Vector3(2.047193f, 2.117647f, 3.344665f);
+            gun.transform.localScale = new Vector3(1.378487f, 1.425928f, 2.252146f);
         }
     }
     public class add_submGun : Weapon
