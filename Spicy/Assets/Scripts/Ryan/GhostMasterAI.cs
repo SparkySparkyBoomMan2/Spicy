@@ -6,20 +6,20 @@ using Pathfinding;
 public class GhostMasterAI : MonoBehaviour
 {
     
-    public Transform target;
+    protected Transform target;
 
-    public float speed = 200f;
+    protected float speed = 200f;
     public float nextWaypointDistance = 2f;
 
-    public Transform enemyGFX;
+    protected Transform enemyGFX;
 
-    public Path path; //path to follow
+    protected Path path; //path to follow
     public int currentWaypoint = 0;
     public bool reachedEndOfPath = false;
 
-    public Seeker seeker;
-    public Rigidbody2D rb;
-    public Transform dest;
+    protected Seeker seeker;
+    protected Rigidbody2D rb;
+    protected Transform dest;
     public GameObject playerLoc;
 
     // Start is called before the first frame update

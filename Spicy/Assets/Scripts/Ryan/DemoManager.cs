@@ -28,7 +28,10 @@ public class DemoManager : MonoBehaviour
         if (dInstance == null)
         {
             dInstance = this;
-            DontDestroyOnLoad(gameObject);
+            if (!demoModeActive)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             Debug.Log("demo instance created.");
         }
         else if (dInstance != this)
