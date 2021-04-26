@@ -1,0 +1,608 @@
+fileFormatVersion: 2
+guid: 707f066b96d901744ae1879c79ff52d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6479777525403152374
+    second: TowerFall_Ghost_Blue_Movement_Sprites_0
+  - first:
+      213: -4485316313598225320
+    second: TowerFall_Ghost_Blue_Movement_Sprites_1
+  - first:
+      213: -4832201325211865183
+    second: TowerFall_Ghost_Blue_Movement_Sprites_2
+  - first:
+      213: 5196069683094323009
+    second: TowerFall_Ghost_Blue_Movement_Sprites_3
+  - first:
+      213: -1854695229459435088
+    second: TowerFall_Ghost_Blue_Movement_Sprites_4
+  - first:
+      213: 5223815405297312984
+    second: TowerFall_Ghost_Blue_Movement_Sprites_5
+  - first:
+      213: 8531890488181101582
+    second: TowerFall_Ghost_Blue_Movement_Sprites_6
+  - first:
+      213: -7235378407621997315
+    second: TowerFall_Ghost_Blue_Movement_Sprites_7
+  - first:
+      213: -8554341977886722830
+    second: TowerFall_Ghost_Blue_Movement_Sprites_8
+  - first:
+      213: 2735528680069279089
+    second: TowerFall_Ghost_Blue_Movement_Sprites_9
+  - first:
+      213: 4695206715625159692
+    second: TowerFall_Ghost_Blue_Movement_Sprites_10
+  - first:
+      213: 5774311463015433535
+    second: TowerFall_Ghost_Blue_Movement_Sprites_11
+  - first:
+      213: 8745058691946670390
+    second: TowerFall_Ghost_Blue_Movement_Sprites_12
+  - first:
+      213: -3954701930892485947
+    second: TowerFall_Ghost_Blue_Movement_Sprites_13
+  - first:
+      213: 988069050039823705
+    second: TowerFall_Ghost_Blue_Movement_Sprites_14
+  - first:
+      213: -6723870787943363442
+    second: TowerFall_Ghost_Blue_Movement_Sprites_15
+  - first:
+      213: -7315833814920559741
+    second: TowerFall_Ghost_Blue_Movement_Sprites_16
+  - first:
+      213: -9094218024594622852
+    second: TowerFall_Ghost_Blue_Movement_Sprites_17
+  - first:
+      213: -3642478141433509117
+    second: TowerFall_Ghost_Blue_Movement_Sprites_18
+  - first:
+      213: -2720423842311514658
+    second: TowerFall_Ghost_Blue_Movement_Sprites_19
+  - first:
+      213: -3156447225258728141
+    second: TowerFall_Ghost_Blue_Movement_Sprites_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffe639f35bcce950800000000000000
+      internalID: 6479777525403152374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85496b6b394f0c1c0800000000000000
+      internalID: -4485316313598225320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 127
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af239f2f7290fcb0800000000000000
+      internalID: -4832201325211865183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 127
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f7309c8d52c1840800000000000000
+      internalID: 5196069683094323009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b17571f38cc246e0800000000000000
+      internalID: -1854695229459435088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4a5f42f68be7840800000000000000
+      internalID: 5223815405297312984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 78
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e049192f13d576670800000000000000
+      internalID: 8531890488181101582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 78
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcc8264ca5c69b90800000000000000
+      internalID: -7235378407621997315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 78
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f479d04b4fd84980800000000000000
+      internalID: -8554341977886722830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d2c6057dc86f520800000000000000
+      internalID: 2735528680069279089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 52
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cbddfa1a9b82140800000000000000
+      internalID: 4695206715625159692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 52
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3540879ea9722050800000000000000
+      internalID: 5774311463015433535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 52
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6396c690c80bc5970800000000000000
+      internalID: 8745058691946670390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 26
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca1a98fb831e19c0800000000000000
+      internalID: -3954701930892485947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 26
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d6e25e09356bd00800000000000000
+      internalID: 988069050039823705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 26
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c8209942300b2a0800000000000000
+      internalID: -6723870787943363442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 26
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3838ed108efe87a90800000000000000
+      internalID: -7315833814920559741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76351ec3e8dac180800000000000000
+      internalID: -9094218024594622852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b0bb5dd61537dc0800000000000000
+      internalID: -3642478141433509117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5d488cdec1f3ad0800000000000000
+      internalID: -2720423842311514658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TowerFall_Ghost_Blue_Movement_Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335af22e8fb0234d0800000000000000
+      internalID: -3156447225258728141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
