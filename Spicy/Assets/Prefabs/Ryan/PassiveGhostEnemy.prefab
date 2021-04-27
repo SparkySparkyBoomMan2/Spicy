@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1171845054461076134}
   - component: {fileID: 808993974403709535}
   - component: {fileID: 5961819087087755716}
+  - component: {fileID: 841568626}
   m_Layer: 11
   m_Name: PassiveGhostEnemy
   m_TagString: Enemy
@@ -112,14 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cb1ec2980b0964387317e1a9255a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 200
   nextWaypointDistance: 2
-  enemyGFX: {fileID: 0}
   currentWaypoint: 0
   reachedEndOfPath: 0
-  seeker: {fileID: 0}
-  rb: {fileID: 0}
   playerLoc: {fileID: 0}
 --- !u!212 &5961819087087755716
 SpriteRenderer:
@@ -172,3 +168,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &841568626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136033949337939215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 707ffdbd11a0486429b25f5be3acd2fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
