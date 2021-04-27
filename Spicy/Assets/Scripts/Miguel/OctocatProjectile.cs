@@ -7,6 +7,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class OctocatProjectile : MonoBehaviour
@@ -16,12 +17,21 @@ public class OctocatProjectile : MonoBehaviour
     private float time;             // Time elapsed for projectile
     public float despawnTime = 3f;  // Time in which projectile will be despawned
     public GameObject impact;       // Animation object that will play on impact with player
+    private bool actualScene;       // For workaround between test level and actual level
 
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.up * speed;     // Move projectile
         time = despawnTime;                     // Set despawn time for projectile
+
+        // Workaround for test level and actual level
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "Level 4")
+            actualScene = true;
+        else
+            actualScene = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -31,8 +41,8 @@ public class OctocatProjectile : MonoBehaviour
         //     Call temporary respawn while final level and game manager are missing
         if (collision.gameObject.tag == "Player")
         {
-            Instantiate(impact, transform.position, transform.rotation);
-            Destroy(impact);
+            GameObject copy = (GameObject) Instantiate(impact, transform.position, transform.rotation);
+            Destroy(copy);
 
             // Won't work until boss level is implemented
             // My intuition is that the GameManager is needed
@@ -43,9 +53,17 @@ public class OctocatProjectile : MonoBehaviour
             }*/
 
             // Until then
-            Debug.Log("Player Hit");
-            collision.gameObject.SetActive(false);
-            StartCoroutine(TemporaryRespawn(collision.gameObject));
+            if (!actualScene)
+            {
+                Debug.Log("Player Hit");
+                collision.gameObject.SetActive(false);
+                StartCoroutine(TemporaryRespawn(collision.gameObject));
+            }
+            else
+            {
+                GameObject player = GameObject.Find("Player Variant");
+                GameManager.instance.KillPlayer(player);
+            }
         }
     }
 

@@ -1,3 +1,15 @@
-﻿{
-	"name": "MVPlayerReference"
+{
+    "name": "MVPlayerReference",
+    "references": [
+        "GUID:d64516cf171c53a45a40d077288d82f5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
