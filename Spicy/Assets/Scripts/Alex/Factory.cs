@@ -16,8 +16,8 @@ public class Factory : MonoBehaviour
             
             if (WeaponHolder == null)
                 Debug.Log("null");
-            //else
-                //Debug.Log("MIRAACLE");
+            else
+                Debug.Log("MIRAACLE");
         }
     }
 
@@ -108,11 +108,14 @@ public class Factory : MonoBehaviour
         }
     }
 
-    void OnEnable()
+    //void OnEnable()
+    void Awake()
     {
         //Debug.Log("Im enabled");
+        /*
         GameManager gameManager = FindObjectOfType<GameManager>();
 
+        
         int playerLives = -1;
         if (gameManager != null)
         {
@@ -120,6 +123,7 @@ public class Factory : MonoBehaviour
         }
 
         Debug.Log("lives -> "+ playerLives);
+        */
 
         Weapon gun = null;
         
