@@ -109,23 +109,23 @@ public class Octocat : MonoBehaviour
         rend.color = Color.red;
         Invoke(nameof(ResetColor), 0.5f);
         // Decorator pattern here
-        if (health == 28)
+        if (health == 48)  // Previously 28
         {
             attack = new Attack1(attack);   // Shoot 3 projectiles
         }
-        else if (health == 24)
+        else if (health == 44)  // Previously 24
         {
             attack = new Attack2(attack);   // Shoot 5 projectiles
         }
-        else if (health == 20)
+        else if (health == 40)  // Previously 20
         {
             attack = new Attack3(attack);   // Shoot 9 projectiles
         }
-        else if (health == 16)
+        else if (health == 36)  // Previously 16
         {
             attack = new Attack4(attack);   // Shoot 9 * 3 (27) projectiles
         }
-        else if (health == 10)
+        else if (health == 30)  // Previously 10
         {
             attack = new Attack5(attack);   // Shoot 31 projectiles
         }
