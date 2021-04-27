@@ -51,6 +51,10 @@ public class AudioManager : MonoBehaviour
             Play("Flamenco2");
         else if (sceneName == "Level 2")
             Play("Flamenco3");
+        else if (sceneName == "Level 3")
+            Play("Flamenco5");
+        else if (sceneName == "Level 4")
+            Play("Flamenco4");
         else if (sceneName == "MVOctocatTestScene")
             Play("Flamenco4");
         //Play("");        
