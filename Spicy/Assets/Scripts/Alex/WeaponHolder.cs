@@ -53,6 +53,22 @@ public class WeaponHolder : MonoBehaviour
         //Changes selected weapon based on input, if the weapon changes, then call the function
         int previousWeapon = selectedWeapon;
 
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            if (selectedWeapon >= transform.childCount - 1)
+                selectedWeapon = 0;
+            else
+                selectedWeapon++;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            if (selectedWeapon <= 0)
+                selectedWeapon = transform.childCount - 1;
+            else
+                selectedWeapon--;
+        }
+        
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectedWeapon = 0;
