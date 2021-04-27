@@ -554,6 +554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponFactory
       objectReference: {fileID: 0}
+    - target: {fileID: 1165925475765097876, guid: efe97b1fd49e7ce419a026864b42ed03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1165925475765097877, guid: efe97b1fd49e7ce419a026864b42ed03,
         type: 3}
       propertyPath: WeaponHolder
