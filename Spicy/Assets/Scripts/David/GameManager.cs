@@ -56,10 +56,6 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-
-            
-            //Factory weaponFactory = new Factory();
-            //var weapon = weaponFactory.makeWeapon(2);
         }
         else if (instance != this)
         {
@@ -134,6 +130,15 @@ public class GameManager : MonoBehaviour
         playerSpawnPoint.parent = null;
         GameObject newPlayer = Instantiate(Player, playerSpawnPoint);
         //newPlayer.transform.parent = null;
+
+        // Finding a reference to Alex's weapon factory
+        WeaponFactory = playerSpawnPoint.Find("Spice Master(Clone)").transform.Find("WeaponFactory").gameObject;
+            if (WeaponFactory != null)
+                Debug.Log("WORKING");
+            else
+                Debug.Log("NONONONULLLLLL");
+        
+
         spawningPlayer = false;
     }
 

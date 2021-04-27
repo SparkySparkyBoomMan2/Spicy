@@ -34,6 +34,8 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.638f, -0.96f, 57.17585f);
             gun.transform.localScale = new Vector3(1.378487f, 1.425928f, 2.252146f);
+
+            gun.SetActive(false);
         }
     }
     public class add_submGun : Weapon
@@ -49,6 +51,8 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.72f, -0.94f, 124.7404f);
             gun.transform.localScale = new Vector3(2.047193f, 2.117647f, 3.344665f);
+
+            gun.SetActive(false);
         }
     }
     public class add_hotLauncher : Weapon
@@ -63,6 +67,8 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.72f, -0.94f, 124.7404f);
             gun.transform.localScale = new Vector3(0.3811741f, 0.3505865f, 4.142298f);
+
+            gun.SetActive(false);
         }
     }
     public class add_shotGun : Weapon
@@ -77,6 +83,8 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.72f, -0.94f, 124.7404f);
             gun.transform.localScale = new Vector3(2.047193f, 2.117647f, 3.344665f);
+
+            gun.SetActive(false);
         }
     }
     public class add_handGun : Weapon
@@ -91,6 +99,8 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.72f, -0.94f, 124.7404f);
             gun.transform.localScale = new Vector3(2.047193f, 2.117647f, 3.344665f);
+
+            gun.SetActive(false);
         }
     }
     public class add_machineGun : Weapon
@@ -105,14 +115,16 @@ public class Factory : MonoBehaviour
 
             gun.transform.localPosition = new Vector3(1.72f, -0.94f, 124.7404f);
             gun.transform.localScale = new Vector3(0.3720945f, 0.3849f, 0.6079206f);
+
+            gun.SetActive(false);
         }
     }
 
-    //void OnEnable()
-    void Awake()
+    void OnEnable()
+    //void Awake()
     {
         //Debug.Log("Im enabled");
-        /*
+        
         GameManager gameManager = FindObjectOfType<GameManager>();
 
         
@@ -123,43 +135,47 @@ public class Factory : MonoBehaviour
         }
 
         Debug.Log("lives -> "+ playerLives);
-        */
+        
 
         Weapon gun = null;
         
+        /*
         for (int i = 1; i < 6; i++)
         {
             gun = makeWeapon(i);
             gun.addWeapon();
         }
+        */
 
         //Commented out for now until can work out the bugs with david
-        /*
-        if (playerLives == 3)
+        
+        //if (playerLives == 3)
+        if (playerLives == 2)
         {
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i < 2; i++)
             {
                 gun = makeWeapon(i);
                 gun.addWeapon();
             }
         
         }
-        else if (playerLives == 2)
+        //else if (playerLives == 2)
+        else if (playerLives == 1)
         {
-            for (int i = 3; i < 5; i++)
+            for (int i = 2; i < 5; i++)
             {
                 gun = makeWeapon(i);
                 gun.addWeapon();
             }
         }
-        else if (playerLives == 1)
+        else if (playerLives == 0)
         {
             for (int i = 5; i < 6; i++)
             {
                 gun = makeWeapon(i);
                 gun.addWeapon();
             }
-        }*/
+        }
     }
 
 
@@ -173,15 +189,15 @@ public class Factory : MonoBehaviour
                 //return new add_handGun();
                 //break;
             case 1:
-                //Debug.Log("WE HERE");
                 return new add_submGun();
+                //Debug.Log("WE HERE");
                 //break;
             case 2:
-                return new add_hotLauncher();
+                return new add_shotGun();
                 //return new GunWeapon();
                 //break; 
             case 3:
-                return new add_shotGun();
+                return new add_machineGun();
                 //return new GunWeapon();
                 //break; 
             case 4:
@@ -189,7 +205,7 @@ public class Factory : MonoBehaviour
                 //return new GunWeapon();
                 //break; 
             case 5:
-                return new add_machineGun();
+                return new add_hotLauncher();
                 //return new GunWeapon();
                 //break; 
             default:
