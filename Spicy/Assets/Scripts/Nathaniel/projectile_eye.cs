@@ -30,4 +30,13 @@ public class projectile_eye : death_tomato
             DamagePlayer(other);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
