@@ -82,46 +82,49 @@ public class PassiveGhost : GhostMasterAI
         {
             dest = playerLoc.GetComponent<Transform>();
             target = dest;
-        }
 
+            if (path == null)
+            {
+                return;
+            }
 
-        if (path == null)
-        {
-            return;
-        }
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                return;
+            }
+            else
+            {
+                reachedEndOfPath = false;
+            }
 
-        if(currentWaypoint >= path.vectorPath.Count)
-        {
-            reachedEndOfPath = true;
-            return;
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * 0.5f * Time.deltaTime;
+
+            if (!reachedEndOfPath)
+            {
+                rb.AddForce(force);
+            }
+
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
+
+            if (rb.velocity.x <= 0.01f)
+            {
+                enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else if (rb.velocity.x >= 0.01f)
+            {
+                enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            }
         }
         else
         {
-            reachedEndOfPath = false;
-        }
-
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * 0.5f * Time.deltaTime;
-
-        if(!reachedEndOfPath)
-        {
-            rb.AddForce(force);
-        }
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-        if(distance < nextWaypointDistance)
-        {
-            currentWaypoint++;
-        }
-
-        if(rb.velocity.x <= 0.01f)
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if(rb.velocity.x >= 0.01f)
-        {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            playerLoc = GameObject.Find("Player Variant");
         }
     }
 }
