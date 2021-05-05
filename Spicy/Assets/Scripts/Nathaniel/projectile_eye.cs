@@ -14,10 +14,13 @@ public class projectile_eye : death_tomato
     {
         rigidProjectile = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Gun");
-        Vector2 moveTowardsPosition = (target.transform.position - transform.position) * speedProjectile;
-        rigidProjectile.velocity = new Vector2(moveTowardsPosition.x, moveTowardsPosition.y);
-        Destroy(this.gameObject, 2);
+        if (target != null) {
+            Vector2 moveTowardsPosition = (target.transform.position - transform.position) * speedProjectile;
+            rigidProjectile.velocity = new Vector2(moveTowardsPosition.x, moveTowardsPosition.y);
+            Destroy(this.gameObject, 2);
+        }
     }
+
 
     //damages player if hits
     //inherites damage player from death_tomato

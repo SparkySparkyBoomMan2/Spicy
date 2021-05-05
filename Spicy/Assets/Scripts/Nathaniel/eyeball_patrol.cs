@@ -38,7 +38,7 @@ public class eyeball_patrol : MonoBehaviour
         {
             Patrol();
         }
-        distanceFromPlayer = Vector2.Distance(player.position, transform.position);//calcs distance between eyeball guy and player
+        distanceFromPlayer = Vector2.Distance(player.position, transform.position); //calcs distance between eyeball guy and player
         
         //Debug.Log("Distant from player " + distanceFromPlayer);
 

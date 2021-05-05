@@ -29,6 +29,7 @@ public class death_tomato : MonoBehaviour
             //Debug.Log("Damage Player called");
         }
     }
+
     //Handles killing player
     public void DamagePlayer(Collision2D other)
     {
@@ -40,6 +41,7 @@ public class death_tomato : MonoBehaviour
             player.DiePlayer();
         }
     }
+
      void FreezeTomato()
     {
         movement_tomato triggerFreeze = gameObject.GetComponent<movement_tomato>();
